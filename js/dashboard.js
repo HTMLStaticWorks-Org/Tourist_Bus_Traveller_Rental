@@ -1,4 +1,4 @@
-// Patient Portal Dashboard Logic for ApexPain
+// Customer Portal Dashboard Logic for Horizon Coach - Tourist Bus & Traveller Rental
 
 let overviewChart;
 let fullProgressChart;
@@ -14,54 +14,51 @@ document.addEventListener('DOMContentLoaded', () => {
   initOverviewChart();
   initProgressChart();
 
-  // Shop / Directory filtering
-  const wallFilter = document.getElementById('routeWallFilter');
-  const gradeFilter = document.getElementById('routeGradeFilter');
-  if (wallFilter && gradeFilter) {
-    [wallFilter, gradeFilter].forEach(el => {
-      el.addEventListener('change', filterRoutes);
+  // Saved / Fleet Directory filtering
+  const seatFilter = document.getElementById('routeWallFilter');
+  const acFilter = document.getElementById('routeGradeFilter');
+  if (seatFilter && acFilter) {
+    [seatFilter, acFilter].forEach(el => {
+      el.addEventListener('change', filterVehicles);
     });
   }
 
-  // Log Search & Filtering (Order History)
+  // Booking History Search & Status Filtering
   const logSearch = document.getElementById('logSearch');
-  const logGradeFilter = document.getElementById('logGradeFilter');
-  if (logSearch && logGradeFilter) {
-    logSearch.addEventListener('input', filterLogs);
-    logGradeFilter.addEventListener('change', filterLogs);
+  const logStatusFilter = document.getElementById('logGradeFilter');
+  if (logSearch && logStatusFilter) {
+    logSearch.addEventListener('input', filterBookings);
+    logStatusFilter.addEventListener('change', filterBookings);
   }
+
+  // Load saved profile data from localStorage (Demo)
+  loadDemoProfile();
 });
 
 // Panel Switcher
 function showSection(sectionId) {
-  // Hide all panels
   document.querySelectorAll('.dashboard-panel').forEach(panel => {
     panel.classList.add('hidden');
   });
 
-  // Remove active styling from sidebar buttons
   document.querySelectorAll('.sidebar-link').forEach(btn => {
     btn.classList.remove('active');
   });
 
-  // Remove active styling from mobile menu buttons
   document.querySelectorAll('.mobile-nav-link').forEach(btn => {
     btn.classList.remove('active');
   });
 
-  // Show active panel
   const targetPanel = document.getElementById('panel-' + sectionId);
   if (targetPanel) {
     targetPanel.classList.remove('hidden');
   }
 
-  // Highlight active button
   const targetBtn = document.getElementById('nav-' + sectionId);
   if (targetBtn) {
     targetBtn.classList.add('active');
   }
 
-  // Highlight active mobile menu button
   const targetMobileBtn = document.getElementById('mobile-nav-' + sectionId);
   if (targetMobileBtn) {
     targetMobileBtn.classList.add('active');
@@ -76,13 +73,13 @@ function initOverviewChart() {
   overviewChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6'],
+      labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
       datasets: [{
-        label: 'Pain Score (VAS 1-10)',
-        data: [8, 7, 5, 4, 3, 2],
+        label: 'Distance Travelled (km)',
+        data: [420, 680, 510, 940, 1120, 860],
         borderColor: '#0D9488',
-        backgroundColor: 'rgba(13, 148, 136, 0.15)',
-        borderWidth: 2,
+        backgroundColor: 'rgba(13, 148, 136, 0.2)',
+        borderWidth: 2.5,
         tension: 0.4,
         fill: true
       }]
@@ -93,13 +90,12 @@ function initOverviewChart() {
       scales: {
         y: {
           min: 0,
-          max: 10,
-          grid: { color: 'rgba(255,255,255,0.05)' },
-          ticks: { color: '#9CA3AF' }
+          grid: { color: 'rgba(255,255,255,0.06)' },
+          ticks: { color: '#94A3B8' }
         },
         x: {
           grid: { display: false },
-          ticks: { color: '#9CA3AF' }
+          ticks: { color: '#94A3B8' }
         }
       },
       plugins: {
@@ -114,17 +110,14 @@ function initProgressChart() {
   if (!ctx) return;
 
   fullProgressChart = new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     data: {
-      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+      labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
       datasets: [{
-        label: 'Procedure Relief %',
-        data: [20, 35, 55, 70, 85, 92],
-        borderColor: '#0284C7',
-        backgroundColor: 'rgba(2, 132, 199, 0.15)',
-        borderWidth: 2,
-        tension: 0.3,
-        fill: true
+        label: 'Completed Group Trips',
+        data: [1, 2, 1, 3, 2, 3],
+        backgroundColor: '#D4AF37',
+        borderRadius: 8
       }]
     },
     options: {
@@ -133,18 +126,13 @@ function initProgressChart() {
       scales: {
         y: {
           min: 0,
-          max: 100,
-          grid: { color: 'rgba(255,255,255,0.05)' },
-          ticks: {
-            color: '#9CA3AF',
-            callback: function (value) {
-              return value + '%';
-            }
-          }
+          max: 5,
+          grid: { color: 'rgba(255,255,255,0.06)' },
+          ticks: { color: '#94A3B8', stepSize: 1 }
         },
         x: {
           grid: { display: false },
-          ticks: { color: '#9CA3AF' }
+          ticks: { color: '#94A3B8' }
         }
       },
       plugins: {
@@ -154,97 +142,91 @@ function initProgressChart() {
   });
 }
 
-// Log Session / Prescription Handlers
-let logModal;
+// Quick Booking Modal Handlers
+let bookingModal;
 function openLogModal() {
-  if (!logModal) {
-    logModal = new bootstrap.Modal(document.getElementById('logClimbModal'));
+  const modalEl = document.getElementById('logClimbModal');
+  if (!modalEl) return;
+  if (!bookingModal) {
+    bookingModal = new bootstrap.Modal(modalEl);
   }
-  logModal.show();
+  bookingModal.show();
 }
 
 function triggerQuickLog() {
   openLogModal();
 }
 
-function submitClimbLog(event) {
+function submitBookingRequest(event) {
   event.preventDefault();
 
-  const nameInput = document.getElementById('logRouteName'); // Medicine Name
-  const gradeSelect = document.getElementById('logRouteGrade'); // Category
-  const attemptsInput = document.getElementById('logRouteAttempts'); // Qty
+  const vehicleSelect = document.getElementById('logRouteName');
+  const tripTypeSelect = document.getElementById('logRouteGrade');
+  const passengersInput = document.getElementById('logRouteAttempts');
+  const pickupInput = document.getElementById('bookingPickup');
+  const destInput = document.getElementById('bookingDestination');
+  const travelDateInput = document.getElementById('bookingTravelDate');
+  const returnDateInput = document.getElementById('bookingReturnDate');
 
-  if (!nameInput.value) return;
+  if (!vehicleSelect || !vehicleSelect.value) return;
 
-  // Calculate mock cost based on quantity
-  const price = (attemptsInput.value * 14.99).toFixed(2);
+  const bookingId = 'HC-' + Math.floor(1000 + Math.random() * 9000);
+  const travelDate = travelDateInput && travelDateInput.value ? travelDateInput.value : new Date().toISOString().split('T')[0];
+  const returnDate = returnDateInput && returnDateInput.value ? returnDateInput.value : travelDate;
+  const pickup = pickupInput && pickupInput.value ? pickupInput.value : 'City Central Terminal';
+  const destination = destInput && destInput.value ? destInput.value : 'Outstation Tour';
 
-  // Add new row to Session Log table (Order History)
   const tbody = document.querySelector('#climbLogTable tbody');
-  const today = new Date().toISOString().split('T')[0];
+  if (tbody) {
+    const rowHtml = `
+      <tr>
+        <td class="py-3 px-4 font-mono text-xs text-[#D4AF37]">${bookingId}</td>
+        <td class="py-3 px-4 font-medium">${vehicleSelect.value}</td>
+        <td class="py-3 px-4 text-xs text-gray-400">${pickup} → ${destination}</td>
+        <td class="py-3 px-4 text-xs text-gray-400">${travelDate} to ${returnDate}</td>
+        <td class="py-3 px-4"><span class="px-2 py-0.5 rounded bg-[#0D9488]/20 text-[#2DD4BF] text-xs">Requested (Demo)</span></td>
+        <td class="py-3 px-4 text-right font-semibold text-[#D4AF37]">Quote Pending</td>
+      </tr>
+    `;
+    tbody.insertAdjacentHTML('afterbegin', rowHtml);
+  }
 
-  const rowHtml = `
-    <tr>
-      <td class="py-3 px-4 text-gray-500">${today}</td>
-      <td class="py-3 px-4 font-medium">${nameInput.value}</td>
-      <td class="py-3 px-4"><span class="px-2 py-0.5 rounded bg-[#10B981]/20 text-[#10B981]">${gradeSelect.value}</span></td>
-      <td class="py-3 px-4 text-center">${attemptsInput.value}</td>
-      <td class="py-3 px-4 text-right text-violet-400">$${price}</td>
-    </tr>
-  `;
-  tbody.insertAdjacentHTML('afterbegin', rowHtml);
+  if (bookingModal) bookingModal.hide();
 
-  // Close Modal
-  if (logModal) logModal.hide();
+  const feedback = document.getElementById('bookingRequestFeedback');
+  if (feedback) {
+    feedback.textContent = `Demo booking request ${bookingId} submitted for ${vehicleSelect.value} (${passengersInput ? passengersInput.value : '12'} passengers). Our dispatch team will confirm your custom quote.`;
+    feedback.classList.remove('hidden');
+  }
 
-  // Reset inputs
-  nameInput.value = '';
-  attemptsInput.value = '1';
-
-  // Blast Confetti Celebration!
-  confetti({
-    particleCount: 120,
-    spread: 70,
-    origin: { y: 0.6 }
-  });
-}
-
-// Badge achievements unlock triggers
-function clickBadge(badgeTitle) {
-  alert(`Health Milestone: ${badgeTitle}! Thank you for staying proactive with Health Store!`);
-}
-
-function unlockFiftyBadge() {
-  const badge = document.getElementById('badge-50');
-  const label = document.getElementById('badge-50-label');
-
-  if (badge && badge.classList.contains('badge-locked')) {
-    badge.classList.remove('badge-locked');
-    label.innerText = 'Unlocked';
+  if (typeof confetti === 'function') {
     confetti({
-      particleCount: 150,
-      colors: ['#34D399', '#10B981']
+      particleCount: 90,
+      spread: 70,
+      origin: { y: 0.6 }
     });
-    alert('Congratulations! You unlocked the "Adherence Hero" badge milestone!');
-  } else {
-    alert('You have already unlocked the "Adherence Hero" badge!');
   }
 }
 
-// Product Directory filters
-function filterRoutes() {
-  const wall = document.getElementById('routeWallFilter').value;
-  const grade = document.getElementById('routeGradeFilter').value;
+// Keep alias for any legacy handler
+function submitClimbLog(event) {
+  submitBookingRequest(event);
+}
+
+// Filter Saved Vehicles
+function filterVehicles() {
+  const seatCat = document.getElementById('routeWallFilter').value;
+  const acType = document.getElementById('routeGradeFilter').value;
   const cards = document.querySelectorAll('#routesGrid > div');
 
   cards.forEach(card => {
-    const cardWall = card.getAttribute('data-wall');
-    const cardGrade = card.getAttribute('data-grade');
+    const cardSeat = card.getAttribute('data-wall');
+    const cardAc = card.getAttribute('data-grade');
 
-    const wallMatch = (wall === 'all' || cardWall === wall);
-    const gradeMatch = (grade === 'all' || cardGrade === grade);
+    const seatMatch = (seatCat === 'all' || cardSeat === seatCat);
+    const acMatch = (acType === 'all' || cardAc === acType);
 
-    if (wallMatch && gradeMatch) {
+    if (seatMatch && acMatch) {
       card.classList.remove('hidden');
     } else {
       card.classList.add('hidden');
@@ -252,23 +234,62 @@ function filterRoutes() {
   });
 }
 
-// Search and Filter Logs
-function filterLogs() {
+// Search and Filter Booking History
+function filterBookings() {
   const query = document.getElementById('logSearch').value.toLowerCase();
-  const grade = document.getElementById('logGradeFilter').value;
+  const statusFilter = document.getElementById('logGradeFilter').value;
   const rows = document.querySelectorAll('#climbLogTable tbody tr');
 
   rows.forEach(row => {
-    const routeName = row.children[1].innerText.toLowerCase();
-    const routeGrade = row.children[2].innerText.trim();
+    const rowText = row.innerText.toLowerCase();
+    const statusText = row.children[4] ? row.children[4].innerText.trim() : '';
 
-    const searchMatch = routeName.includes(query);
-    const gradeMatch = (grade === 'all' || routeGrade === grade);
+    const searchMatch = rowText.includes(query);
+    const statusMatch = (statusFilter === 'all' || statusText.includes(statusFilter));
 
-    if (searchMatch && gradeMatch) {
+    if (searchMatch && statusMatch) {
       row.classList.remove('hidden');
     } else {
       row.classList.add('hidden');
     }
   });
+}
+
+// Demo Profile Persistence
+function loadDemoProfile() {
+  const saved = localStorage.getItem('horizonCoachDemoProfile');
+  if (!saved) return;
+  try {
+    const data = JSON.parse(saved);
+    const nameEl = document.getElementById('profileFullName');
+    const emailEl = document.getElementById('profileEmail');
+    const phoneEl = document.getElementById('profilePhone');
+    const addressEl = document.getElementById('profileAddress');
+    if (nameEl && data.name) nameEl.value = data.name;
+    if (emailEl && data.email) emailEl.value = data.email;
+    if (phoneEl && data.phone) phoneEl.value = data.phone;
+    if (addressEl && data.address) addressEl.value = data.address;
+  } catch (e) {
+    // ignore invalid localStorage data
+  }
+}
+
+function saveDemoProfile(event) {
+  event.preventDefault();
+  const data = {
+    name: document.getElementById('profileFullName')?.value || '',
+    email: document.getElementById('profileEmail')?.value || '',
+    phone: document.getElementById('profilePhone')?.value || '',
+    address: document.getElementById('profileAddress')?.value || ''
+  };
+  localStorage.setItem('horizonCoachDemoProfile', JSON.stringify(data));
+  const msg = document.getElementById('profileSaveMsg');
+  if (msg) {
+    msg.classList.remove('hidden');
+    setTimeout(() => msg.classList.add('hidden'), 3500);
+  }
+}
+
+function downloadDemoInvoice(txId) {
+  alert(`Demo Invoice Preview (${txId}):\nThis is a frontend demo invoice for Horizon Coach Tourist Bus & Traveller Rental. No real payment was processed.`);
 }

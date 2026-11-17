@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - ApexPain Management & Anesthesiology Clinic</title>
+  <title>Contact &amp; Book Vehicle | Horizon Coach – Tourist Bus &amp; Traveller Rental</title>
   <meta name="description"
-    content="Contact ApexPain Medical Center. Book an interventional pain consultation, verify insurance coverage, or locate our Denver fluoroscopic surgical center.">
+    content="Request a custom travel quote or book a 12 to 45-seater tourist bus or tempo traveller with Horizon Coach.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -16,391 +16,294 @@
       theme: {
         extend: {
           colors: {
-            darkbg: '#081018',
-            cardbg1: '#0D1B2A',
-            cardbg2: '#132337',
+            darkbg: '#0B1120',
+            cardbg1: '#111B2E',
             primary: '#0D9488',
-            secondary: '#0284C7',
-            accent: '#14B8A6',
-            violet: {
-              400: '#0D9488',
-              500: '#0F766E',
-              600: '#0284C7',
-            }
+            secondary: '#111B2E',
+            accent: '#D4AF37',
           },
           fontFamily: {
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
-            heading: ['Outfit', 'sans-serif']
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Manrope', 'Plus Jakarta Sans', 'sans-serif']
           }
         }
       }
     }
   </script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/custom.css">
 </head>
 
-<body class="bg-[#081018] text-[#F8FAFC]">
+<body class="bg-[#0B1120] text-white transition-colors duration-300">
 
-  <!-- Navbar -->
+  <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg fixed-top glass-navbar py-3">
     <div class="container-fluid px-4 max-w-7xl mx-auto flex justify-between items-center">
-      <a class="brand-logo flex items-center gap-2" href="index.html">
-        <i class="fa-solid fa-heart-pulse text-[#2DD4BF] text-xl"></i>
-        <span>APEX<span class="text-[#0D9488]">PAIN</span></span>
+      <a class="brand-logo flex items-center gap-2 text-decoration-none" href="index.html">
+        <i class="fa-solid fa-bus-simple text-[#D4AF37] text-xl"></i>
+        <span>HORIZON<span class="text-[#0D9488]">COACH</span></span>
       </a>
-
-      <!-- Desktop Links (Single Word) -->
-      <div class="hidden lg:flex items-center gap-8">
-        <a class="text-[#CBD5E1] hover:text-[#0D9488] transition-colors font-medium" href="index.html">Home</a>
-        <a class="text-[#CBD5E1] hover:text-[#0D9488] transition-colors font-medium" href="home-2.html">Home 2</a>
-        <a class="text-[#CBD5E1] hover:text-[#0D9488] transition-colors font-medium" href="about.html">About</a>
-
-        <a class="text-[#CBD5E1] hover:text-[#0D9488] transition-colors font-medium" href="services.html">Services</a>
-
-        <a class="text-[#CBD5E1] hover:text-[#0D9488] transition-colors font-medium" href="doctors.html">Doctors</a>
-        <a class="text-[#CBD5E1] hover:text-[#0D9488] transition-colors font-medium" href="contact.html">Contact</a>
-        <a class="text-[#CBD5E1] hover:text-[#0D9488] transition-colors font-medium" href="dashboard.html">Dashboard</a>
+      <div class="hidden lg:flex items-center gap-7">
+        <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none"
+          href="index.html">Home</a>
+        <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none"
+          href="home-2.html">Home 2</a>
+        <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none"
+          href="services.html">Fleet</a>
+        <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none"
+          href="prescriptions.html">Rates</a>
+        <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none"
+          href="about.html">About</a>
+        <a class="text-[#D4AF37] font-bold active-nav-link hover:text-[#D4AF37] transition-colors text-decoration-none"
+          href="contact.html" aria-current="page">Contact</a>
+        <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none"
+          href="dashboard.html">Dashboard</a>
       </div>
-
-      <!-- Action Buttons -->
       <div class="hidden lg:flex items-center gap-3">
-        <!-- Theme Toggle Switch Button -->
         <button id="theme-toggle" class="header-theme-switch" title="Toggle Theme">
           <span class="track-icons flex justify-between items-center text-xs select-none w-full">
             <i class="fa-regular fa-moon text-sky-400 text-xs opacity-75"></i>
             <i class="fa-regular fa-sun text-amber-400 text-xs opacity-75"></i>
           </span>
-          <span id="header-theme-thumb">
-            <i id="theme-icon" class="fa-regular fa-sun text-white"></i>
-          </span>
+          <span id="header-theme-thumb"><i id="theme-icon" class="fa-regular fa-sun text-white"></i></span>
         </button>
-
-        <!-- RTL/LTR Toggle Button -->
         <button id="rtl-toggle"
-          class="w-[38px] h-[38px] flex items-center justify-center rounded-full border border-gray-800 hover:bg-gray-800 text-gray-300 hover:text-white transition-colors bg-transparent"
+          class="w-[38px] h-[38px] flex items-center justify-center rounded-full border border-white/20 hover:bg-white/10 text-gray-300 hover:text-white transition-colors bg-transparent"
           title="Toggle Layout Direction">
           <i id="rtl-icon" class="fa-solid fa-right-left text-sm"></i>
         </button>
         <a href="register.html"
-          class="h-[38px] px-5 inline-flex items-center justify-center rounded-full border border-[#0D9488] bg-[#0D9488]/10 text-[#F8FAFC] hover:bg-[#0D9488] transition-all duration-300 font-medium text-sm text-decoration-none">
-          Register
-        </a>
+          class="h-[38px] px-5 inline-flex items-center justify-center rounded-full border border-[#0D9488] bg-[#0D9488] text-white hover:bg-[#0D9488]/90 transition-all duration-300 font-medium text-sm text-decoration-none">Book
+          Vehicle</a>
       </div>
-
-      <!-- Mobile Toggle -->
-      <button class="lg:hidden text-[#F8FAFC] text-xl" id="mobile-menu-btn" aria-expanded="false">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+      <button class="lg:hidden text-white text-xl" id="mobile-menu-btn" aria-expanded="false"><i
+          class="fa-solid fa-bars"></i></button>
     </div>
   </nav>
 
-  <!-- Mobile Dropdown Navigation -->
+  <!-- Mobile Menu -->
   <div id="mobile-menu"
     class="hidden fixed top-[70px] left-0 w-full glass-panel py-6 px-5 z-40 lg:hidden flex flex-col gap-3">
-    <a class="text-base text-[#CBD5E1]" href="index.html">Home</a>
-    <a class="text-base text-[#CBD5E1]" href="home-2.html">Home 2</a>
-    <a class="text-base text-[#CBD5E1]" href="about.html">About</a>
-
-    <a class="text-base text-[#CBD5E1]" href="services.html">Services</a>
-
-    <a class="text-base text-[#CBD5E1]" href="doctors.html">Doctors</a>
-    <a class="text-base text-[#CBD5E1]" href="contact.html">Contact</a>
-    <a class="text-base text-[#CBD5E1]" href="dashboard.html">Dashboard</a>
-
-    <div class="h-[1px] bg-gray-800/80 my-2"></div>
-
-    <!-- Mobile Settings Section -->
-    <div class="space-y-2">
-      <span
-        class="text-[11px] uppercase tracking-wider text-[#94A3B8] font-heading font-semibold block px-1">Settings</span>
-      <div class="grid grid-cols-2 gap-2">
-        <button id="theme-toggle-mobile"
-          class="mobile-settings-btn flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-medium transition-all">
-          <span class="flex items-center gap-2">
-            <i id="theme-icon-mobile" class="fa-regular fa-sun text-[#0D9488]"></i>
-            <span>Theme</span>
-          </span>
-          <span id="theme-switch-track" class="toggle-switch-track">
-            <span class="toggle-switch-thumb"></span>
-          </span>
-        </button>
-        <button id="rtl-toggle-mobile"
-          class="mobile-settings-btn flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-medium transition-all">
-          <span class="flex items-center gap-2">
-            <i class="fa-solid fa-right-left text-[#0284C7]"></i>
-            <span>Direction</span>
-          </span>
-          <span id="rtl-switch-track" class="toggle-switch-track">
-            <span class="toggle-switch-thumb"></span>
-          </span>
-        </button>
-      </div>
-    </div>
-
-    <div class="pt-2">
-      <a href="register.html"
-        class="w-full block text-center py-2.5 rounded-xl bg-[#0D9488] text-white font-medium hover:bg-opacity-95 transition-all text-decoration-none text-sm shadow-md shadow-[#0D9488]/20">
-        Register
-      </a>
-    </div>
+    <a class="text-base text-[#E2E8F0] text-decoration-none" href="index.html">Home</a>
+    <a class="text-base text-[#E2E8F0] text-decoration-none" href="home-2.html">Home 2</a>
+    <a class="text-base text-[#E2E8F0] text-decoration-none" href="services.html">Fleet</a>
+    <a class="text-base text-[#E2E8F0] text-decoration-none" href="prescriptions.html">Rates</a>
+    <a class="text-base text-[#E2E8F0] text-decoration-none" href="about.html">About</a>
+    <a class="text-base text-[#D4AF37] font-bold active-nav-link text-decoration-none" href="contact.html">Contact</a>
+    <a class="text-base text-[#E2E8F0] text-decoration-none" href="dashboard.html">Dashboard</a>
   </div>
 
-  <!-- Page Header / Hero Section -->
-  <header class="pt-32 pb-20 relative overflow-hidden flex items-center">
-    <div class="bg-gradient-orb orb-secondary"></div>
-    <div class="container max-w-3xl mx-auto px-4 text-center space-y-6 relative z-10" data-aos="fade-up">
-      <span class="text-xs uppercase tracking-widest text-[#0284C7] font-heading font-semibold block">ApexPain Clinic
-        Intake</span>
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-heading leading-tight mx-auto">
-        Contact Our <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-[#0284C7] to-[#0D9488] text-glow-secondary">Specialists</span>
-      </h1>
-      <p class="text-[#CBD5E1] text-lg font-light leading-relaxed max-w-xl mx-auto">
-        Have questions about interventional spinal injections, nerve blocks, pre-anesthesia consultations, or insurance
-        coverage? Reach our clinical team below.
-      </p>
+  <!-- Contact & Booking Quote Form -->
+  <section class="pt-32 pb-20 bg-gradient-to-b from-[#0B1120] via-[#111B2E] to-[#0B1120]">
+    <div class="container max-w-7xl mx-auto px-4 grid lg:grid-cols-12 gap-10 items-start">
 
-    </div>
-  </header>
-
-  <!-- Contact Form & Info Grid -->
-  <main id="contact-section" class="container max-w-7xl mx-auto px-4 py-12">
-    <div class="grid lg:grid-cols-12 gap-12 items-start" data-aos="fade-up">
-      <!-- Left side: Form -->
-      <div class="lg:col-span-7 glass-panel p-8 rounded-3xl space-y-6">
-        <h3 class="text-xl font-heading">Appointment & Intake Request</h3>
-        <form class="space-y-4"
-          onsubmit="event.preventDefault(); alert('Appointment intake request submitted! Our clinical coordinator will call you within 2 business hours.');">
-          <div>
-            <label class="block text-xs uppercase tracking-wider text-[#94A3B8] mb-1">Patient Full Name</label>
-            <input type="text" required placeholder="e.g. Sarah Jenkins"
-              class="w-full px-4 py-2.5 rounded-xl bg-[#081018] border border-gray-800 text-white text-sm focus:outline-none focus:border-[#0284C7]">
-          </div>
-
-          <div>
-            <label class="block text-xs uppercase tracking-wider text-[#94A3B8] mb-1">Insurance Provider (if
-              applicable)</label>
-            <input type="text" placeholder="e.g. BlueCross, Medicare, UnitedHealth, Aetna"
-              class="w-full px-4 py-2.5 rounded-xl bg-[#081018] border border-gray-800 text-white text-sm focus:outline-none focus:border-[#0284C7]">
-          </div>
-          <div>
-            <label class="block text-xs uppercase tracking-wider text-[#94A3B8] mb-1">Phone Number</label>
-            <input type="tel" required placeholder="(303) 555-0199"
-              class="w-full px-4 py-2.5 rounded-xl bg-[#081018] border border-gray-800 text-white text-sm focus:outline-none focus:border-[#0284C7]">
-          </div>
-          <div>
-            <label class="block text-xs uppercase tracking-wider text-[#94A3B8] mb-1">Email Address</label>
-            <input type="email" required placeholder="patient@example.com"
-              class="w-full px-4 py-2.5 rounded-xl bg-[#081018] border border-gray-800 text-white text-sm focus:outline-none focus:border-[#0284C7]">
-          </div>
-          <div>
-            <label class="block text-xs uppercase tracking-wider text-[#94A3B8] mb-1">Procedure / Consultation
-              Interest</label>
-            <select
-              class="w-full px-4 py-2.5 rounded-xl bg-[#081018] border border-gray-800 text-white text-sm focus:outline-none focus:border-[#0284C7]">
-              <option>Epidural Steroid Injection Consult</option>
-              <option>Facet Joint Injection / Radiofrequency Ablation</option>
-              <option>Sympathetic or Occipital Nerve Block</option>
-              <option>Spinal Cord Stimulation (SCS) Trial</option>
-              <option>Pre-Anesthesia Evaluation</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-xs uppercase tracking-wider text-[#94A3B8] mb-1">Pain Symptoms & MRI
-              Details</label>
-            <textarea rows="4" required
-              placeholder="Describe pain location (e.g., Lumbar, Sciatic, Cervical), duration, and any prior imaging MRI reports..."
-              class="w-full px-4 py-2.5 rounded-xl bg-[#081018] border border-gray-800 text-white text-sm focus:outline-none focus:border-[#0284C7]"></textarea>
-          </div>
-          <button type="submit"
-            class="w-full py-3 rounded-xl bg-[#0D9488] hover:bg-[#0D9488]/90 transition-all font-medium text-sm">
-            Submit Consultation Request
-          </button>
-        </form>
-      </div>
-
-      <!-- Right side: Info Panel -->
-      <div class="lg:col-span-5 space-y-8">
-        <div class="glass-panel p-6 rounded-2xl space-y-4">
-          <h4 class="text-lg font-heading">Clinical Operating Hours</h4>
-          <div class="space-y-2 text-xs text-[#CBD5E1]">
-            <div class="flex justify-between">
-              <span>Monday - Thursday</span>
-              <span>08:00 - 17:00</span>
-            </div>
-            <div class="flex justify-between">
-              <span>Friday (Surgical Suites)</span>
-              <span>07:30 - 16:00</span>
-            </div>
-            <div class="flex justify-between">
-              <span>Saturday - Sunday</span>
-              <span>Closed (Emergency Line Active)</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="glass-panel p-6 rounded-2xl space-y-4">
-          <h4 class="text-lg font-heading">ApexPain Center Details</h4>
-          <div class="space-y-3 text-xs text-[#CBD5E1]">
-            <p><i class="fa-solid fa-map-location-dot mr-2 text-[#0D9488]"></i>ApexPain Medical Center, 1400 Glenarm
-              Place, Suite 400, Denver, CO 80202</p>
-            <p><i class="fa-solid fa-phone mr-2 text-[#0284C7]"></i>(303) 555-0140</p>
-            <p><i class="fa-solid fa-envelope mr-2 text-[#14B8A6]"></i>care@apexpain.com</p>
-          </div>
-          <div class="h-[1px] bg-gray-800/60 my-3"></div>
-          <div class="flex gap-3 pt-1">
-            <a href="#" class="social-icon-btn instagram" title="Instagram">
-              <i class="fa-brands fa-instagram text-xs"></i>
-            </a>
-            <a href="#" class="social-icon-btn youtube" title="YouTube">
-              <i class="fa-brands fa-youtube text-xs"></i>
-            </a>
-            <a href="#" class="social-icon-btn facebook" title="Facebook">
-              <i class="fa-brands fa-facebook-f text-xs"></i>
-            </a>
-            <a href="#" class="social-icon-btn linkedin" title="LinkedIn">
-              <i class="fa-brands fa-linkedin-in text-xs"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Interactive Google Map -->
-        <div class="glass-panel h-60 rounded-2xl overflow-hidden border border-gray-800 relative">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.887850893043!2d-104.9922244243685!3d39.74438367155609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c78d38102a249%3A0xf6509f6e6fb1c49!2s1400%20Glenarm%20Pl%2C%20Denver%2C%20CO%2080202!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-            class="w-full h-full border-0 opacity-90 contrast-100 dark:opacity-85" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <!-- Premium Footer -->
-  <footer class="premium-footer pt-16 pb-12 text-sm text-[#94A3B8]">
-    <div class="bg-gradient-orb orb-primary opacity-[0.04] -bottom-16 -left-16 w-80 h-80"></div>
-    <div class="bg-gradient-orb orb-secondary opacity-[0.04] -top-16 -right-16 w-80 h-80"></div>
-
-    <div class="container max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-8 mb-12 relative z-10">
-      <!-- Brand column -->
-      <div class="md:col-span-4 space-y-4">
-        <a class="brand-logo flex items-center gap-2" href="index.html">
-          <i class="fa-solid fa-heart-pulse text-[#2DD4BF] text-xl"></i>
-          <span>APEX<span class="text-[#0D9488]">PAIN</span></span>
-        </a>
-        <p class="text-xs leading-relaxed text-[#94A3B8] max-w-sm">
-          ApexPain is a premier pain management and anesthesiology clinic providing image-guided interventions, nerve
-          block therapies, and personalized pain recovery programs.
+      <!-- Left Info -->
+      <div class="lg:col-span-5 space-y-6" style="text-align: left !important;" data-aos="fade-right">
+        <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-heading font-semibold block" style="text-align: left !important;">24/7 Dispatch
+          &amp; Quotes</span>
+        <h1 class="text-4xl font-heading leading-tight mb-0" style="text-align: left !important;">Get Your Custom Travel Quote</h1>
+        <p class="text-sm text-[#CBD5E1] leading-relaxed mb-0" style="text-align: left !important;">
+          Share your group size, preferred vehicle, pickup city, and travel dates. Our trip coordinators will reply with
+          a transparent quote and availability confirmation.
         </p>
-        <!-- Social Icons -->
-        <div class="flex gap-3 pt-2">
-          <a href="#" class="social-icon-btn instagram" title="Instagram">
-            <i class="fa-brands fa-instagram text-center"></i>
-          </a>
-          <a href="#" class="social-icon-btn youtube" title="YouTube">
-            <i class="fa-brands fa-youtube text-center"></i>
-          </a>
-          <a href="#" class="social-icon-btn facebook" title="Facebook">
-            <i class="fa-brands fa-facebook-f text-center"></i>
-          </a>
-          <a href="#" class="social-icon-btn linkedin" title="LinkedIn">
-            <i class="fa-brands fa-linkedin-in text-center"></i>
-          </a>
+
+        <div class="glass-panel p-6 rounded-2xl space-y-4 text-xs sm:text-sm" style="text-align: left !important;">
+          <div class="flex items-center gap-4" style="justify-content: flex-start !important; text-align: left !important;">
+            <div
+              class="w-10 h-10 rounded-xl bg-[#0D9488]/15 border border-[#0D9488]/35 flex items-center justify-center text-[#D4AF37] shrink-0">
+              <i class="fa-solid fa-location-dot text-base"></i>
+            </div>
+            <div style="text-align: left !important;">
+              <strong class="text-white block" style="text-align: left !important;">Main Fleet Terminal</strong>
+              <span class="text-[#CBD5E1] block" style="text-align: left !important;">420 Transport Terminal Road, Suite 12</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4" style="justify-content: flex-start !important; text-align: left !important;">
+            <div
+              class="w-10 h-10 rounded-xl bg-[#0D9488]/15 border border-[#0D9488]/35 flex items-center justify-center text-[#0D9488] shrink-0">
+              <i class="fa-solid fa-phone text-base"></i>
+            </div>
+            <div style="text-align: left !important;">
+              <strong class="text-white block" style="text-align: left !important;">Booking Helpline</strong>
+              <span class="text-[#CBD5E1] block" style="text-align: left !important;">+1 (800) 555-0199 (24/7 Support)</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4" style="justify-content: flex-start !important; text-align: left !important;">
+            <div
+              class="w-10 h-10 rounded-xl bg-[#0D9488]/15 border border-[#0D9488]/35 flex items-center justify-center text-[#D4AF37] shrink-0">
+              <i class="fa-solid fa-envelope text-base"></i>
+            </div>
+            <div style="text-align: left !important;">
+              <strong class="text-white block" style="text-align: left !important;">Email Desk</strong>
+              <span class="text-[#CBD5E1] block" style="text-align: left !important;">bookings@horizoncoach.com</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4" style="justify-content: flex-start !important; text-align: left !important;">
+            <div
+              class="w-10 h-10 rounded-xl bg-[#0D9488]/15 border border-[#0D9488]/35 flex items-center justify-center text-[#0D9488] shrink-0">
+              <i class="fa-solid fa-clock text-base"></i>
+            </div>
+            <div style="text-align: left !important;">
+              <strong class="text-white block" style="text-align: left !important;">Dispatch Hours</strong>
+              <span class="text-[#CBD5E1] block" style="text-align: left !important;">Open 24 Hours • All Days</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Quick links (Single Word Labels) -->
-      <div class="md:col-span-2 space-y-3">
-        <h5 class="text-white text-xs font-semibold uppercase tracking-wider">Services</h5>
-        <ul class="space-y-2 text-xs p-0 list-none">
-          <li><a href="services.html#injections-section"
-              class="hover:text-white transition-colors text-decoration-none">Injections</a></li>
-          <li><a href="services.html#programs-section"
-              class="hover:text-white transition-colors text-decoration-none">Programs</a></li>
-          <li><a href="services.html#articles-section"
-              class="hover:text-white transition-colors text-decoration-none">Articles</a></li>
-          <li><a href="contact.html" class="hover:text-white transition-colors text-decoration-none">Consultation</a>
-          </li>
-        </ul>
+      <!-- Right Form -->
+      <div class="lg:col-span-7" data-aos="fade-left">
+        <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-white/15">
+          <h2 class="text-xl font-heading font-bold text-white mb-4">Vehicle Booking &amp; Quote Request</h2>
+          <div id="quoteSuccess"
+            class="hidden mb-4 p-4 rounded-xl bg-[#0D9488]/25 border border-[#0D9488] text-xs sm:text-sm text-[#2DD4BF]">
+            Thank you! Your demo booking enquiry has been received. Our dispatch coordinator will respond shortly.
+          </div>
+          <form
+            onsubmit="event.preventDefault(); document.getElementById('quoteSuccess').classList.remove('hidden'); this.reset();"
+            class="grid sm:grid-cols-2 gap-4 text-xs">
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Full Name</label>
+              <input type="text" required placeholder="Your Name"
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
+            </div>
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Phone Number</label>
+              <input type="tel" required placeholder="+1 (800) 555-0199"
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
+            </div>
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Email Address</label>
+              <input type="email" required placeholder="you@example.com"
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
+            </div>
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Select Vehicle</label>
+              <select class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
+                <option>12-Seater Tempo Traveller</option>
+                <option>17-Seater Tempo Traveller</option>
+                <option>20-Seater Mini Bus</option>
+                <option>27-Seater Tourist Bus</option>
+                <option>35-Seater Tourist Bus</option>
+                <option>45-Seater Luxury Coach</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Pickup City / Address</label>
+              <input type="text" required placeholder="e.g. City Central Hub"
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
+            </div>
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Destination</label>
+              <input type="text" required placeholder="e.g. Pine Valley / Outstation"
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
+            </div>
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Travel Date</label>
+              <input type="date" required
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
+            </div>
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Return Date</label>
+              <input type="date" required
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block text-[#CBD5E1] mb-1">Trip Notes &amp; Special Requirements</label>
+              <textarea rows="3"
+                placeholder="Tell us about passenger count, luggage, AC preference, or multi-city stops..."
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white"></textarea>
+            </div>
+            <div class="sm:col-span-2 pt-2">
+              <button type="submit"
+                class="w-full py-3.5 rounded-xl bg-[#0D9488] text-white font-semibold hover:bg-[#0D9488]/90 transition-all">
+                Send Booking Enquiry
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
 
-      <div class="md:col-span-2 space-y-3">
-        <h5 class="text-white text-xs font-semibold uppercase tracking-wider">Navigation</h5>
-        <ul class="space-y-2 text-xs p-0 list-none">
-          <li><a href="index.html" class="hover:text-white transition-colors text-decoration-none">Home</a></li>
-          <li><a href="home-2.html" class="hover:text-white transition-colors text-decoration-none">Home 2</a></li>
-          <li><a href="about.html" class="hover:text-white transition-colors text-decoration-none">About</a></li>
-          <li><a href="doctors.html" class="hover:text-white transition-colors text-decoration-none">Doctors</a></li>
-          <li><a href="dashboard.html" class="hover:text-white transition-colors text-decoration-none">Dashboard</a>
-          </li>
-        </ul>
+    </div>
+  </section>
+
+  <!-- Fleet Terminal Map & Pickup Hubs -->
+  <section class="py-16 bg-[#0B1120] border-t border-white/10">
+    <div class="container max-w-7xl mx-auto px-4 space-y-8">
+      <div class="text-center max-w-2xl mx-auto space-y-2" data-aos="fade-up">
+        <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-heading font-semibold">Visit Our Depot</span>
+        <h2 class="text-3xl font-heading">Main Fleet Terminal &amp; Pickup Hubs</h2>
+        <p class="text-xs sm:text-sm text-[#CBD5E1]">Inspect our coaches in person or coordinate group departures from
+          our central terminal and airport staging zones.</p>
       </div>
 
-      <!-- Info column -->
-      <div class="md:col-span-4 space-y-3">
-        <h5 class="text-white text-xs font-semibold uppercase tracking-wider">Clinic Location</h5>
-        <ul class="space-y-3 text-xs text-[#94A3B8] p-0 list-none">
-          <li class="flex items-start gap-3">
-            <div
-              class="w-7 h-7 rounded-lg bg-[#0D9488]/10 border border-[#0D9488]/20 flex items-center justify-center text-[#0D9488] shrink-0 mt-0.5">
-              <i class="fa-solid fa-location-dot text-xs text-center"></i>
-            </div>
-            <span class="leading-relaxed text-[#CBD5E1]">
-              ApexPain Medical Center<br>
-              1400 Glenarm Place, Suite 400, Denver, CO 80202
-            </span>
-          </li>
-          <li class="flex items-center gap-3">
-            <div
-              class="w-7 h-7 rounded-lg bg-[#0284C7]/10 border border-[#0284C7]/20 flex items-center justify-center text-[#0284C7] shrink-0">
-              <i class="fa-solid fa-phone text-xs text-center"></i>
-            </div>
-            <a href="tel:3035550140" class="text-[#CBD5E1] hover:text-white transition-colors text-decoration-none">
-              (303) 555-0140
-            </a>
-          </li>
-          <li class="flex items-center gap-3">
-            <div
-              class="w-7 h-7 rounded-lg bg-[#14B8A6]/10 border border-[#14B8A6]/20 flex items-center justify-center text-[#14B8A6] shrink-0">
-              <i class="fa-solid fa-envelope text-xs text-center"></i>
-            </div>
-            <a href="mailto:care@apexpain.com"
-              class="text-[#CBD5E1] hover:text-white transition-colors text-decoration-none">
-              care@apexpain.com
-            </a>
-          </li>
-        </ul>
+      <div class="glass-panel p-3 sm:p-4 rounded-3xl border border-white/15 overflow-hidden" data-aos="fade-up">
+        <iframe title="Horizon Coach Fleet Terminal Map"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-105.01%2C39.72%2C-104.96%2C39.76&amp;layer=mapnik"
+          class="w-full h-[300px] sm:h-[380px] rounded-2xl border-0" loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        <div class="glass-panel p-5 rounded-2xl flex items-center gap-4" style="justify-content: flex-start !important; text-align: left !important;" data-aos="fade-up"
+          data-aos-delay="100">
+          <div
+            class="w-10 h-10 rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] shrink-0">
+            <i class="fa-solid fa-warehouse"></i>
+          </div>
+          <div style="text-align: left !important;">
+            <h4 class="text-sm font-heading mb-0.5" style="text-align: left !important;">Central Coach Depot</h4>
+            <p class="text-xs text-[#CBD5E1] mb-0" style="text-align: left !important;">420 Transport Terminal Road, Suite 12</p>
+          </div>
+        </div>
+        <div class="glass-panel p-5 rounded-2xl flex items-center gap-4" style="justify-content: flex-start !important; text-align: left !important;" data-aos="fade-up"
+          data-aos-delay="200">
+          <div
+            class="w-10 h-10 rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] shrink-0">
+            <i class="fa-solid fa-plane-departure"></i>
+          </div>
+          <div style="text-align: left !important;">
+            <h4 class="text-sm font-heading mb-0.5" style="text-align: left !important;">Airport Group Staging</h4>
+            <p class="text-xs text-[#CBD5E1] mb-0" style="text-align: left !important;">Terminal 1 &amp; 2 Commercial Coach Bay</p>
+          </div>
+        </div>
+        <div class="glass-panel p-5 rounded-2xl flex items-center gap-4" style="justify-content: flex-start !important; text-align: left !important;" data-aos="fade-up"
+          data-aos-delay="300">
+          <div
+            class="w-10 h-10 rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] shrink-0">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <div style="text-align: left !important;">
+            <h4 class="text-sm font-heading mb-0.5" style="text-align: left !important;">24/7 Highway Control</h4>
+            <p class="text-xs text-[#CBD5E1] mb-0" style="text-align: left !important;">Live GPS Dispatch &amp; Emergency Support</p>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Bottom border & copyright -->
-    <div
-      class="container max-w-7xl mx-auto px-4 pt-8 border-t border-gray-900 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-10">
-      <p class="text-[#64748B]">&copy; 2026 ApexPain Management & Anesthesiology Center. All Rights Reserved.</p>
-      <div class="flex gap-6 text-[#64748B]">
-        <a href="#" class="hover:text-white transition-colors text-decoration-none">Privacy</a>
-        <a href="#" class="hover:text-white transition-colors text-decoration-none">Terms</a>
-        <a href="#" class="hover:text-white transition-colors text-decoration-none">HIPAA</a>
+  <!-- Footer -->
+  <footer class="premium-footer pt-14 pb-10 text-sm text-[#94A3B8]">
+    <div class="container max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="text-[#94A3B8] mb-0">&copy; 2026 Horizon Coach – Tourist Bus &amp; Traveller Rental. All Rights
+        Reserved.</p>
+      <div class="flex gap-5 text-xs">
+        <a href="index.html" class="hover:text-white text-decoration-none">Home</a>
+        <a href="services.html" class="hover:text-white text-decoration-none">Fleet</a>
+        <a href="prescriptions.html" class="hover:text-white text-decoration-none">Rates</a>
+        <a href="dashboard.html" class="hover:text-white text-decoration-none">Dashboard</a>
       </div>
     </div>
   </footer>
 
-  <!-- Floating Action Button (Back to Top) -->
-  <button id="back-to-top" class="back-to-top" aria-label="Scroll to top">
-    <i class="fa-solid fa-angle-up text-lg"></i>
-  </button>
-
+  <button id="back-to-top" class="back-to-top" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      AOS.init({ duration: 800, once: true });
-    });
-  </script>
   <script src="js/main.js"></script>
+  <script>AOS.init({ duration: 800, once: true, easing: 'ease-out-quad' });</script>
 </body>
 
 </html>

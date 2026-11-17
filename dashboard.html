@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard - ApexPain Management & Anesthesiology Clinic</title>
+  <title>Customer Dashboard | Horizon Coach – Tourist Bus &amp; Traveller Rental</title>
+  <meta name="description"
+    content="Manage your tourist bus and tempo traveller bookings, upcoming trips, payment invoices, saved vehicles, and traveler profile.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -14,119 +16,102 @@
       theme: {
         extend: {
           colors: {
-            darkbg: '#081018',
-            cardbg1: '#0D1B2A',
-            cardbg2: '#132337',
+            darkbg: '#0B1120',
+            cardbg1: '#111B2E',
             primary: '#0D9488',
-            secondary: '#0284C7',
-            accent: '#14B8A6',
-            violet: {
-              400: '#0D9488',
-              500: '#0F766E',
-              600: '#0284C7',
-            }
+            secondary: '#111B2E',
+            accent: '#D4AF37',
           },
           fontFamily: {
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
-            heading: ['Outfit', 'sans-serif']
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Manrope', 'Plus Jakarta Sans', 'sans-serif']
           }
         }
       }
     }
   </script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/custom.css">
   <style>
-    /* Premium SaaS Dashboard overrides */
-    .sidebar-link.active {
-      background-color: rgba(13, 148, 136, 0.15);
-      border-left: 2px solid #0D9488;
-      color: #0D9488;
-    }
-
-    .neon-glow-border {
-      box-shadow: 0 0 15px rgba(2, 132, 199, 0.15);
-      border-color: rgba(2, 132, 199, 0.3);
+    .sidebar-link.active,
+    .mobile-nav-link.active {
+      background-color: rgba(15, 118, 110, 0.22);
+      border-left: 3px solid #D4AF37;
+      color: #D4AF37 !important;
+      font-weight: 600;
     }
   </style>
 </head>
 
-<body class="bg-[#081018] text-[#F8FAFC] h-screen overflow-hidden flex flex-col lg:flex-row">
+<body class="bg-[#0B1120] text-white h-screen overflow-hidden flex flex-col lg:flex-row">
 
-  <!-- Sidebar Navigation (Desktop) - Single Word Labels -->
+  <!-- Sidebar Navigation (Desktop) -->
   <aside
-    class="hidden lg:flex flex-col w-64 glass-panel border-r border-gray-900 p-6 justify-between shrink-0 sticky top-0 h-screen overflow-y-auto">
-    <div class="space-y-8 flex flex-col flex-1">
+    class="hidden lg:flex flex-col w-64 glass-panel border-r border-white/10 p-6 justify-between shrink-0 sticky top-0 h-screen overflow-y-auto">
+    <div class="space-y-6 flex flex-col flex-1">
       <div class="flex justify-between items-center">
-        <a class="brand-logo flex items-center gap-2 text-lg" href="index.html">
-          <i class="fa-solid fa-heart-pulse text-[#2DD4BF] text-xl"></i>
-          <span>APEX<span class="text-[#0D9488]">PAIN</span></span>
+        <a class="brand-logo flex items-center gap-2 text-lg text-decoration-none" href="index.html">
+          <i class="fa-solid fa-bus-simple text-[#D4AF37] text-xl"></i>
+          <span>HORIZON<span class="text-[#0D9488]">COACH</span></span>
         </a>
       </div>
 
-      <!-- Navigation Links (Single Word) -->
+      <!-- Navigation Links -->
       <nav class="space-y-1 flex-1">
         <button onclick="showSection('overview')" id="nav-overview"
-          class="sidebar-link w-full text-left py-2.5 px-4 rounded-lg flex items-center gap-3 text-xs text-[#94A3B8] hover:text-white transition-all active">
-          <i class="fa-solid fa-chart-pie w-4 text-[#0D9488]"></i> Overview
-        </button>
-        <button onclick="showSection('progress')" id="nav-progress"
-          class="sidebar-link w-full text-left py-2.5 px-4 rounded-lg flex items-center gap-3 text-xs text-[#94A3B8] hover:text-white transition-all">
-          <i class="fa-solid fa-calendar-check w-4 text-[#0284C7]"></i> Appointments
-        </button>
-        <button onclick="showSection('log')" id="nav-log"
-          class="sidebar-link w-full text-left py-2.5 px-4 rounded-lg flex items-center gap-3 text-xs text-[#94A3B8] hover:text-white transition-all">
-          <i class="fa-solid fa-book-medical w-4 text-[#14B8A6]"></i> Journal
-        </button>
-        <button onclick="showSection('achievements')" id="nav-achievements"
-          class="sidebar-link w-full text-left py-2.5 px-4 rounded-lg flex items-center gap-3 text-xs text-[#94A3B8] hover:text-white transition-all">
-          <i class="fa-solid fa-clipboard-check w-4 text-[#0D9488]"></i> Treatments
-        </button>
-        <button onclick="showSection('routes')" id="nav-routes"
-          class="sidebar-link w-full text-left py-2.5 px-4 rounded-lg flex items-center gap-3 text-xs text-[#94A3B8] hover:text-white transition-all">
-          <i class="fa-solid fa-pills w-4 text-[#0284C7]"></i> Medications
+          class="sidebar-link w-full text-left py-2.5 px-4 rounded-lg flex items-center gap-3 text-xs text-[#CBD5E1] hover:text-white transition-all active">
+          <i class="fa-solid fa-chart-pie w-4 text-[#D4AF37]"></i> Overview
         </button>
         <button onclick="showSection('bookings')" id="nav-bookings"
-          class="sidebar-link w-full text-left py-2.5 px-4 rounded-lg flex items-center gap-3 text-xs text-[#94A3B8] hover:text-white transition-all">
-          <i class="fa-solid fa-user-doctor w-4 text-[#14B8A6]"></i> Consult
+          class="sidebar-link w-full text-left py-2.5 px-4 rounded-lg flex items-center gap-3 text-xs text-[#CBD5E1] hover:text-white transition-all">
+          <i class="fa-solid fa-calendar-check w-4 text-[#0D9488]"></i> My Bookings
         </button>
-        <button onclick="showSection('events')" id="nav-events"
-          class="sidebar-link w-full text-left py-2.5 px-4 rounded-lg flex items-center gap-3 text-xs text-[#94A3B8] hover:text-white transition-all">
-          <i class="fa-solid fa-id-card w-4 text-[#0D9488]"></i> Records
+        <button onclick="showSection('trips')" id="nav-trips"
+          class="sidebar-link w-full text-left py-2.5 px-4 rounded-lg flex items-center gap-3 text-xs text-[#CBD5E1] hover:text-white transition-all">
+          <i class="fa-solid fa-route w-4 text-[#D4AF37]"></i> My Trips
         </button>
-        <button onclick="showSection('membership')" id="nav-membership"
-          class="sidebar-link w-full text-left py-2.5 px-4 rounded-lg flex items-center gap-3 text-xs text-[#94A3B8] hover:text-white transition-all">
-          <i class="fa-solid fa-credit-card w-4 text-[#0284C7]"></i> Billing
+        <button onclick="showSection('book-vehicle')" id="nav-book-vehicle"
+          class="sidebar-link w-full text-left py-2.5 px-4 rounded-lg flex items-center gap-3 text-xs text-[#CBD5E1] hover:text-white transition-all">
+          <i class="fa-solid fa-bus w-4 text-[#0D9488]"></i> Vehicle Booking
+        </button>
+        <button onclick="showSection('payments')" id="nav-payments"
+          class="sidebar-link w-full text-left py-2.5 px-4 rounded-lg flex items-center gap-3 text-xs text-[#CBD5E1] hover:text-white transition-all">
+          <i class="fa-solid fa-credit-card w-4 text-[#D4AF37]"></i> Payments
+        </button>
+        <button onclick="showSection('saved')" id="nav-saved"
+          class="sidebar-link w-full text-left py-2.5 px-4 rounded-lg flex items-center gap-3 text-xs text-[#CBD5E1] hover:text-white transition-all">
+          <i class="fa-solid fa-heart w-4 text-[#0D9488]"></i> Saved Vehicles
+        </button>
+        <button onclick="showSection('support')" id="nav-support"
+          class="sidebar-link w-full text-left py-2.5 px-4 rounded-lg flex items-center gap-3 text-xs text-[#CBD5E1] hover:text-white transition-all">
+          <i class="fa-solid fa-bell w-4 text-[#D4AF37]"></i> Alerts &amp; Help
         </button>
         <button onclick="showSection('profile')" id="nav-profile"
-          class="sidebar-link w-full text-left py-2.5 px-4 rounded-lg flex items-center gap-3 text-xs text-[#94A3B8] hover:text-white transition-all">
-          <i class="fa-solid fa-circle-user w-4 text-[#94A3B8]"></i> Settings
+          class="sidebar-link w-full text-left py-2.5 px-4 rounded-lg flex items-center gap-3 text-xs text-[#CBD5E1] hover:text-white transition-all">
+          <i class="fa-solid fa-circle-user w-4 text-[#CBD5E1]"></i> My Profile
         </button>
       </nav>
     </div>
 
-    <!-- Patient Section footer -->
-    <div class="border-t border-gray-900 pt-4 space-y-3">
+    <!-- Customer Footer -->
+    <div class="border-t border-white/10 pt-4 space-y-3">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-[#0D9488]/40 shrink-0">
-          <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Sarah Jenkins"
-            class="w-full h-full object-cover object-top">
+        <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-[#D4AF37]/60 shrink-0">
+          <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150"
+            alt="Ananya Sharma" class="w-full h-full object-cover object-top">
         </div>
         <div>
-          <p class="text-xs font-heading font-bold text-white">Sarah Jenkins</p>
-          <p class="text-[10px] text-[#0D9488] font-semibold">Patient ID: #PX-8942</p>
+          <p class="text-xs font-heading font-bold text-white mb-0">Ananya Sharma</p>
+          <p class="text-[10px] text-[#D4AF37] font-semibold mb-0">Demo Account • #HC-2041</p>
         </div>
       </div>
       <a href="index.html"
-   class="w-full h-12 px-5 inline-flex items-center justify-center gap-2.5 text-sm font-bold bg-red-600 hover:bg-red-700 rounded-xl transition-all shadow-lg shadow-red-600/20 hover:shadow-red-600/40 text-decoration-none"
-   style="color: #ffffff !important;">
-
-  <i class="fa-solid fa-right-from-bracket text-base"
-     style="color: #ffffff !important;"></i>
-
-  <span style="color: #ffffff !important;">Log Out</span>
-</a>
+        class="w-full h-11 px-5 inline-flex items-center justify-center gap-2 text-xs font-bold bg-red-600/90 hover:bg-red-700 rounded-xl transition-all text-decoration-none text-white">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+      </a>
     </div>
   </aside>
 
@@ -134,759 +119,556 @@
   <div class="flex-1 flex flex-col h-full max-h-full overflow-hidden">
     <!-- Top Header Bar -->
     <header
-      class="w-full glass-panel border-b border-gray-900 px-4 md:px-6 py-4 flex justify-between items-center bg-[#081018]/40 backdrop-blur-md sticky top-0 z-30">
-      <!-- Left side -->
+      class="w-full glass-panel border-b border-white/10 px-4 md:px-6 py-4 flex justify-between items-center bg-[#0B1120]/70 backdrop-blur-md sticky top-0 z-30">
       <div class="flex items-center gap-3">
-        <!-- Mobile Toggle (Hamburger Button) -->
-        <button class="lg:hidden text-[#F8FAFC] text-xl" id="mobile-menu-btn" aria-expanded="false">
+        <button class="lg:hidden text-white text-xl" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#mobileSidebar" aria-label="Open Dashboard Menu">
           <i class="fa-solid fa-bars"></i>
         </button>
-        <!-- Mobile Brand Logo -->
-        <a class="brand-logo lg:hidden flex items-center gap-2" href="index.html">
-          <i class="fa-solid fa-heart-pulse text-[#2DD4BF] text-xl"></i>
-          <span>APEX<span class="text-[#0D9488]">PAIN</span></span>
-        </a>
-        <!-- Desktop Welcome Message -->
-        <div class="hidden lg:block">
-          <h2 class="text-xl md:text-2xl font-bold font-heading text-[#F8FAFC] m-0 leading-tight">Welcome Back, Sarah</h2>
-          <p class="text-xs md:text-sm text-[#CBD5E1] font-medium m-0 mt-0.5">ApexPain Patient Care & Anesthesiology Portal</p>
+        <div>
+          <h1 class="text-base sm:text-lg font-heading font-bold text-white mb-0">Customer Travel Portal</h1>
+          <p class="text-[11px] text-[#CBD5E1] mb-0">Sample Demo Data • Manage Bookings, Trips &amp; Invoices</p>
         </div>
       </div>
-      <div class="flex items-center gap-3">
-        <!-- Theme Toggle Switch Button -->
-        <button id="theme-toggle" class="hidden lg:inline-flex header-theme-switch" title="Toggle Theme">
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button id="theme-toggle" class="header-theme-switch" title="Toggle Theme">
           <span class="track-icons flex justify-between items-center text-xs select-none w-full">
             <i class="fa-regular fa-moon text-sky-400 text-xs opacity-75"></i>
             <i class="fa-regular fa-sun text-amber-400 text-xs opacity-75"></i>
           </span>
-          <span id="header-theme-thumb">
-            <i id="theme-icon" class="fa-regular fa-sun text-white"></i>
-          </span>
+          <span id="header-theme-thumb"><i id="theme-icon" class="fa-regular fa-sun text-white"></i></span>
         </button>
-
-        <!-- RTL/LTR Toggle Button -->
-        <button id="rtl-toggle" class="hidden lg:flex w-[38px] h-[38px] items-center justify-center rounded-full border border-gray-800 hover:bg-gray-800 text-gray-300 hover:text-white transition-colors bg-transparent" title="Toggle Layout Direction">
-          <i id="rtl-icon" class="fa-solid fa-right-left text-sm"></i>
-        </button>
-        <div class="flex items-center gap-2 lg:pl-3 lg:border-l lg:border-gray-800">
-          <div class="w-9 h-9 rounded-full overflow-hidden border-2 border-[#0D9488]/40 shrink-0">
-            <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Sarah Jenkins"
-              class="w-full h-full object-cover object-top">
-          </div>
-          <span class="hidden sm:inline text-xs font-heading text-[#F8FAFC]">Sarah Jenkins</span>
-        </div>
       </div>
     </header>
 
-    <!-- Mobile Dropdown Navigation for Dashboard (Single Word Labels) -->
-    <div id="mobile-menu"
-      class="hidden fixed top-[73px] left-0 w-full glass-panel py-6 px-4 z-40 lg:hidden flex flex-col gap-2 border-b border-gray-900">
-      <button onclick="showSection('overview'); document.getElementById('mobile-menu').classList.add('hidden');" id="mobile-nav-overview"
-        class="mobile-nav-link w-full text-left py-2 px-3 rounded-lg flex items-center gap-3 text-xs text-[#CBD5E1] hover:bg-gray-800 transition-all active">
-        <i class="fa-solid fa-chart-pie w-4 text-[#0D9488]"></i> Overview
-      </button>
-      <button onclick="showSection('progress'); document.getElementById('mobile-menu').classList.add('hidden');" id="mobile-nav-progress"
-        class="mobile-nav-link w-full text-left py-2 px-3 rounded-lg flex items-center gap-3 text-xs text-[#CBD5E1] hover:bg-gray-800 transition-all">
-        <i class="fa-solid fa-calendar-check w-4 text-[#0284C7]"></i> Appointments
-      </button>
-      <button onclick="showSection('log'); document.getElementById('mobile-menu').classList.add('hidden');" id="mobile-nav-log"
-        class="mobile-nav-link w-full text-left py-2 px-3 rounded-lg flex items-center gap-3 text-xs text-[#CBD5E1] hover:bg-gray-800 transition-all">
-        <i class="fa-solid fa-book-medical w-4 text-[#14B8A6]"></i> Journal
-      </button>
-      <button onclick="showSection('achievements'); document.getElementById('mobile-menu').classList.add('hidden');" id="mobile-nav-achievements"
-        class="mobile-nav-link w-full text-left py-2 px-3 rounded-lg flex items-center gap-3 text-xs text-[#CBD5E1] hover:bg-gray-800 transition-all">
-        <i class="fa-solid fa-clipboard-check w-4 text-[#0D9488]"></i> Treatments
-      </button>
-      <button onclick="showSection('routes'); document.getElementById('mobile-menu').classList.add('hidden');" id="mobile-nav-routes"
-        class="mobile-nav-link w-full text-left py-2 px-3 rounded-lg flex items-center gap-3 text-xs text-[#CBD5E1] hover:bg-gray-800 transition-all">
-        <i class="fa-solid fa-pills w-4 text-[#0284C7]"></i> Medications
-      </button>
-      <button onclick="showSection('bookings'); document.getElementById('mobile-menu').classList.add('hidden');" id="mobile-nav-bookings"
-        class="mobile-nav-link w-full text-left py-2 px-3 rounded-lg flex items-center gap-3 text-xs text-[#CBD5E1] hover:bg-gray-800 transition-all">
-        <i class="fa-solid fa-user-doctor w-4 text-[#14B8A6]"></i> Consult
-      </button>
-      <button onclick="showSection('events'); document.getElementById('mobile-menu').classList.add('hidden');" id="mobile-nav-events"
-        class="mobile-nav-link w-full text-left py-2 px-3 rounded-lg flex items-center gap-3 text-xs text-[#CBD5E1] hover:bg-gray-800 transition-all">
-        <i class="fa-solid fa-id-card w-4 text-[#0D9488]"></i> Records
-      </button>
-      <button onclick="showSection('membership'); document.getElementById('mobile-menu').classList.add('hidden');" id="mobile-nav-membership"
-        class="mobile-nav-link w-full text-left py-2 px-3 rounded-lg flex items-center gap-3 text-xs text-[#CBD5E1] hover:bg-gray-800 transition-all">
-        <i class="fa-solid fa-credit-card w-4 text-[#0284C7]"></i> Billing
-      </button>
-      <button onclick="showSection('profile'); document.getElementById('mobile-menu').classList.add('hidden');" id="mobile-nav-profile"
-        class="mobile-nav-link w-full text-left py-2 px-3 rounded-lg flex items-center gap-3 text-xs text-[#CBD5E1] hover:bg-gray-800 transition-all">
-        <i class="fa-solid fa-circle-user w-4 text-[#94A3B8]"></i> Settings
-      </button>
-      <div class="h-[1px] bg-gray-800 my-2"></div>
-      
-      <!-- Mobile Settings Section -->
-      <div class="space-y-2">
-        <span class="text-[11px] uppercase tracking-wider text-[#94A3B8] font-heading font-semibold block px-1">Settings</span>
-        <div class="grid grid-cols-2 gap-2">
-          <button id="theme-toggle-mobile" class="mobile-settings-btn flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-medium transition-all">
-            <span class="flex items-center gap-2">
-              <i id="theme-icon-mobile" class="fa-regular fa-sun text-[#0D9488]"></i>
-              <span>Theme</span>
-            </span>
-            <span id="theme-switch-track" class="toggle-switch-track">
-              <span class="toggle-switch-thumb"></span>
-            </span>
-          </button>
-          <button id="rtl-toggle-mobile" class="mobile-settings-btn flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-medium transition-all">
-            <span class="flex items-center gap-2">
-              <i class="fa-solid fa-right-left text-[#0284C7]"></i>
-              <span>Direction</span>
-            </span>
-            <span id="rtl-switch-track" class="toggle-switch-track">
-              <span class="toggle-switch-thumb"></span>
-            </span>
-          </button>
-        </div>
-      </div>
-
-      <a href="index.html"
-        class="w-full h-12 px-5 inline-flex items-center justify-center gap-2.5 text-sm font-bold text-white bg-red-600 hover:bg-red-700 rounded-xl transition-all shadow-lg shadow-red-600/20 hover:shadow-red-600/40 text-decoration-none mt-2">
-        <i class="fa-solid fa-right-from-bracket text-base"></i>
-        <span>Log Out</span>
-      </a>
-    </div>
-
-    <!-- Main Content Box -->
-    <main class="flex-1 p-3 md:p-8 lg:p-10 overflow-y-auto lg:mb-0 w-full max-w-full overflow-x-hidden">
+    <!-- Scrollable Main Dashboard Area -->
+    <main class="flex-1 overflow-y-auto p-4 md:p-6 space-y-6">
 
       <!-- 1. OVERVIEW PANEL -->
-      <div id="panel-overview" class="dashboard-panel space-y-6">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
-          <div>
-            <h2 class="text-xl font-heading">Patient Care Overview</h2>
-            <p class="text-xs text-[#94A3B8] mt-1.5">Track procedure appointments, daily pain journal ratings, treatment plans, and medication schedules</p>
+      <section id="panel-overview" class="dashboard-panel space-y-6">
+        <!-- KPI Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+          <div class="glass-panel p-5 rounded-2xl border border-white/10" style="text-align: left !important;">
+            <div class="flex items-center gap-3 w-full" style="justify-content: space-between !important;">
+              <span class="text-xs font-medium text-[#CBD5E1]">Total Bookings</span>
+              <span class="w-8 h-8 rounded-lg bg-[#D4AF37]/15 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-ticket text-[#D4AF37] text-xs"></i>
+              </span>
+            </div>
+            <p class="text-3xl font-heading font-bold text-white mt-2 mb-0">14</p>
+            <p class="text-[11px] text-[#2DD4BF] mt-1 mb-0">Demo: Family &amp; Corporate</p>
           </div>
-          <button onclick="showSection('progress')"
-            class="px-4 py-2 rounded-xl bg-[#0D9488] hover:bg-[#0D9488]/90 text-white font-medium text-xs flex items-center gap-1.5 shadow-lg shadow-[#0D9488]/20 shrink-0">
-            <i class="fa-solid fa-plus"></i> Book Procedure / Consult
-          </button>
+          <div class="glass-panel p-5 rounded-2xl border border-white/10" style="text-align: left !important;">
+            <div class="flex items-center gap-3 w-full" style="justify-content: space-between !important;">
+              <span class="text-xs font-medium text-[#CBD5E1]">Upcoming Trips</span>
+              <span class="w-8 h-8 rounded-lg bg-[#0D9488]/15 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-calendar-day text-[#0D9488] text-xs"></i>
+              </span>
+            </div>
+            <p class="text-3xl font-heading font-bold text-white mt-2 mb-0">2</p>
+            <p class="text-[11px] text-[#D4AF37] mt-1 mb-0">Next: 17-Seater Tempo Traveller</p>
+          </div>
+          <div class="glass-panel p-5 rounded-2xl border border-white/10" style="text-align: left !important;">
+            <div class="flex items-center gap-3 w-full" style="justify-content: space-between !important;">
+              <span class="text-xs font-medium text-[#CBD5E1]">Completed Trips</span>
+              <span class="w-8 h-8 rounded-lg bg-[#D4AF37]/15 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-flag-checkered text-[#D4AF37] text-xs"></i>
+              </span>
+            </div>
+            <p class="text-3xl font-heading font-bold text-white mt-2 mb-0">12</p>
+            <p class="text-[11px] text-[#CBD5E1] mt-1 mb-0">4,530+ km travelled safely</p>
+          </div>
+          <div class="glass-panel p-5 rounded-2xl border border-white/10" style="text-align: left !important;">
+            <div class="flex items-center gap-3 w-full" style="justify-content: space-between !important;">
+              <span class="text-xs font-medium text-[#CBD5E1]">Pending Payments</span>
+              <span class="w-8 h-8 rounded-lg bg-[#0D9488]/15 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-wallet text-[#0D9488] text-xs"></i>
+              </span>
+            </div>
+            <p class="text-3xl font-heading font-bold text-[#D4AF37] mt-2 mb-0">$280</p>
+            <p class="text-[11px] text-[#CBD5E1] mt-1 mb-0">Demo balance on HC-4821</p>
+          </div>
         </div>
 
-        <!-- Stats Cards -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
-          <div class="glass-panel p-3.5 sm:p-5 rounded-2xl space-y-1">
-            <span class="text-[8px] sm:text-[10px] uppercase tracking-normal sm:tracking-wider text-[#94A3B8]">Next Procedure</span>
-            <p class="text-sm sm:text-lg font-heading text-[#0284C7] whitespace-nowrap">Sept 22 (Epidural)</p>
-          </div>
-          <div class="glass-panel p-3.5 sm:p-5 rounded-2xl space-y-1">
-            <span class="text-[8px] sm:text-[10px] uppercase tracking-normal sm:tracking-wider text-[#94A3B8]">Current Pain Score</span>
-            <p class="text-sm sm:text-2xl font-heading text-[#0D9488]">3 / 10 VAS</p>
-          </div>
-          <div class="glass-panel p-3.5 sm:p-5 rounded-2xl space-y-1">
-            <span class="text-[8px] sm:text-[10px] uppercase tracking-normal sm:tracking-wider text-[#94A3B8]">Treatment Plan</span>
-            <p class="text-sm sm:text-2xl font-heading text-[#14B8A6]">2 Active</p>
-          </div>
-          <div class="glass-panel p-3.5 sm:p-5 rounded-2xl space-y-1">
-            <span class="text-[8px] sm:text-[10px] uppercase tracking-normal sm:tracking-wider text-[#94A3B8]">Medications</span>
-            <p class="text-sm sm:text-2xl font-heading text-[#0284C7]">3 Scheduled</p>
-          </div>
-        </div>
-
-        <!-- Overview Charts & Mini Logs -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full min-w-0">
-          <div class="lg:col-span-8 glass-panel p-4 sm:p-6 rounded-2xl space-y-4 min-w-0">
-            <h4 class="text-sm font-heading">Pain VAS Reduction Score Trajectory (1-10)</h4>
-            <div class="h-64 relative w-full overflow-hidden">
+        <!-- Charts Row -->
+        <div class="grid lg:grid-cols-2 gap-6">
+          <div class="glass-panel p-6 rounded-2xl border border-white/10">
+            <h3 class="text-sm font-heading font-bold text-white mb-4">Monthly Travel Distance (km – Demo)</h3>
+            <div class="h-56">
               <canvas id="overviewChart"></canvas>
             </div>
           </div>
-          <div class="lg:col-span-4 glass-panel p-6 rounded-2xl space-y-4 min-w-0">
-            <h4 class="text-sm font-heading">Clinical Alerts & Records</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3.5">
-              <div class="clinical-alert-item flex items-center gap-3.5 p-3.5 bg-[#081018]/50 rounded-xl border border-gray-800/80 hover:border-gray-700 transition-all">
-                <div class="w-10 h-10 rounded-xl bg-[#0284C7]/15 border border-[#0284C7]/30 flex items-center justify-center shrink-0">
-                  <i class="fa-solid fa-calendar-check text-[#0284C7] text-base"></i>
-                </div>
-                <div class="flex-1 min-w-0">
-                  <h5 class="text-xs font-heading font-semibold text-[#F8FAFC] mb-0.5">Lumbar Epidural Appointment</h5>
-                  <p class="text-[11px] text-[#CBD5E1] m-0">Sept 22, 10:00 AM • Dr. Vance (Suite 2)</p>
-                </div>
-              </div>
-              <div class="clinical-alert-item flex items-center gap-3.5 p-3.5 bg-[#081018]/50 rounded-xl border border-gray-800/80 hover:border-gray-700 transition-all">
-                <div class="w-10 h-10 rounded-xl bg-[#0D9488]/15 border border-[#0D9488]/30 flex items-center justify-center shrink-0">
-                  <i class="fa-solid fa-circle-check text-[#0D9488] text-base"></i>
-                </div>
-                <div class="flex-1 min-w-0">
-                  <h5 class="text-xs font-heading font-semibold text-[#F8FAFC] mb-0.5">Stellate Block Log Verified</h5>
-                  <p class="text-[11px] text-[#CBD5E1] m-0">Dr. Rostova confirmed 90% pain reduction</p>
-                </div>
-              </div>
-              <div class="clinical-alert-item flex items-center gap-3.5 p-3.5 bg-[#081018]/50 rounded-xl border border-gray-800/80 hover:border-gray-700 transition-all">
-                <div class="w-10 h-10 rounded-xl bg-[#14B8A6]/15 border border-[#14B8A6]/30 flex items-center justify-center shrink-0">
-                  <i class="fa-solid fa-pills text-[#14B8A6] text-base"></i>
-                </div>
-                <div class="flex-1 min-w-0">
-                  <h5 class="text-xs font-heading font-semibold text-[#F8FAFC] mb-0.5">Gabapentin Refill Active</h5>
-                  <p class="text-[11px] text-[#CBD5E1] m-0">300mg • 18 days supply remaining</p>
-                </div>
-              </div>
-              <div class="clinical-alert-item flex items-center gap-3.5 p-3.5 bg-[#081018]/50 rounded-xl border border-gray-800/80 hover:border-gray-700 transition-all">
-                <div class="w-10 h-10 rounded-xl bg-[#0284C7]/15 border border-[#0284C7]/30 flex items-center justify-center shrink-0">
-                  <i class="fa-solid fa-notes-medical text-[#0284C7] text-base"></i>
-                </div>
-                <div class="flex-1 min-w-0">
-                  <h5 class="text-xs font-heading font-semibold text-[#F8FAFC] mb-0.5">Pre-Op Fasting Guidelines</h5>
-                  <p class="text-[11px] text-[#CBD5E1] m-0">No food 6 hrs prior to MAC sedation</p>
-                </div>
-              </div>
+          <div class="glass-panel p-6 rounded-2xl border border-white/10">
+            <h3 class="text-sm font-heading font-bold text-white mb-4">Completed Group Trips by Month</h3>
+            <div class="h-56">
+              <canvas id="fullProgressChart"></canvas>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- 2. APPOINTMENTS PANEL -->
-      <div id="panel-progress" class="dashboard-panel space-y-6 hidden">
-        <div>
-          <h2 class="text-xl font-heading">Consultation & Procedure Appointments</h2>
-          <p class="text-xs text-[#94A3B8] mt-1.5">Book spinal injections, nerve blocks, or specialist physician consultations.</p>
+        <!-- Recent Booking Activity -->
+        <div class="glass-panel p-6 rounded-2xl border border-white/10">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-base font-heading font-bold text-white mb-0">Recent Booking Activity (Demo Data)</h3>
+            <button onclick="showSection('bookings')"
+              class="text-xs text-[#D4AF37] hover:underline bg-transparent border-0">View All Bookings</button>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="table table-dark table-hover align-middle mb-0 text-xs" style="background: transparent;">
+              <thead>
+                <tr class="text-[#D4AF37]">
+                  <th>Booking ID</th>
+                  <th>Vehicle</th>
+                  <th>Route</th>
+                  <th>Travel Dates</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-mono text-[#D4AF37]">HC-4821</td>
+                  <td class="font-semibold">17-Seater Tempo Traveller (AC)</td>
+                  <td>City Hub → Pine Valley Resort</td>
+                  <td>24 Nov – 27 Nov 2026</td>
+                  <td><span class="px-2 py-0.5 rounded bg-[#0D9488]/25 text-[#2DD4BF]">Confirmed</span></td>
+                </tr>
+                <tr>
+                  <td class="font-mono text-[#D4AF37]">HC-4790</td>
+                  <td class="font-semibold">35-Seater Tourist Bus</td>
+                  <td>Grand Hotel → Heritage Fort</td>
+                  <td>05 Dec – 07 Dec 2026</td>
+                  <td><span class="px-2 py-0.5 rounded bg-[#D4AF37]/20 text-[#D4AF37]">Chauffeur Assigned</span></td>
+                </tr>
+                <tr>
+                  <td class="font-mono text-[#D4AF37]">HC-4612</td>
+                  <td class="font-semibold">12-Seater Tempo Traveller</td>
+                  <td>Airport Terminal → Lakeview</td>
+                  <td>12 Oct – 14 Oct 2026</td>
+                  <td><span class="px-2 py-0.5 rounded bg-white/10 text-[#CBD5E1]">Completed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+      </section>
 
-        <!-- Appointment Cards -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
-          <div class="glass-panel p-4 rounded-xl">
-            <span class="text-[10px] uppercase text-[#94A3B8]">Next Procedure</span>
-            <p class="text-lg font-heading text-[#0284C7]">Sept 22, 10:00 AM</p>
+      <!-- 2. MY BOOKINGS PANEL -->
+      <section id="panel-bookings" class="dashboard-panel hidden space-y-6">
+        <div class="glass-panel p-6 rounded-2xl border border-white/10 space-y-4">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div>
+              <h2 class="text-xl font-heading font-bold text-white mb-0">My Bookings &amp; History</h2>
+              <p class="text-xs text-[#CBD5E1] mb-0">All reservations shown below are sample demo records.</p>
+            </div>
+            <div class="flex flex-wrap gap-2 w-full sm:w-auto">
+              <input id="logSearch" type="text" placeholder="Search booking or destination..."
+                class="px-3 py-2 rounded-xl bg-[#0B1120] border border-white/20 text-xs text-white focus:outline-none">
+              <select id="logGradeFilter"
+                class="px-3 py-2 rounded-xl bg-[#0B1120] border border-white/20 text-xs text-white focus:outline-none">
+                <option value="all">All Statuses</option>
+                <option value="Confirmed">Confirmed</option>
+                <option value="Completed">Completed</option>
+                <option value="Requested">Requested</option>
+              </select>
+            </div>
           </div>
-          <div class="glass-panel p-4 rounded-xl">
-            <span class="text-[10px] uppercase text-[#94A3B8]">Attending Doctor</span>
-            <p class="text-lg font-heading text-[#0D9488]">Dr. Marcus Vance</p>
-          </div>
-          <div class="glass-panel p-4 rounded-xl">
-            <span class="text-[10px] uppercase text-[#94A3B8]">Anesthesia Protocol</span>
-            <p class="text-lg font-heading text-[#14B8A6]">MAC Sedation</p>
-          </div>
-          <div class="glass-panel p-4 rounded-xl">
-            <span class="text-[10px] uppercase text-[#94A3B8]">Clinic Suite</span>
-            <p class="text-lg font-heading text-[#0284C7]">Suite 2 (C-Arm)</p>
+
+          <div class="overflow-x-auto">
+            <table id="climbLogTable" class="table table-dark table-hover align-middle mb-0 text-xs"
+              style="background: transparent;">
+              <thead>
+                <tr class="text-[#D4AF37]">
+                  <th>Booking ID</th>
+                  <th>Vehicle &amp; Capacity</th>
+                  <th>Pickup → Destination</th>
+                  <th>Travel &amp; Return Dates</th>
+                  <th>Status</th>
+                  <th class="text-right">Total Amount (Demo)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="py-3 px-4 font-mono text-[#D4AF37]">HC-4821</td>
+                  <td class="py-3 px-4 font-semibold">17-Seater Tempo Traveller (17 Seats)</td>
+                  <td class="py-3 px-4">City Central Hub → Pine Valley</td>
+                  <td class="py-3 px-4">2026-11-24 to 2026-11-27</td>
+                  <td class="py-3 px-4"><span
+                      class="px-2 py-0.5 rounded bg-[#0D9488]/25 text-[#2DD4BF]">Confirmed</span></td>
+                  <td class="py-3 px-4 text-right font-semibold text-[#D4AF37]">$780 (Sample)</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 font-mono text-[#D4AF37]">HC-4790</td>
+                  <td class="py-3 px-4 font-semibold">35-Seater Tourist Bus (35 Seats)</td>
+                  <td class="py-3 px-4">Grand Hotel → Heritage Fort</td>
+                  <td class="py-3 px-4">2026-12-05 to 2026-12-07</td>
+                  <td class="py-3 px-4"><span
+                      class="px-2 py-0.5 rounded bg-[#D4AF37]/20 text-[#D4AF37]">Confirmed</span></td>
+                  <td class="py-3 px-4 text-right font-semibold text-[#D4AF37]">$1,420 (Sample)</td>
+                </tr>
+                <tr>
+                  <td class="py-3 px-4 font-mono text-[#D4AF37]">HC-4612</td>
+                  <td class="py-3 px-4 font-semibold">12-Seater Tempo Traveller (12 Seats)</td>
+                  <td class="py-3 px-4">Airport Terminal 2 → Lakeview</td>
+                  <td class="py-3 px-4">2026-10-12 to 2026-10-14</td>
+                  <td class="py-3 px-4"><span class="px-2 py-0.5 rounded bg-white/10 text-[#CBD5E1]">Completed</span>
+                  </td>
+                  <td class="py-3 px-4 text-right font-semibold text-white">$540 (Sample)</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
+      </section>
 
-        <!-- Booking Form Card -->
-        <div class="glass-panel p-6 rounded-2xl space-y-4">
-          <h4 class="text-base font-heading">Book New Consultation or Interventional Procedure</h4>
-          <form onsubmit="event.preventDefault(); alert('Appointment request submitted successfully! Our intake coordinator will confirm within 2 hours.');"
-            class="space-y-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <!-- 3. MY TRIPS PANEL -->
+      <section id="panel-trips" class="dashboard-panel hidden space-y-6">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="glass-panel p-6 rounded-2xl border border-white/10 space-y-4">
+            <div class="flex justify-between items-start">
               <div>
-                <label class="block text-[10px] uppercase text-[#94A3B8] mb-1">Select Physician / Specialist</label>
-                <select class="w-full px-3 py-2 bg-[#081018] border border-gray-800 rounded-lg text-xs text-white">
-                  <option>Dr. Marcus Vance, MD (Interventional Spine)</option>
-                  <option>Dr. Elena Rostova, MD (Anesthesiology & Nerve Blocks)</option>
-                  <option>Dr. Aris Thorne, MD (Neuromodulation & SCS)</option>
-                </select>
+                <span class="text-[10px] uppercase tracking-wider text-[#D4AF37] font-semibold">Upcoming Journey •
+                  HC-4821</span>
+                <h3 class="text-lg font-heading font-bold text-white mt-1">Pine Valley Family Retreat</h3>
               </div>
+              <span class="px-2.5 py-1 rounded-full bg-[#0D9488]/25 text-[#2DD4BF] text-xs font-semibold">Ready for
+                Dispatch</span>
+            </div>
+            <div class="space-y-2 text-xs text-[#CBD5E1]">
+              <p class="mb-1"><strong class="text-white">Vehicle:</strong> 17-Seater Executive Tempo Traveller (AC)</p>
+              <p class="mb-1"><strong class="text-white">Pickup:</strong> City Central Hub, Gate 3 • 24 Nov, 06:30 AM
+              </p>
+              <p class="mb-1"><strong class="text-white">Destination:</strong> Pine Valley Resort &amp; Hill Viewpoints
+              </p>
+              <p class="mb-0"><strong class="text-white">Driver Contact (Demo):</strong> Capt. Rajesh Verma • +1 (800)
+                555-0144</p>
+            </div>
+          </div>
+
+          <div class="glass-panel p-6 rounded-2xl border border-white/10 space-y-4">
+            <div class="flex justify-between items-start">
               <div>
-                <label class="block text-[10px] uppercase text-[#94A3B8] mb-1">Procedure / Service Type</label>
-                <select class="w-full px-3 py-2 bg-[#081018] border border-gray-800 rounded-lg text-xs text-white">
-                  <option>Lumbar Epidural Steroid Injection</option>
-                  <option>Cervical Facet Joint Injection / RFA</option>
-                  <option>Stellate Ganglion Sympathetic Block</option>
-                  <option>Sacroiliac (SI) Joint Block</option>
-                  <option>Physician Initial Consultation</option>
-                </select>
+                <span class="text-[10px] uppercase tracking-wider text-[#D4AF37] font-semibold">Upcoming Journey •
+                  HC-4790</span>
+                <h3 class="text-lg font-heading font-bold text-white mt-1">Wedding Guest Shuttle Fleet</h3>
               </div>
-              <div>
-                <label class="block text-[10px] uppercase text-[#94A3B8] mb-1">Preferred Date</label>
-                <input type="date" required class="w-full px-3 py-2 bg-[#081018] border border-gray-800 rounded-lg text-xs text-white">
-              </div>
+              <span class="px-2.5 py-1 rounded-full bg-[#D4AF37]/20 text-[#D4AF37] text-xs font-semibold">Chauffeur
+                Assigned</span>
+            </div>
+            <div class="space-y-2 text-xs text-[#CBD5E1]">
+              <p class="mb-1"><strong class="text-white">Vehicle:</strong> 35-Seater Tourist Bus (Air Suspension AC)</p>
+              <p class="mb-1"><strong class="text-white">Pickup:</strong> Grand Palace Hotel • 05 Dec, 08:00 AM</p>
+              <p class="mb-1"><strong class="text-white">Destination:</strong> Heritage Fort Banquet Venue</p>
+              <p class="mb-0"><strong class="text-white">Driver Contact (Demo):</strong> Capt. Suresh Nair • +1 (800)
+                555-0188</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. VEHICLE BOOKING PANEL -->
+      <section id="panel-book-vehicle" class="dashboard-panel hidden space-y-6">
+        <div class="glass-panel p-6 rounded-2xl border border-white/10 max-w-3xl">
+          <h2 class="text-xl font-heading font-bold text-white mb-1">Request a New Vehicle Booking</h2>
+          <p class="text-xs text-[#CBD5E1] mb-5">Submit a demo booking request below. It will appear immediately in your
+            My Bookings list.</p>
+
+          <div id="bookingRequestFeedback"
+            class="hidden mb-4 p-3 rounded-xl bg-[#0D9488]/25 border border-[#0D9488] text-xs text-[#2DD4BF]"></div>
+
+          <form onsubmit="submitBookingRequest(event)" class="grid sm:grid-cols-2 gap-4 text-xs">
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Select Vehicle</label>
+              <select id="logRouteName" required
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
+                <option value="12-Seater Tempo Traveller (12 Seats)">12-Seater Tempo Traveller</option>
+                <option value="17-Seater Tempo Traveller (17 Seats)">17-Seater Tempo Traveller</option>
+                <option value="20-Seater Mini Bus (20 Seats)">20-Seater Mini Bus</option>
+                <option value="27-Seater Tourist Bus (27 Seats)">27-Seater Tourist Bus</option>
+                <option value="35-Seater Tourist Bus (35 Seats)">35-Seater Tourist Bus</option>
+                <option value="45-Seater Luxury Coach (45 Seats)">45-Seater Luxury Coach</option>
+              </select>
             </div>
             <div>
-              <label class="block text-[10px] uppercase text-[#94A3B8] mb-1">Pain Symptoms & Diagnostic Notes</label>
-              <textarea placeholder="Describe pain location, current VAS severity (1-10), and MRI radiologist findings..." rows="3"
-                class="w-full px-4 py-2 bg-[#081018] border border-gray-800 rounded-xl text-xs text-white focus:outline-none focus:border-[#0D9488]"></textarea>
+              <label class="block text-[#CBD5E1] mb-1">Trip Type</label>
+              <select id="logRouteGrade"
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
+                <option value="Family Holiday">Family Holiday</option>
+                <option value="Corporate Travel">Corporate Travel</option>
+                <option value="Wedding Shuttle">Wedding Shuttle</option>
+                <option value="Outstation Tour">Outstation Tour</option>
+                <option value="Local Package">Local Package</option>
+              </select>
             </div>
-            <button type="submit" class="px-6 py-2.5 rounded-xl bg-[#0D9488] hover:bg-[#0D9488]/90 text-white font-medium text-xs">
-              Request Appointment Slot
-            </button>
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Pickup Location</label>
+              <input id="bookingPickup" type="text" required placeholder="e.g. Downtown Terminal"
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
+            </div>
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Destination</label>
+              <input id="bookingDestination" type="text" required placeholder="e.g. Mountain View Resort"
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
+            </div>
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Travel Date</label>
+              <input id="bookingTravelDate" type="date" required
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
+            </div>
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Return Date</label>
+              <input id="bookingReturnDate" type="date" required
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
+            </div>
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Number of Passengers</label>
+              <input id="logRouteAttempts" type="number" min="1" max="50" value="14" required
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
+            </div>
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Special Requirements</label>
+              <input type="text" placeholder="e.g. Roof luggage carrier, senior seating"
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
+            </div>
+            <div class="sm:col-span-2 pt-2">
+              <button type="submit"
+                class="px-6 py-3 rounded-xl bg-[#0D9488] text-white font-semibold hover:bg-[#0D9488]/90 transition-all">
+                Submit Booking Request (Demo)
+              </button>
+            </div>
           </form>
         </div>
+      </section>
 
-        <div class="glass-panel p-6 rounded-2xl space-y-4 min-w-0">
-          <h4 class="text-sm font-heading">Historical Procedure Relief Trajectory (%)</h4>
-          <div class="h-80 relative w-full overflow-hidden">
-            <canvas id="fullProgressChart"></canvas>
+      <!-- 5. PAYMENTS PANEL -->
+      <section id="panel-payments" class="dashboard-panel hidden space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+          <div class="glass-panel p-5 rounded-2xl border border-white/10">
+            <span class="text-xs text-[#CBD5E1]">Total Billed (Demo)</span>
+            <p class="text-2xl font-heading font-bold text-white mt-1 mb-0">$2,740</p>
+          </div>
+          <div class="glass-panel p-5 rounded-2xl border border-white/10">
+            <span class="text-xs text-[#CBD5E1]">Advance Paid</span>
+            <p class="text-2xl font-heading font-bold text-[#2DD4BF] mt-1 mb-0">$2,460</p>
+          </div>
+          <div class="glass-panel p-5 rounded-2xl border border-white/10">
+            <span class="text-xs text-[#CBD5E1]">Remaining Balance</span>
+            <p class="text-2xl font-heading font-bold text-[#D4AF37] mt-1 mb-0">$280</p>
+          </div>
+          <div class="glass-panel p-5 rounded-2xl border border-white/10">
+            <span class="text-xs text-[#CBD5E1]">Payment Status</span>
+            <p class="text-lg font-heading font-bold text-[#2DD4BF] mt-2 mb-0">Advance Verified</p>
           </div>
         </div>
-      </div>
 
-      <!-- 3. JOURNAL PANEL (Pain Journal Entries) -->
-      <div id="panel-log" class="dashboard-panel space-y-6 hidden">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
-          <div>
-            <h2 class="text-xl font-heading">Pain Journal Tracker</h2>
-            <p class="text-xs text-[#94A3B8] mt-1.5">Track daily pain scale entries (VAS 1-10), body locations, and trigger factors for physician review.</p>
-          </div>
-          <button onclick="openLogModal()"
-            class="px-4 py-2 rounded-xl bg-[#0D9488] hover:bg-[#0D9488]/90 text-white font-medium text-xs flex items-center gap-1.5 shadow-lg shadow-[#0D9488]/20 shrink-0">
-            <i class="fa-solid fa-plus"></i> New Pain Entry
-          </button>
-        </div>
-
-        <!-- Pain VAS Rating Card -->
-        <div class="glass-panel p-6 rounded-2xl space-y-4">
-          <h4 class="text-sm font-heading">Log Today's Pain Score (Visual Analog Scale 1-10)</h4>
-          <form onsubmit="event.preventDefault(); alert('Pain journal entry saved to your electronic health record!');" class="space-y-4">
-            <div class="space-y-2">
-              <div class="flex justify-between text-xs text-[#CBD5E1]">
-                <span>Mild (1-3)</span>
-                <span id="pain-val-display" class="font-bold text-[#0D9488] text-base">3 / 10</span>
-                <span>Severe (8-10)</span>
-              </div>
-              <input type="range" min="1" max="10" value="3" id="painRangeSlider"
-                oninput="document.getElementById('pain-val-display').innerText = this.value + ' / 10';"
-                class="w-full accent-[#0D9488] cursor-pointer">
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-              <div>
-                <label class="block text-[10px] uppercase text-[#94A3B8] mb-1">Body Pain Region</label>
-                <select class="w-full px-3 py-2 bg-[#081018] border border-gray-800 rounded-lg text-xs text-white">
-                  <option>Lumbar Spine (Lower Back)</option>
-                  <option>Cervical Spine (Neck)</option>
-                  <option>Sciatic Nerve (Leg / Hip)</option>
-                  <option>Sacroiliac (SI) Joint</option>
-                  <option>Thoracic Mid-Back</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-[10px] uppercase text-[#94A3B8] mb-1">Pain Type</label>
-                <select class="w-full px-3 py-2 bg-[#081018] border border-gray-800 rounded-lg text-xs text-white">
-                  <option>Burning / Neuropathic</option>
-                  <option>Sharp / Radiating</option>
-                  <option>Throbbing / Aching</option>
-                  <option>Stiffness / Tightness</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-[10px] uppercase text-[#94A3B8] mb-1">Trigger / Activity Factor</label>
-                <input type="text" placeholder="e.g., Prolonged sitting, bending, walking" class="w-full px-3 py-2 bg-[#081018] border border-gray-800 rounded-lg text-xs text-white">
-              </div>
-            </div>
-
-            <button type="submit" class="px-6 py-2 rounded-xl bg-[#0D9488] hover:bg-[#0D9488]/90 text-white font-medium text-xs">
-              Save Pain Log Entry
-            </button>
-          </form>
-        </div>
-
-        <!-- Pain Journal Table -->
-        <div class="glass-panel rounded-2xl overflow-hidden">
-          <div class="table-responsive">
-            <table class="table table-hover mb-0 text-xs">
+        <div class="glass-panel p-6 rounded-2xl border border-white/10">
+          <h3 class="text-base font-heading font-bold text-white mb-4">Payment History &amp; Demo Invoices</h3>
+          <div class="overflow-x-auto">
+            <table class="table table-dark table-hover align-middle mb-0 text-xs" style="background: transparent;">
               <thead>
-                <tr class="border-b border-gray-800 text-[#94A3B8]">
-                  <th class="py-3 px-4">Date</th>
-                  <th class="py-3 px-4">VAS Rating</th>
-                  <th class="py-3 px-4">Body Region</th>
-                  <th class="py-3 px-4">Pain Character</th>
-                  <th class="py-3 px-4">Trigger / Notes</th>
-                  <th class="py-3 px-4 text-right">Status</th>
+                <tr class="text-[#D4AF37]">
+                  <th>Transaction ID</th>
+                  <th>Booking ID</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th class="text-right">Invoice</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-gray-900">
+              <tbody>
                 <tr>
-                  <td class="py-3 px-4 text-gray-500">2026-09-14</td>
-                  <td class="py-3 px-4 font-bold text-[#0D9488]">3 / 10</td>
-                  <td class="py-3 px-4 font-medium">Lumbar Spine</td>
-                  <td class="py-3 px-4"><span class="px-2 py-0.5 rounded bg-[#0284C7]/20 text-[#0284C7]">Dull Ache</span></td>
-                  <td class="py-3 px-4 text-gray-400">Post 45-min walk, manageable</td>
-                  <td class="py-3 px-4 text-right text-[#0D9488]">Reviewed</td>
+                  <td class="font-mono">TXN-90412</td>
+                  <td>HC-4821</td>
+                  <td>10 Nov 2026</td>
+                  <td>$500 (Advance)</td>
+                  <td><span class="px-2 py-0.5 rounded bg-[#0D9488]/25 text-[#2DD4BF]">Paid (Demo)</span></td>
+                  <td class="text-right"><button onclick="downloadDemoInvoice('TXN-90412')"
+                      class="px-3 py-1 rounded-lg border border-white/20 text-white hover:bg-white/10">Download
+                      PDF</button></td>
                 </tr>
                 <tr>
-                  <td class="py-3 px-4 text-gray-500">2026-09-11</td>
-                  <td class="py-3 px-4 font-bold text-[#0D9488]">2 / 10</td>
-                  <td class="py-3 px-4 font-medium">Lumbar Spine</td>
-                  <td class="py-3 px-4"><span class="px-2 py-0.5 rounded bg-[#0284C7]/20 text-[#0284C7]">Mild Stiffness</span></td>
-                  <td class="py-3 px-4 text-gray-400">Stellate block relief active</td>
-                  <td class="py-3 px-4 text-right text-[#0D9488]">Reviewed</td>
-                </tr>
-                <tr>
-                  <td class="py-3 px-4 text-gray-500">2026-09-08</td>
-                  <td class="py-3 px-4 font-bold text-[#0284C7]">5 / 10</td>
-                  <td class="py-3 px-4 font-medium">Sciatic Nerve</td>
-                  <td class="py-3 px-4"><span class="px-2 py-0.5 rounded bg-yellow-500/20 text-yellow-400">Burning</span></td>
-                  <td class="py-3 px-4 text-gray-400">Long car ride, took Gabapentin</td>
-                  <td class="py-3 px-4 text-right text-[#0D9488]">Reviewed</td>
-                </tr>
-                <tr>
-                  <td class="py-3 px-4 text-gray-500">2026-08-20</td>
-                  <td class="py-3 px-4 font-bold text-red-400">7 / 10</td>
-                  <td class="py-3 px-4 font-medium">Lumbar & Sciatic</td>
-                  <td class="py-3 px-4"><span class="px-2 py-0.5 rounded bg-red-500/20 text-red-400">Sharp Radiating</span></td>
-                  <td class="py-3 px-4 text-gray-400">Prior to Epidural injection</td>
-                  <td class="py-3 px-4 text-right text-gray-500">Archived</td>
+                  <td class="font-mono">TXN-89940</td>
+                  <td>HC-4612</td>
+                  <td>14 Oct 2026</td>
+                  <td>$540 (Full)</td>
+                  <td><span class="px-2 py-0.5 rounded bg-[#0D9488]/25 text-[#2DD4BF]">Settled (Demo)</span></td>
+                  <td class="text-right"><button onclick="downloadDemoInvoice('TXN-89940')"
+                      class="px-3 py-1 rounded-lg border border-white/20 text-white hover:bg-white/10">Download
+                      PDF</button></td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- 4. TREATMENTS PANEL (Treatment Plan History) -->
-      <div id="panel-achievements" class="dashboard-panel space-y-6 hidden">
-        <div>
-          <h2 class="text-xl font-heading">Interventional Treatments & Care Plans</h2>
-          <p class="text-xs text-[#94A3B8] mt-1.5">Review documented interventional pain procedures, fluoroscopy-guided injections, and recorded relief trajectory.</p>
+      <!-- 6. SAVED VEHICLES PANEL -->
+      <section id="panel-saved" class="dashboard-panel hidden space-y-6">
+        <div class="flex flex-wrap justify-between items-center gap-4">
+          <h2 class="text-xl font-heading font-bold text-white mb-0">Saved Fleet Vehicles</h2>
+          <div class="flex gap-2">
+            <select id="routeWallFilter"
+              class="px-3 py-2 rounded-xl bg-[#0B1120] border border-white/20 text-xs text-white">
+              <option value="all">All Sizes</option>
+              <option value="traveller">Tempo Traveller</option>
+              <option value="bus">Tourist Bus &amp; Coach</option>
+            </select>
+            <select id="routeGradeFilter"
+              class="px-3 py-2 rounded-xl bg-[#0B1120] border border-white/20 text-xs text-white">
+              <option value="all">All Climate</option>
+              <option value="ac">AC Pushback</option>
+            </select>
+          </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <!-- Treatment 1 -->
-          <div class="glass-panel p-5 rounded-2xl space-y-3 border-t-2 border-t-[#0D9488]">
-            <div class="flex justify-between items-center">
-              <span class="text-[10px] uppercase font-semibold text-[#0D9488] bg-[#0D9488]/10 px-2 py-0.5 rounded">Active Protocol</span>
-              <span class="text-[10px] text-gray-500">Date: Sept 10, 2026</span>
+        <div id="routesGrid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div class="glass-panel p-5 rounded-2xl border border-white/10 space-y-3" data-wall="traveller"
+            data-grade="ac">
+            <img
+              src="https://images.pexels.com/photos/29510192/pexels-photo-29510192/free-photo-of-travelers-seated-on-a-bus-interior-view.jpeg?auto=compress&cs=tinysrgb&w=900"
+              alt="17-Seater Tempo Traveller" class="w-full h-40 object-cover rounded-xl">
+            <h4 class="text-base font-heading font-bold text-white mb-0">17-Seater Tempo Traveller</h4>
+            <p class="text-xs text-[#CBD5E1]">AC Pushback • 15–17 Bags • Family &amp; Hill Tours</p>
+            <button onclick="showSection('book-vehicle')"
+              class="w-full py-2 rounded-xl bg-[#0D9488] text-white text-xs font-semibold">Book This Vehicle</button>
+          </div>
+          <div class="glass-panel p-5 rounded-2xl border border-white/10 space-y-3" data-wall="bus" data-grade="ac">
+            <img src="images/fleet-27-bus.jpg" alt="27-Seater Tourist Bus" class="w-full h-40 object-cover rounded-xl">
+            <h4 class="text-base font-heading font-bold text-white mb-0">27-Seater Tourist Bus</h4>
+            <p class="text-xs text-[#CBD5E1]">Panoramic AC • Under-Floor Boot • Corporate &amp; Group</p>
+            <button onclick="showSection('book-vehicle')"
+              class="w-full py-2 rounded-xl bg-[#0D9488] text-white text-xs font-semibold">Book This Vehicle</button>
+          </div>
+          <div class="glass-panel p-5 rounded-2xl border border-white/10 space-y-3" data-wall="bus" data-grade="ac">
+            <img src="images/fleet-45-coach.jpg" alt="45-Seater Luxury Coach"
+              class="w-full h-40 object-cover rounded-xl">
+            <h4 class="text-base font-heading font-bold text-white mb-0">45-Seater Luxury Coach</h4>
+            <p class="text-xs text-[#CBD5E1]">Multi-Zone AC • Mega Bay • Weddings &amp; Charters</p>
+            <button onclick="showSection('book-vehicle')"
+              class="w-full py-2 rounded-xl bg-[#0D9488] text-white text-xs font-semibold">Book This Vehicle</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. NOTIFICATIONS & SUPPORT PANEL -->
+      <section id="panel-support" class="dashboard-panel hidden space-y-6">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="glass-panel p-6 rounded-2xl border border-white/10 space-y-4">
+            <h3 class="text-base font-heading font-bold text-white">Recent Notifications (Demo)</h3>
+            <div class="space-y-3 text-xs">
+              <div class="p-3 rounded-xl bg-[#0B1120]/70 border border-white/10">
+                <p class="font-semibold text-[#D4AF37] mb-1">Chauffeur Assigned for HC-4821</p>
+                <p class="text-[#CBD5E1] mb-0">Capt. Rajesh Verma has been assigned to your 17-Seater Tempo Traveller
+                  trip.</p>
+              </div>
+              <div class="p-3 rounded-xl bg-[#0B1120]/70 border border-white/10">
+                <p class="font-semibold text-[#2DD4BF] mb-1">Advance Payment Recorded</p>
+                <p class="text-[#CBD5E1] mb-0">Demo receipt TXN-90412 for $500 is available in your Payments tab.</p>
+              </div>
             </div>
-            <h4 class="text-base font-heading">Stellate Ganglion Sympathetic Block</h4>
-            <p class="text-xs text-[#94A3B8]">Performed by Dr. Elena Rostova, MD under fluoroscopic guidance for upper extremity neuropathic pain relief.</p>
-            <div class="pt-2 border-t border-gray-800 flex justify-between text-[10px] text-[#CBD5E1]">
-              <span>Relief Status: Active</span>
-              <span class="text-[#0D9488] font-bold">90% Pain Reduction</span>
+          </div>
+          <div class="glass-panel p-6 rounded-2xl border border-white/10 space-y-4">
+            <h3 class="text-base font-heading font-bold text-white">24/7 Dispatch &amp; Help Desk</h3>
+            <p class="text-xs text-[#CBD5E1]">Need to modify pickup time, add extra luggage carrier, or request a route
+              change?</p>
+            <p class="text-xs text-white mb-1"><i class="fa-solid fa-phone text-[#D4AF37] mr-2"></i> +1 (800) 555-0199
+            </p>
+            <p class="text-xs text-white mb-3"><i class="fa-solid fa-envelope text-[#0D9488] mr-2"></i>
+              bookings@horizoncoach.com</p>
+            <a href="contact.html"
+              class="inline-block px-5 py-2.5 rounded-xl bg-[#0D9488] text-white text-xs font-semibold text-decoration-none">Open
+              Support Enquiry</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. MY PROFILE PANEL -->
+      <section id="panel-profile" class="dashboard-panel hidden space-y-6">
+        <div class="glass-panel p-6 rounded-2xl border border-white/10 max-w-2xl space-y-4">
+          <div class="flex items-center gap-4">
+            <img
+              src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150"
+              alt="Profile Photo" class="w-16 h-16 rounded-full object-cover border-2 border-[#D4AF37]">
+            <div>
+              <h2 class="text-lg font-heading font-bold text-white mb-0">My Profile &amp; Contact Details</h2>
+              <p class="text-xs text-[#CBD5E1] mb-0">Changes are saved locally in your browser for this demo.</p>
             </div>
           </div>
 
-          <!-- Treatment 2 -->
-          <div class="glass-panel p-5 rounded-2xl space-y-3 border-t-2 border-t-[#0284C7]">
-            <div class="flex justify-between items-center">
-              <span class="text-[10px] uppercase font-semibold text-[#0284C7] bg-[#0284C7]/10 px-2 py-0.5 rounded">Completed Procedure</span>
-              <span class="text-[10px] text-gray-500">Date: Aug 15, 2026</span>
-            </div>
-            <h4 class="text-base font-heading">L5-S1 Transforaminal Epidural Steroid Injection</h4>
-            <p class="text-xs text-[#94A3B8]">Targeted corticosteroid injection by Dr. Marcus Vance, MD for lumbar radiculopathy & sciatic nerve decompression.</p>
-            <div class="pt-2 border-t border-gray-800 flex justify-between text-[10px] text-[#CBD5E1]">
-              <span>Relief Duration: 6 Months</span>
-              <span class="text-[#0284C7] font-bold">85% Pain Reduction</span>
-            </div>
+          <div id="profileSaveMsg"
+            class="hidden p-3 rounded-xl bg-[#0D9488]/25 border border-[#0D9488] text-xs text-[#2DD4BF]">
+            Demo profile updated in localStorage!
           </div>
 
-          <!-- Treatment 3 -->
-          <div class="glass-panel p-5 rounded-2xl space-y-3 border-t-2 border-t-[#14B8A6]">
-            <div class="flex justify-between items-center">
-              <span class="text-[10px] uppercase font-semibold text-[#14B8A6] bg-[#14B8A6]/10 px-2 py-0.5 rounded">Completed Procedure</span>
-              <span class="text-[10px] text-gray-500">Date: May 20, 2026</span>
+          <form onsubmit="saveDemoProfile(event)" class="grid sm:grid-cols-2 gap-4 text-xs">
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Full Name</label>
+              <input id="profileFullName" type="text" value="Ananya Sharma" required
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
             </div>
-            <h4 class="text-base font-heading">Cervical Facet Joint Medial Branch Block</h4>
-            <p class="text-xs text-[#94A3B8]">Diagnostic facet joint blockade by Dr. Elena Rostova, MD to relieve cervicogenic headache & neck stiffness.</p>
-            <div class="pt-2 border-t border-gray-800 flex justify-between text-[10px] text-[#CBD5E1]">
-              <span>Relief Duration: 4 Months</span>
-              <span class="text-[#14B8A6] font-bold">80% Pain Reduction</span>
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Email Address</label>
+              <input id="profileEmail" type="email" value="ananya.sharma@example.com" required
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 5. MEDICATIONS PANEL (Medication Schedule) -->
-      <div id="panel-routes" class="dashboard-panel space-y-6 hidden">
-        <div class="flex justify-between items-center">
-          <div>
-            <h2 class="text-xl font-heading">Prescribed Medications & Dosage Schedule</h2>
-            <p class="text-xs text-[#94A3B8] mt-1.5">Monitor active physician-prescribed nerve modulators, muscle relaxants, anti-inflammatories, and pharmacy refill statuses.</p>
-          </div>
-          <button onclick="alert('Refill request sent to ApexPain clinical pharmacy desk!');"
-            class="px-4 py-2 rounded-xl bg-[#0D9488] text-white text-xs font-medium hover:bg-[#0D9488]/90 transition-all shadow-md">Request Prescription Refill</button>
-        </div>
-
-        <div class="glass-panel p-6 rounded-2xl space-y-4">
-          <div class="table-responsive">
-            <table class="table table-hover mb-0 text-xs">
-              <thead>
-                <tr class="border-b border-gray-800 text-[#94A3B8]">
-                  <th class="py-3 px-4">Prescribed Medication & Strength</th>
-                  <th class="py-3 px-4">Pharmacologic Class</th>
-                  <th class="py-3 px-4">Dosage Instructions & Schedule</th>
-                  <th class="py-3 px-4">Prescribing Physician</th>
-                  <th class="py-3 px-4 text-right">Refill & Supply Balance</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-gray-900">
-                <tr>
-                  <td class="py-3 px-4 font-bold text-white">Gabapentin 300mg</td>
-                  <td class="py-3 px-4"><span class="px-2 py-0.5 rounded bg-[#0D9488]/20 text-[#0D9488]">Nerve Modulator</span></td>
-                  <td class="py-3 px-4">1 Capsule (300mg) 3x Daily (Morning, Midday, Bedtime)</td>
-                  <td class="py-3 px-4 text-gray-400">Dr. Marcus Vance, MD</td>
-                  <td class="py-3 px-4 text-right text-[#0D9488]">18 Days Supply Remaining</td>
-                </tr>
-                <tr>
-                  <td class="py-3 px-4 font-bold text-white">Celecoxib 200mg</td>
-                  <td class="py-3 px-4"><span class="px-2 py-0.5 rounded bg-[#0284C7]/20 text-[#0284C7]">NSAID Anti-Inflammatory</span></td>
-                  <td class="py-3 px-4">1 Capsule (200mg) Daily with Breakfast</td>
-                  <td class="py-3 px-4 text-gray-400">Dr. Elena Rostova, MD</td>
-                  <td class="py-3 px-4 text-right text-[#0284C7]">22 Days Supply Remaining</td>
-                </tr>
-                <tr>
-                  <td class="py-3 px-4 font-bold text-white">Baclofen 10mg</td>
-                  <td class="py-3 px-4"><span class="px-2 py-0.5 rounded bg-[#14B8A6]/20 text-[#14B8A6]">Muscle Relaxant</span></td>
-                  <td class="py-3 px-4">1 Tablet (10mg) Nightly as Needed for Spasms</td>
-                  <td class="py-3 px-4 text-gray-400">Dr. Aris Thorne, MD</td>
-                  <td class="py-3 px-4 text-right text-[#14B8A6]">30 Days Supply Remaining</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <!-- 6. CONSULT PANEL (Doctor Consultation) -->
-      <div id="panel-bookings" class="dashboard-panel space-y-6 hidden">
-        <div>
-          <h2 class="text-xl font-heading">Consult Specialist Doctors</h2>
-          <p class="text-xs text-[#94A3B8] mt-1.5">Schedule virtual telehealth consultations or pre-op meetings with ApexPain physicians.</p>
-        </div>
-
-        <div class="glass-panel p-6 rounded-2xl space-y-4">
-          <h4 class="text-sm font-heading">Upcoming Consultations</h4>
-          <div
-            class="p-4 bg-[#081018]/60 border border-gray-800 rounded-xl flex flex-col sm:flex-row gap-3 justify-between items-start sm:items-center">
-            <div class="flex items-start sm:items-center gap-3">
-              <div
-                class="w-10 h-10 rounded-lg bg-[#0D9488]/20 flex items-center justify-center text-[#0D9488] shrink-0 mt-0.5 sm:mt-0">
-                <i class="fa-solid fa-video"></i>
-              </div>
-              <div>
-                <h5 class="text-xs font-heading">Pre-Procedure Anesthesia Review</h5>
-                <p class="text-[10px] text-[#94A3B8] mt-0.5">With Dr. Elena Rostova, MD • Today at 3:00 PM (15 Mins)</p>
-              </div>
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Mobile Number</label>
+              <input id="profilePhone" type="tel" value="+1 (800) 555-0172" required
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
             </div>
-            <span
-              class="text-[10px] bg-[#0D9488]/20 text-[#0D9488] px-2.5 py-1 rounded uppercase font-heading font-semibold shrink-0">Confirmed</span>
-          </div>
-
-          <div class="border-t border-gray-800 pt-6">
-            <h4 class="text-sm font-heading mb-4">Book New Doctor Consultation Slot</h4>
-            <form onsubmit="event.preventDefault(); alert('Telehealth consult slot requested successfully!');"
-              class="grid grid-cols-1 md:grid-cols-4 gap-4">
-              <div>
-                <label class="block text-[10px] uppercase text-[#94A3B8] mb-1">Select Physician</label>
-                <select class="w-full px-3 py-2 bg-[#081018] border border-gray-800 rounded-lg text-xs text-white">
-                  <option>Dr. Marcus Vance (Spine Specialist)</option>
-                  <option>Dr. Elena Rostova (Anesthesiologist)</option>
-                  <option>Dr. Aris Thorne (Neuromodulation)</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-[10px] uppercase text-[#94A3B8] mb-1">Date</label>
-                <input type="date" required
-                  class="w-full px-3 py-2 bg-[#081018] border border-gray-800 rounded-lg text-xs text-white">
-              </div>
-              <div>
-                <label class="block text-[10px] uppercase text-[#94A3B8] mb-1">Time Block</label>
-                <select class="w-full px-3 py-2 bg-[#081018] border border-gray-800 rounded-lg text-xs text-white">
-                  <option>09:00 AM - Morning</option>
-                  <option>02:00 PM - Afternoon</option>
-                  <option>05:00 PM - Evening</option>
-                </select>
-              </div>
-              <div class="flex items-end">
-                <button type="submit"
-                  class="w-full py-2.5 rounded-lg bg-[#0D9488] hover:bg-[#0D9488]/90 text-white font-medium text-xs">Request Session</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <!-- 7. RECORDS PANEL (Pre-Anesthesia & Health Records) -->
-      <div id="panel-events" class="dashboard-panel space-y-6 hidden">
-        <div>
-          <h2 class="text-xl font-heading">Pre-Op & Health Records</h2>
-          <p class="text-xs text-[#94A3B8] mt-1.5">Upload MRI scans, X-rays, and view anesthesia clearance documents.</p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          <!-- Upload Form -->
-          <div class="lg:col-span-7 glass-panel p-6 rounded-2xl space-y-4">
-            <h4 class="text-sm font-heading">Upload MRI Radiology Reports & Imaging</h4>
-            <div class="border-2 border-dashed border-gray-800 hover:border-[#0D9488] transition-colors rounded-xl p-6 text-center cursor-pointer"
-                 onclick="alert('Select your DICOM / MRI PDF files to upload.');">
-              <i class="fa-solid fa-cloud-arrow-up text-3xl text-[#0284C7] mb-2"></i>
-              <p class="text-xs text-[#CBD5E1] font-medium">Click or Drag DICOM, MRI, or X-Ray PDF files</p>
-              <p class="text-[10px] text-[#94A3B8] mt-1">Encrypted HIPAA transmission layer active</p>
+            <div>
+              <label class="block text-[#CBD5E1] mb-1">Pickup Address</label>
+              <input id="profileAddress" type="text" value="742 Lakeview Avenue, Suite 4B" required
+                class="w-full px-3.5 py-2.5 rounded-xl bg-[#0B1120] border border-white/20 text-white">
             </div>
-          </div>
-
-          <!-- Active Clearances -->
-          <div class="lg:col-span-5 glass-panel p-6 rounded-2xl space-y-3">
-            <h4 class="text-sm font-heading">Active Pre-Op Clearances</h4>
-            <div class="p-3 bg-[#081018]/40 border border-gray-900 rounded-xl space-y-2 text-xs">
-              <div class="flex justify-between"><span>Anesthesia Clearance:</span><span class="text-[#0D9488] font-bold">Approved</span></div>
-              <div class="flex justify-between"><span>MRI Radiology Review:</span><span class="text-[#0D9488] font-bold">L5-S1 Impingement</span></div>
-              <div class="flex justify-between"><span>Consent Documents:</span><span class="text-[#0284C7] font-bold">Signed Online</span></div>
+            <div class="sm:col-span-2 pt-2">
+              <button type="submit"
+                class="px-6 py-2.5 rounded-xl bg-[#0D9488] text-white font-semibold hover:bg-[#0D9488]/90">
+                Save Profile
+              </button>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 8. BILLING PANEL (Invoices & Billing) -->
-      <div id="panel-membership" class="dashboard-panel space-y-6 hidden">
-        <div>
-          <h2 class="text-xl font-heading">Billing Statements & Insurance Claims</h2>
-          <p class="text-xs text-[#94A3B8] mt-1.5">Manage clinical billing statements, submitted insurance claims (BlueCross/Medicare), copay status, and downloadable receipts.</p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full min-w-0">
-          <div class="lg:col-span-4 glass-panel p-6 rounded-2xl space-y-4 flex flex-col justify-between">
-            <div class="space-y-4">
-              <h4 class="text-sm font-heading">Primary Health Insurance Coverage</h4>
-              <div class="p-3 bg-[#081018]/40 border border-gray-900 rounded-xl space-y-3 text-xs">
-                <div>
-                  <span class="text-[#94A3B8] text-[9px] uppercase tracking-wider">Insurance Provider</span>
-                  <p class="font-heading font-semibold text-white">BlueCross BlueShield PPO</p>
-                </div>
-                <div class="flex justify-between">
-                  <div>
-                    <span class="text-[#94A3B8] text-[9px] uppercase tracking-wider">Procedure Coverage</span>
-                    <p class="text-[#0D9488] font-heading font-semibold">85% Covered</p>
-                  </div>
-                  <div>
-                    <span class="text-[#94A3B8] text-[9px] uppercase tracking-wider">Patient Copay Balance</span>
-                    <p class="text-[#0284C7] font-heading font-semibold">$35.00 Outstanding</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button onclick="alert('Redirecting to secure payment processing portal...');"
-              class="w-full py-2.5 rounded-xl bg-[#0D9488] hover:bg-[#0D9488]/90 text-white transition-all text-xs font-medium mt-4 shadow-md">Pay Outstanding Balance ($35.00)</button>
-          </div>
-
-          <div class="lg:col-span-8 glass-panel p-6 rounded-2xl space-y-4">
-            <h4 class="text-sm font-heading">Procedure Billing & Claim Records</h4>
-            <div class="table-responsive">
-              <table class="table table-hover mb-0 text-xs w-full">
-                <thead>
-                  <tr class="border-b border-gray-800 text-[#94A3B8]">
-                    <th class="py-3 px-4 text-left">Billing Date</th>
-                    <th class="py-3 px-4 text-left">Procedure & Service Description</th>
-                    <th class="py-3 px-4 text-right">Insurance Claimed Amount</th>
-                    <th class="py-3 px-4 text-right">Patient Copay Status</th>
-                    <th class="py-3 px-4 text-right">Statement Receipt</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-900">
-                  <tr>
-                    <td class="py-3.5 px-4 text-left text-[#CBD5E1]">Sept 10, 2026</td>
-                    <td class="py-3.5 px-4 text-left font-medium text-[#F8FAFC]">Stellate Ganglion Sympathetic Block</td>
-                    <td class="py-3.5 px-4 text-right font-heading text-[#0D9488] font-semibold">$850.00 Claimed</td>
-                    <td class="py-3.5 px-4 text-right"><span class="px-2.5 py-1 rounded bg-[#0D9488]/20 text-[#0D9488] text-[11px] font-semibold">$35.00 Copay Paid</span></td>
-                    <td class="py-3.5 px-4 text-right"><a href="#" onclick="alert('Downloading PDF Receipt...');" class="text-[#0284C7] hover:underline text-decoration-none font-medium">Download PDF</a></td>
-                  </tr>
-                  <tr>
-                    <td class="py-3.5 px-4 text-left text-[#CBD5E1]">Aug 15, 2026</td>
-                    <td class="py-3.5 px-4 text-left font-medium text-[#F8FAFC]">L5-S1 Transforaminal Epidural Steroid Injection</td>
-                    <td class="py-3.5 px-4 text-right font-heading text-[#0D9488] font-semibold">$1,200.00 Claimed</td>
-                    <td class="py-3.5 px-4 text-right"><span class="px-2.5 py-1 rounded bg-[#0D9488]/20 text-[#0D9488] text-[11px] font-semibold">$50.00 Copay Paid</span></td>
-                    <td class="py-3.5 px-4 text-right"><a href="#" onclick="alert('Downloading PDF Receipt...');" class="text-[#0284C7] hover:underline text-decoration-none font-medium">Download PDF</a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 9. SETTINGS PANEL -->
-      <div id="panel-profile" class="dashboard-panel space-y-6 hidden">
-        <div>
-          <h2 class="text-xl font-heading">Patient Account Settings</h2>
-          <p class="text-xs text-[#94A3B8] mt-1.5">Update patient demographics, emergency contacts, and clinic notification preferences.</p>
-        </div>
-
-        <div class="glass-panel p-6 rounded-2xl">
-          <form onsubmit="event.preventDefault(); alert('Patient configurations saved successfully!');"
-            class="space-y-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-[10px] uppercase tracking-widest text-[#94A3B8] mb-1">Patient Full Name</label>
-                <input type="text" value="Sarah Jenkins"
-                  class="w-full px-4 py-2 bg-[#081018] border border-gray-800 rounded-xl text-xs text-white focus:outline-none focus:border-[#0284C7]">
-              </div>
-              <div>
-                <label class="block text-[10px] uppercase tracking-widest text-[#94A3B8] mb-1">Primary Clinic Location</label>
-                <select
-                  class="w-full px-4 py-2 bg-[#081018] border border-gray-800 rounded-xl text-xs text-white focus:outline-none focus:border-[#0284C7]">
-                  <option>ApexPain Medical Center - Denver (Glenarm Pl)</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div>
-                <label class="block text-[10px] uppercase tracking-widest text-[#94A3B8] mb-1">Primary Insurance Policy #</label>
-                <input type="text" value="BC-98402129-A"
-                  class="w-full px-4 py-2 bg-[#081018] border border-gray-800 rounded-xl text-xs text-white focus:outline-none focus:border-[#0284C7]">
-              </div>
-              <div>
-                <label class="block text-[10px] uppercase tracking-widest text-[#94A3B8] mb-1">Contact Email Address</label>
-                <input type="email" value="sarah.jenkins@apexpain.com"
-                  class="w-full px-4 py-2 bg-[#081018] border border-gray-800 rounded-xl text-xs text-white focus:outline-none focus:border-[#0284C7]">
-              </div>
-              <div>
-                <label class="block text-[10px] uppercase tracking-widest text-[#94A3B8] mb-1">Emergency Contact Phone</label>
-                <input type="text" value="(303) 555-0188"
-                  class="w-full px-4 py-2 bg-[#081018] border border-gray-800 rounded-xl text-xs text-white focus:outline-none focus:border-[#0284C7]">
-              </div>
-            </div>
-
-            <button type="submit"
-              class="w-full py-2.5 rounded-xl bg-[#0D9488] hover:bg-[#0D9488]/90 transition-all text-white text-xs font-medium mt-4">Save Patient Preferences</button>
           </form>
         </div>
-      </div>
+      </section>
 
     </main>
   </div>
 
-  <!-- Log Session Modal (Used as New Entry Modal) -->
-  <div class="modal fade" id="logClimbModal" tabindex="-1" aria-labelledby="logClimbModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-[#0D1B2A] border border-gray-800 text-white rounded-3xl p-6">
-        <div class="modal-header border-b-0 p-0 justify-between items-center">
-          <h5 class="modal-title font-heading text-lg" id="logClimbModalLabel">Log Pain Rating & Symptom Entry</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-0 mt-4">
-          <form class="space-y-4" id="logClimbForm" onsubmit="event.preventDefault(); alert('Pain journal entry recorded!'); bootstrap.Modal.getInstance(document.getElementById('logClimbModal')).hide();">
-            <div>
-              <label class="block text-[10px] uppercase tracking-widest text-[#94A3B8] mb-1">Body Pain Location</label>
-              <input type="text" required placeholder="e.g. Lumbar Spine, Neck, Sciatic"
-                class="w-full px-4 py-2 bg-[#081018] border border-gray-800 rounded-xl text-xs text-white focus:outline-none focus:border-[#0284C7]">
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-              <div>
-                <label class="block text-[10px] uppercase tracking-widest text-[#94A3B8] mb-1">Pain Rating VAS (1-10)</label>
-                <input type="number" required min="1" max="10" value="3"
-                  class="w-full px-4 py-2 bg-[#081018] border border-gray-800 rounded-xl text-xs text-white focus:outline-none focus:border-[#0284C7]">
-              </div>
-              <div>
-                <label class="block text-[10px] uppercase tracking-widest text-[#94A3B8] mb-1">Pain Character</label>
-                <select class="w-full px-4 py-2 bg-[#081018] border border-gray-800 rounded-xl text-xs text-white focus:outline-none focus:border-[#0284C7]">
-                  <option value="Neuropathic">Neuropathic / Burning</option>
-                  <option value="Sharp">Sharp / Radiating</option>
-                  <option value="Ache">Dull Ache</option>
-                </select>
-              </div>
-            </div>
-            <button type="submit"
-              class="w-full py-3 rounded-xl bg-[#0D9488] hover:bg-[#0D9488]/90 transition-all font-medium text-xs uppercase tracking-wider mt-4">
-              Save Journal Entry
-            </button>
-          </form>
-        </div>
+  <!-- Mobile Offcanvas Sidebar -->
+  <div class="offcanvas offcanvas-start bg-[#0B1120] text-white border-r border-white/15" tabindex="-1"
+    id="mobileSidebar">
+    <div class="offcanvas-header border-b border-white/10">
+      <h5 class="offcanvas-title font-heading font-bold">HORIZON<span class="text-[#0D9488]">COACH</span></h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body space-y-2">
+      <button onclick="showSection('overview')" id="mobile-nav-overview" data-bs-dismiss="offcanvas"
+        class="mobile-nav-link w-full text-left py-2.5 px-4 rounded-lg text-xs text-[#CBD5E1] active">Overview</button>
+      <button onclick="showSection('bookings')" id="mobile-nav-bookings" data-bs-dismiss="offcanvas"
+        class="mobile-nav-link w-full text-left py-2.5 px-4 rounded-lg text-xs text-[#CBD5E1]">My Bookings</button>
+      <button onclick="showSection('trips')" id="mobile-nav-trips" data-bs-dismiss="offcanvas"
+        class="mobile-nav-link w-full text-left py-2.5 px-4 rounded-lg text-xs text-[#CBD5E1]">My Trips</button>
+      <button onclick="showSection('book-vehicle')" id="mobile-nav-book-vehicle" data-bs-dismiss="offcanvas"
+        class="mobile-nav-link w-full text-left py-2.5 px-4 rounded-lg text-xs text-[#CBD5E1]">Vehicle Booking</button>
+      <button onclick="showSection('payments')" id="mobile-nav-payments" data-bs-dismiss="offcanvas"
+        class="mobile-nav-link w-full text-left py-2.5 px-4 rounded-lg text-xs text-[#CBD5E1]">Payments</button>
+      <button onclick="showSection('saved')" id="mobile-nav-saved" data-bs-dismiss="offcanvas"
+        class="mobile-nav-link w-full text-left py-2.5 px-4 rounded-lg text-xs text-[#CBD5E1]">Saved Vehicles</button>
+      <button onclick="showSection('support')" id="mobile-nav-support" data-bs-dismiss="offcanvas"
+        class="mobile-nav-link w-full text-left py-2.5 px-4 rounded-lg text-xs text-[#CBD5E1]">Alerts &amp;
+        Help</button>
+      <button onclick="showSection('profile')" id="mobile-nav-profile" data-bs-dismiss="offcanvas"
+        class="mobile-nav-link w-full text-left py-2.5 px-4 rounded-lg text-xs text-[#CBD5E1]">My Profile</button>
+      <div class="pt-4 border-t border-white/10">
+        <a href="index.html"
+          class="block w-full text-center py-2.5 rounded-xl bg-red-600 text-white text-xs font-bold text-decoration-none">Logout</a>
       </div>
     </div>
   </div>
 
-  <!-- Back to top button -->
-  <button id="back-to-top" class="back-to-top" title="Back to top" aria-label="Scroll to top">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
-
-  <!-- JS Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/dashboard.js"></script>
 </body>

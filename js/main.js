@@ -1,4 +1,4 @@
-// Global JavaScript for Health Store
+// Global JavaScript for Horizon Coach - Tourist Bus & Traveller Rental
 
 document.addEventListener('DOMContentLoaded', () => {
   // Theme Manager
@@ -91,14 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
   // Scroll Progress Indicator
   window.addEventListener('scroll', () => {
     const scrollProgress = document.getElementById('scroll-progress');
     if (scrollProgress) {
       const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
+      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
       scrollProgress.style.width = scrolled + '%';
     }
 
@@ -107,9 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const backToTopBtn = document.getElementById('back-to-top');
 
     if (window.scrollY > 50) {
-      navbar?.classList.add('shadow-xl', 'bg-opacity-90', 'border-b', 'border-gray-800');
+      navbar?.classList.add('shadow-xl', 'bg-opacity-95', 'border-b', 'border-white/10');
     } else {
-      navbar?.classList.remove('shadow-xl', 'bg-opacity-90', 'border-b', 'border-gray-800');
+      navbar?.classList.remove('shadow-xl', 'bg-opacity-95', 'border-b', 'border-white/10');
     }
 
     if (window.scrollY > 300) {
@@ -162,15 +161,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
   const iconMapping = {
     'index.html': 'fa-solid fa-house',
-    'home-2.html': 'fa-solid fa-house-chimney-medical',
+    'home-2.html': 'fa-solid fa-compass',
+    'services.html': 'fa-solid fa-bus',
+    'prescriptions.html': 'fa-solid fa-tags',
     'about.html': 'fa-solid fa-circle-info',
-    'services.html': 'fa-solid fa-hand-holding-medical',
-    'medicines.html': 'fa-solid fa-pills',
-    'prescriptions.html': 'fa-solid fa-prescription',
-    'health-blog.html': 'fa-solid fa-newspaper',
-    'doctors.html': 'fa-solid fa-user-doctor',
     'contact.html': 'fa-solid fa-envelope',
-    'dashboard.html': 'fa-solid fa-chart-line'
+    'login.html': 'fa-solid fa-right-to-bracket',
+    'register.html': 'fa-solid fa-user-plus',
+    'dashboard.html': 'fa-solid fa-chart-line',
+    'doctors.html': 'fa-solid fa-id-card',
+    'medicines.html': 'fa-solid fa-couch',
+    'health-blog.html': 'fa-solid fa-map-location-dot'
   };
 
   mobileMenuLinks.forEach(link => {
@@ -193,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentPage = 'index.html';
   }
 
-  const servicePages = ['medicines.html', 'prescriptions.html', 'health-blog.html', 'services.html'];
+  const fleetPages = ['services.html', 'medicines.html', 'health-blog.html', 'doctors.html'];
 
   // Highlight standard desktop & mobile nav links
   const navLinks = document.querySelectorAll('nav a, #mobile-menu a');
@@ -202,57 +203,79 @@ document.addEventListener('DOMContentLoaded', () => {
     if (href) {
       const hrefPage = href.split('/').pop().split('#')[0].split('?')[0];
       if (hrefPage === currentPage) {
-        link.classList.remove('text-[#CBD5E1]', 'text-[#D1D5DB]', 'text-[#F3F4F6]', 'text-gray-300', 'text-gray-400', 'font-medium');
-        link.classList.add('text-[#0D9488]', 'font-bold', 'active', 'active-nav-link');
-        link.style.color = '#0D9488';
+        link.classList.remove('text-[#CBD5E1]', 'text-[#E2E8F0]', 'text-[#D1D5DB]', 'text-[#F3F4F6]', 'text-gray-300', 'text-gray-400', 'font-medium');
+        link.classList.add('text-[#D4AF37]', 'font-bold', 'active', 'active-nav-link');
+        link.style.color = '#D4AF37';
 
-        // Dropdown item styling in desktop dropdown (if present)
         if (link.closest('.group') || link.classList.contains('dropdown-item')) {
-          link.classList.add('bg-[#0D9488]/15', 'text-[#0D9488]', 'font-semibold', 'dropdown-active-item');
+          link.classList.add('bg-[#0D9488]/15', 'text-[#D4AF37]', 'font-semibold', 'dropdown-active-item');
         }
 
-        // Mobile menu item active styling
         if (link.closest('#mobile-menu')) {
-          link.classList.add('text-[#0D9488]', 'font-bold', 'active', 'mobile-active-item');
+          link.classList.add('text-[#D4AF37]', 'font-bold', 'active', 'mobile-active-item');
         }
       }
     }
   });
 
-  // Highlight Services nav link when on any services-related page
-  if (servicePages.includes(currentPage)) {
-    const servicesNavLinks = document.querySelectorAll('nav a[href="services.html"], #mobile-menu a[href="services.html"]');
-    servicesNavLinks.forEach(link => {
-      link.classList.remove('text-[#CBD5E1]', 'text-[#D1D5DB]', 'text-[#F3F4F6]', 'text-gray-300', 'text-gray-400', 'font-medium');
-      link.classList.add('text-[#0D9488]', 'font-bold', 'active', 'active-nav-link');
-      link.style.color = '#0D9488';
+  // Highlight Fleet nav link when on fleet sub-pages
+  if (fleetPages.includes(currentPage)) {
+    const fleetNavLinks = document.querySelectorAll('nav a[href="services.html"], #mobile-menu a[href="services.html"]');
+    fleetNavLinks.forEach(link => {
+      link.classList.remove('text-[#CBD5E1]', 'text-[#E2E8F0]', 'text-[#D1D5DB]', 'text-[#F3F4F6]', 'text-gray-300', 'text-gray-400', 'font-medium');
+      link.classList.add('text-[#D4AF37]', 'font-bold', 'active', 'active-nav-link');
+      link.style.color = '#D4AF37';
     });
   }
 
-  // Home 2 Quick Procedure Diagnostic Matcher
-  const symptomSelect = document.getElementById('symptom-select');
-  const procedureRec = document.getElementById('procedure-recommendation');
-  if (symptomSelect && procedureRec) {
-    procedureRec.style.transition = 'opacity 0.15s ease';
-    const procedureMap = {
-      'sciatica': '<span class="text-[#0D9488] font-semibold">Recommended:</span> Transforaminal Epidural (TFESI)',
-      'herniated': '<span class="text-[#0D9488] font-semibold">Recommended:</span> Cervical / Lumbar ESI & Disc Decompression',
-      'facet': '<span class="text-[#0D9488] font-semibold">Recommended:</span> Facet Medial Branch Block & Radiofrequency Ablation',
-      'trigeminal': '<span class="text-[#0D9488] font-semibold">Recommended:</span> Occipital Nerve Therapy & Pulsed Neurotomy',
-      'failed-back': '<span class="text-[#0D9488] font-semibold">Recommended:</span> Spinal Cord Stimulation (SCS) Trial'
+  // Home 2 Quick Fleet Matcher
+  const tripSelect = document.getElementById('trip-type-select') || document.getElementById('symptom-select');
+  const vehicleRec = document.getElementById('vehicle-recommendation') || document.getElementById('procedure-recommendation');
+  if (tripSelect && vehicleRec) {
+    vehicleRec.style.transition = 'opacity 0.15s ease';
+    const fleetMap = {
+      'family': '<span class="text-[#D4AF37] font-semibold">Recommended:</span> 12-Seater Luxury Tempo Traveller (Pushback AC)',
+      'pilgrimage': '<span class="text-[#D4AF37] font-semibold">Recommended:</span> 17-Seater Executive Tempo Traveller (Ample Luggage)',
+      'corporate': '<span class="text-[#D4AF37] font-semibold">Recommended:</span> 20-Seater Mini Bus or 27-Seater Corporate Coach',
+      'wedding': '<span class="text-[#D4AF37] font-semibold">Recommended:</span> 35-Seater Tourist Bus or 45-Seater Luxury Coach',
+      'school': '<span class="text-[#D4AF37] font-semibold">Recommended:</span> 45-Seater Luxury Coach (GPS & Speed Governor)'
     };
 
-    symptomSelect.addEventListener('change', (e) => {
+    tripSelect.addEventListener('change', (e) => {
       const selected = e.target.value;
-      if (procedureMap[selected]) {
-        procedureRec.style.opacity = '0';
+      if (fleetMap[selected]) {
+        vehicleRec.style.opacity = '0';
         setTimeout(() => {
-          procedureRec.innerHTML = procedureMap[selected];
-          procedureRec.style.opacity = '1';
+          vehicleRec.innerHTML = fleetMap[selected];
+          vehicleRec.style.opacity = '1';
         }, 150);
       }
     });
   }
 
-});
+  // Fleet Category Filter Buttons (on services.html)
+  const filterButtons = document.querySelectorAll('.fleet-filter-btn');
+  const fleetCards = document.querySelectorAll('.fleet-card');
+  if (filterButtons.length > 0 && fleetCards.length > 0) {
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-[#0D9488]', 'text-white', 'border-[#0D9488]');
+          b.classList.add('bg-white/5', 'text-[#E2E8F0]', 'border-white/15');
+        });
+        btn.classList.remove('bg-white/5', 'text-[#E2E8F0]', 'border-white/15');
+        btn.classList.add('bg-[#0D9488]', 'text-white', 'border-[#0D9488]');
 
+        const category = btn.getAttribute('data-filter');
+        fleetCards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          if (category === 'all' || cardCat === category) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  }
+});

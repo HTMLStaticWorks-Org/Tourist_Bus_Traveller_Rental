@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ApexPain - Pain Management & Anesthesiology Clinic</title>
+  <title>Horizon Coach | Tourist Bus &amp; Traveller Rental</title>
   <meta name="description"
-    content="ApexPain provides comprehensive interventional pain management, fluoroscopy-guided spine injections, nerve blocks, chronic pain rehabilitation, and sub-specialty anesthesiology care.">
+    content="Horizon Coach offers reliable tourist bus rentals, 12 to 17-seater tempo travellers, mini buses, and 45-seater luxury coaches for family holidays, corporate travel, weddings, and group tours.">
+  <meta name="keywords" content="tourist bus rental, tempo traveller rental, luxury coach hire, mini bus rental, group transportation, wedding bus rental, corporate travel">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
   <!-- CSS Stylesheets -->
@@ -17,53 +18,52 @@
       theme: {
         extend: {
           colors: {
-            darkbg: '#081018',
-            cardbg1: '#0D1B2A',
-            cardbg2: '#132337',
+            darkbg: '#0B1120',
+            cardbg1: '#111B2E',
+            cardbg2: '#1E3A5F',
             primary: '#0D9488',
-            secondary: '#0284C7',
-            accent: '#14B8A6',
+            secondary: '#111B2E',
+            accent: '#D4AF37',
             violet: {
               400: '#0D9488',
-              500: '#0F766E',
-              600: '#0284C7',
+              500: '#0D9488',
+              600: '#111B2E',
             }
           },
           fontFamily: {
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
-            heading: ['Outfit', 'sans-serif']
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Manrope', 'Plus Jakarta Sans', 'sans-serif']
           }
         }
       }
     }
   </script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/custom.css">
 </head>
 
-<body class="bg-[#081018] text-[#F8FAFC] transition-colors duration-300">
+<body class="bg-[#0B1120] text-white transition-colors duration-300">
 
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg fixed-top glass-navbar py-3">
     <div class="container-fluid px-4 max-w-7xl mx-auto flex justify-between items-center">
-      <a class="brand-logo flex items-center gap-2" href="index.html">
-        <i class="fa-solid fa-heart-pulse text-[#2DD4BF] text-xl"></i>
-        <span>APEX<span class="text-[#0D9488]">PAIN</span></span>
+      <a class="brand-logo flex items-center gap-2 text-decoration-none" href="index.html">
+        <i class="fa-solid fa-bus-simple text-[#D4AF37] text-xl"></i>
+        <span>HORIZON<span class="text-[#0D9488]">COACH</span></span>
       </a>
 
-      <!-- Desktop Links (Single Word) -->
-      <div class="hidden lg:flex items-center gap-8">
-        <a class="text-[#0D9488] font-bold active-nav-link hover:text-[#0D9488] transition-colors" href="index.html" aria-current="page">Home</a>
-        <a class="text-[#CBD5E1] hover:text-[#0D9488] transition-colors font-medium" href="home-2.html">Home 2</a>
-        <a class="text-[#CBD5E1] hover:text-[#0D9488] transition-colors font-medium" href="about.html">About</a>
-        
-        <a class="text-[#CBD5E1] hover:text-[#0D9488] transition-colors font-medium" href="services.html">Services</a>
-
-        <a class="text-[#CBD5E1] hover:text-[#0D9488] transition-colors font-medium" href="doctors.html">Doctors</a>
-        <a class="text-[#CBD5E1] hover:text-[#0D9488] transition-colors font-medium" href="contact.html">Contact</a>
-        <a class="text-[#CBD5E1] hover:text-[#0D9488] transition-colors font-medium" href="dashboard.html">Dashboard</a>
+      <!-- Desktop Links -->
+      <div class="hidden lg:flex items-center gap-7">
+        <a class="text-[#D4AF37] font-bold active-nav-link hover:text-[#D4AF37] transition-colors text-decoration-none" href="index.html" aria-current="page">Home</a>
+        <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none" href="home-2.html">Home 2</a>
+        <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none" href="services.html">Fleet</a>
+        <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none" href="prescriptions.html">Rates</a>
+        <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none" href="about.html">About</a>
+        <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none" href="contact.html">Contact</a>
+        <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none" href="dashboard.html">Dashboard</a>
       </div>
 
       <!-- Action Buttons -->
@@ -80,17 +80,17 @@
         </button>
 
         <!-- RTL/LTR Toggle Button -->
-        <button id="rtl-toggle" class="w-[38px] h-[38px] flex items-center justify-center rounded-full border border-gray-800 hover:bg-gray-800 text-gray-300 hover:text-white transition-colors bg-transparent" title="Toggle Layout Direction">
+        <button id="rtl-toggle" class="w-[38px] h-[38px] flex items-center justify-center rounded-full border border-white/20 hover:bg-white/10 text-gray-300 hover:text-white transition-colors bg-transparent" title="Toggle Layout Direction">
           <i id="rtl-icon" class="fa-solid fa-right-left text-sm"></i>
         </button>
         <a href="register.html"
-          class="h-[38px] px-5 inline-flex items-center justify-center rounded-full border border-[#0D9488] bg-[#0D9488]/10 text-[#F8FAFC] hover:bg-[#0D9488] transition-all duration-300 font-medium text-sm text-decoration-none">
-          Register
+          class="h-[38px] px-5 inline-flex items-center justify-center rounded-full border border-[#0D9488] bg-[#0D9488] text-white hover:bg-[#0D9488]/90 transition-all duration-300 font-medium text-sm text-decoration-none">
+          Book Vehicle
         </a>
       </div>
 
       <!-- Mobile Toggle -->
-      <button class="lg:hidden text-[#F8FAFC] text-xl" id="mobile-menu-btn" aria-expanded="false">
+      <button class="lg:hidden text-white text-xl" id="mobile-menu-btn" aria-expanded="false">
         <i class="fa-solid fa-bars"></i>
       </button>
     </div>
@@ -99,18 +99,16 @@
   <!-- Mobile Dropdown Navigation -->
   <div id="mobile-menu"
     class="hidden fixed top-[70px] left-0 w-full glass-panel py-6 px-5 z-40 lg:hidden flex flex-col gap-3">
-    <a class="text-base text-[#0D9488] font-bold active-nav-link" href="index.html">Home</a>
-    <a class="text-base text-[#CBD5E1]" href="home-2.html">Home 2</a>
-    <a class="text-base text-[#CBD5E1]" href="about.html">About</a>
-    
-    <a class="text-base text-[#CBD5E1]" href="services.html">Services</a>
+    <a class="text-base text-[#D4AF37] font-bold active-nav-link text-decoration-none" href="index.html">Home</a>
+    <a class="text-base text-[#E2E8F0] text-decoration-none" href="home-2.html">Home 2</a>
+    <a class="text-base text-[#E2E8F0] text-decoration-none" href="services.html">Fleet</a>
+    <a class="text-base text-[#E2E8F0] text-decoration-none" href="prescriptions.html">Rates</a>
+    <a class="text-base text-[#E2E8F0] text-decoration-none" href="about.html">About</a>
+    <a class="text-base text-[#E2E8F0] text-decoration-none" href="contact.html">Contact</a>
+    <a class="text-base text-[#E2E8F0] text-decoration-none" href="dashboard.html">Dashboard</a>
 
-    <a class="text-base text-[#CBD5E1]" href="doctors.html">Doctors</a>
-    <a class="text-base text-[#CBD5E1]" href="contact.html">Contact</a>
-    <a class="text-base text-[#CBD5E1]" href="dashboard.html">Dashboard</a>
+    <div class="h-[1px] bg-white/10 my-2"></div>
 
-    <div class="h-[1px] bg-gray-800/80 my-2"></div>
-    
     <!-- Mobile Settings Section -->
     <div class="space-y-2">
       <span class="text-[11px] uppercase tracking-wider text-[#94A3B8] font-heading font-semibold block px-1">Settings</span>
@@ -126,7 +124,7 @@
         </button>
         <button id="rtl-toggle-mobile" class="mobile-settings-btn flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-medium transition-all">
           <span class="flex items-center gap-2">
-            <i class="fa-solid fa-right-left text-[#0284C7]"></i>
+            <i class="fa-solid fa-right-left text-[#D4AF37]"></i>
             <span>Direction</span>
           </span>
           <span id="rtl-switch-track" class="toggle-switch-track">
@@ -138,135 +136,152 @@
 
     <div class="pt-2">
       <a href="register.html"
-        class="w-full block text-center py-2.5 rounded-xl bg-[#0D9488] text-white font-medium hover:bg-opacity-95 transition-all text-decoration-none text-sm shadow-md shadow-[#0D9488]/20">
-        Register
+        class="w-full block text-center py-2.5 rounded-xl bg-[#0D9488] text-white font-medium hover:bg-opacity-95 transition-all text-decoration-none text-sm shadow-md">
+        Book Vehicle
       </a>
     </div>
   </div>
 
-  <!-- Hero Section (Redesigned Home 1 Centered Header Banner with Interactive Appointment Launcher & Clinical Showcase) -->
-  <section class="relative min-h-screen lg:min-h-0 flex items-center pt-24 lg:pt-28 pb-16 lg:pb-24 xl:pt-32 xl:pb-28 overflow-hidden bg-gradient-to-b from-[#081018] via-[#0B1A28] to-[#081018] home1-hero-wrapper max-w-full">
-    <!-- Gradient Orbs & Subtle Mesh Background -->
-    <div class="bg-gradient-orb orb-primary opacity-60"></div>
-    <div class="bg-gradient-orb orb-secondary opacity-50 top-1/4 left-10"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(#0D9488_1px,transparent_1px)] [background-size:28px_28px] opacity-10 pointer-events-none"></div>
+  <!-- Hero Section -->
+  <section class="relative flex items-center pt-24 lg:pt-28 pb-16 lg:pb-20 overflow-hidden bg-[#070C18] home1-hero-wrapper max-w-full">
+    <!-- Full-Bleed Scenic Highway Background Image + Navy Gradient Overlay -->
+    <div class="absolute inset-0 z-0 overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1800&q=80" alt="Scenic mountain highway road trip background" class="w-full h-full object-cover object-center opacity-35 hero-ken-burns">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#070C18]/90 via-[#0B1120]/80 to-[#111B2E]/95"></div>
+    </div>
+    <div class="bg-gradient-orb orb-primary opacity-40"></div>
+    <div class="bg-gradient-orb orb-secondary opacity-30 top-1/4 left-10"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.06] pointer-events-none"></div>
 
     <div class="container max-w-7xl mx-auto px-4 relative z-10">
-      
+
       <!-- Centered Top Header Banner -->
-      <div class="max-w-3xl mx-auto text-center space-y-4 mb-10 lg:mb-12" data-aos="fade-down">
+      <div class="max-w-3xl mx-auto text-center space-y-3.5 mb-8 lg:mb-10">
         <!-- Eyebrow Pill -->
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0D9488]/15 border border-[#0D9488]/30 text-[#2DD4BF] text-xs font-semibold tracking-widest uppercase shadow-sm">
-          <i class="fa-solid fa-star text-amber-400 text-xs"></i>
-          <span>AAAHC Accredited Chronic Pain & Anesthesiology Clinic</span>
+        <div class="hero-reveal-1 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0D9488]/25 border border-[#D4AF37]/35 text-[#D4AF37] text-[11px] font-semibold tracking-widest uppercase shadow-md backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-[#D4AF37] animate-ping opacity-75"></span>
+          <i class="fa-solid fa-crown text-[#D4AF37] text-[10px]"></i>
+          <span>Trusted Tourist Bus &amp; Tempo Traveller Rental</span>
         </div>
 
         <!-- Main Headline -->
-        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-bold leading-[1.15] text-[#F8FAFC]">
-          Targeted Interventional Pain Relief <br>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0D9488] via-[#14B8A6] to-[#0284C7] text-glow-primary">
-            Restoring Quality & Vitality
+        <h1 class="hero-reveal-2 text-3xl sm:text-5xl lg:text-[3.25rem] font-heading font-bold leading-[1.12] tracking-tight text-white">
+          Your Journey Begins <br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#FDE68A] to-[#2DD4BF] hero-shimmer-text">
+            With the Right Ride
           </span>
         </h1>
 
         <!-- Subtitle -->
-        <p class="text-[#CBD5E1] text-sm sm:text-lg font-light leading-relaxed max-w-2xl mx-auto">
-          Board-certified pain management physicians and anesthesiologists offering fluoroscopy-guided spine injections, diagnostic nerve blocks, and personalized recovery plans.
+        <p class="hero-reveal-3 text-[#CBD5E1] text-sm sm:text-base font-normal leading-relaxed max-w-2xl mx-auto">
+          Travel together, travel comfortably. Explore our premium fleet of tourist buses and tempo travellers for family holidays, group tours, corporate journeys and special occasions.
         </p>
+
+        <!-- Primary Hero CTAs -->
+        <div class="hero-reveal-4 flex flex-wrap items-center justify-center gap-3.5 pt-1">
+          <a href="services.html" class="px-6 py-2.5 rounded-full bg-[#0D9488] text-white font-semibold text-sm hover:bg-[#0F766E] hover:-translate-y-0.5 transition-all shadow-lg shadow-[#0D9488]/30 text-decoration-none inline-flex items-center gap-2">
+            <i class="bi bi-bus-front"></i> Explore Our Fleet
+          </a>
+          <a href="contact.html" class="px-6 py-2.5 rounded-full border border-[#D4AF37]/80 bg-[#D4AF37]/10 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0B1120] hover:-translate-y-0.5 font-semibold text-sm transition-all text-decoration-none inline-flex items-center gap-2">
+            <i class="bi bi-calendar2-check"></i> Book Your Vehicle
+          </a>
+        </div>
       </div>
 
       <!-- 2-Column Split Showcase Grid -->
-      <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+      <div class="grid lg:grid-cols-12 gap-7 lg:gap-9 items-center">
 
-        <!-- Left Column: Interactive Quick Appointment Schedule Widget -->
+        <!-- Left Column: Interactive Quick Trip & Fleet Estimator Widget -->
         <div class="lg:col-span-6" data-aos="fade-right">
-          <div class="glass-panel p-5 sm:p-7 rounded-3xl border border-gray-800/90 shadow-2xl bg-[#0D1B2A]/80 backdrop-blur-xl relative overflow-hidden">
-            <div class="flex items-center justify-between border-b border-gray-800 pb-4 mb-5">
+          <div class="glass-panel p-5 sm:p-7 rounded-3xl border border-white/15 shadow-2xl bg-[#0B1120]/85 backdrop-blur-xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0D9488] via-[#D4AF37] to-[#0D9488]"></div>
+            <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#2DD4BF]">
-                  <i class="fa-solid fa-calendar-day text-lg"></i>
+                <div class="w-10 h-10 rounded-xl bg-[#0D9488]/25 border border-[#0D9488]/50 flex items-center justify-center text-[#D4AF37]">
+                  <i class="fa-solid fa-route text-lg"></i>
                 </div>
                 <div>
-                  <h3 class="text-base font-heading font-bold text-white leading-tight">Instant Consultation Scheduler</h3>
+                  <h3 class="text-base font-heading font-bold text-white leading-tight mb-0">Quick Vehicle &amp; Trip Enquiry</h3>
+                  <p class="text-[11px] text-[#94A3B8] mb-0">Instant availability &amp; custom route estimate</p>
                 </div>
               </div>
-              </span>
+              <span class="px-2.5 py-1 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/30 text-[#D4AF37] text-[11px] font-semibold">24/7 Dispatch</span>
             </div>
 
             <form action="contact.html" method="GET" class="space-y-4">
               <div class="grid sm:grid-cols-2 gap-3">
                 <div>
-                  <label for="home1-area-select" class="block text-xs font-semibold text-[#CBD5E1] mb-1.5">Target Pain Region</label>
-                  <select id="home1-area-select" class="w-full bg-[#081018] border border-gray-700/80 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-[#0D9488] transition-colors">
-                    <option>Lumbar / Lower Back Pain</option>
-                    <option>Neck & Shoulder Radiculopathy</option>
-                    <option>Knee & Peripheral Joint Pain</option>
-                    <option>Sciatica & Nerve Compression</option>
-                    <option>Sub-Specialty Anesthesiology Consult</option>
+                  <label for="home1-vehicle-select" class="block text-xs font-semibold text-[#E2E8F0] mb-1.5">Select Vehicle Category</label>
+                  <select id="home1-vehicle-select" class="w-full bg-[#070C18] border border-white/20 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-[#D4AF37] transition-colors">
+                    <option>12-Seater Tempo Traveller (AC)</option>
+                    <option>17-Seater Tempo Traveller (AC)</option>
+                    <option>20-Seater Tourist Mini Bus</option>
+                    <option>27-Seater Tourist Bus</option>
+                    <option>35-Seater Executive Bus</option>
+                    <option>45-Seater Luxury Coach</option>
                   </select>
                 </div>
                 <div>
-                  <label for="home1-care-select" class="block text-xs font-semibold text-[#CBD5E1] mb-1.5">Preferred Visit Type</label>
-                  <select id="home1-care-select" class="w-full bg-[#081018] border border-gray-700/80 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-[#0D9488] transition-colors">
-                    <option>In-Clinic Fluoroscopy Evaluation</option>
-                    <option>Diagnostic Injection Procedure</option>
-                    <option>Telehealth Virtual Consultation</option>
-                    <option>Second Opinion & Chart Review</option>
+                  <label for="home1-trip-select" class="block text-xs font-semibold text-[#E2E8F0] mb-1.5">Trip Purpose</label>
+                  <select id="home1-trip-select" class="w-full bg-[#070C18] border border-white/20 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-[#D4AF37] transition-colors">
+                    <option>Family Holiday / Outstation Tour</option>
+                    <option>Corporate Offsite &amp; Team Travel</option>
+                    <option>Wedding Guest Transportation</option>
+                    <option>Airport / Railway Group Transfer</option>
+                    <option>Custom Multi-City Package</option>
                   </select>
                 </div>
               </div>
 
-              <div class="pt-2 flex items-center gap-3">
+              <div class="pt-1 flex items-center gap-3">
                 <a href="contact.html"
-   class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#0D9488] to-[#0284C7] font-medium text-center text-xs sm:text-sm hover:shadow-lg hover:shadow-[#0D9488]/30 hover:scale-[1.01] transition-all shadow-md flex items-center justify-center gap-2"
-   style="color: #ffffff !important;">
-
-  <i class="fa-solid fa-clock text-xs" style="color: #ffffff !important;"></i>
-
-  <span style="color: #ffffff !important;">Schedule Priority Consultation</span>
-</a>
+                  class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#0D9488] to-[#111B2E] border border-[#0D9488]/80 font-semibold text-center text-xs sm:text-sm hover:shadow-lg hover:shadow-[#0D9488]/30 hover:scale-[1.01] transition-all shadow-md flex items-center justify-center gap-2 text-decoration-none"
+                  style="color: #ffffff !important;">
+                  <i class="fa-solid fa-paper-plane text-xs" style="color: #D4AF37 !important;"></i>
+                  <span style="color: #ffffff !important;">Get Your Custom Travel Quote</span>
+                </a>
               </div>
 
-              <div class="pt-2 flex items-center justify-between text-[11px] text-[#94A3B8] border-t border-gray-800/80">
-                <span class="flex items-center gap-1.5"><i class="fa-solid fa-lock text-[#0D9488]"></i> HIPAA Compliant</span>
-                <span class="flex items-center gap-1.5"><i class="fa-solid fa-bolt text-amber-400"></i> Same-Week Openings</span>
+              <div class="pt-2 flex items-center justify-between text-[11px] text-[#CBD5E1] border-t border-white/10">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-check-circle text-[#D4AF37]"></i> GPS &amp; AC Verified</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-bolt text-[#D4AF37]"></i> Instant Quote Response</span>
               </div>
             </form>
           </div>
         </div>
 
-        <!-- Right Column: Interactive Clinical Image & Live Availability Frame -->
+        <!-- Right Column: Showcase Vehicle Image & Live Availability Frame -->
         <div class="lg:col-span-6 relative" data-aos="fade-left">
           <div class="relative w-full max-w-md lg:max-w-none mx-auto">
-            
+
             <!-- Main Hero Image Frame -->
-            <div class="relative w-full h-[280px] xs:h-[320px] sm:h-[380px] lg:h-[420px] rounded-3xl overflow-hidden border border-gray-800 shadow-2xl group">
-              <img src="https://www.latrobe.edu.au/courses/images/Master-of-Physiotherapy_1440.jpg/large.jpg" alt="ApexPain Clinical Consultation" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-[#081018] via-transparent to-transparent opacity-70"></div>
+            <div class="relative w-full h-[270px] sm:h-[340px] lg:h-[380px] rounded-3xl overflow-hidden border border-white/20 ring-1 ring-[#D4AF37]/25 shadow-2xl group">
+              <img src="images/hero-coach.jpg" alt="Horizon Coach luxury tourist bus driving on a scenic mountain highway" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0B1120]/85 via-transparent to-transparent"></div>
             </div>
 
             <!-- Floating Live Status Badge (Top Right) -->
-            <div class="absolute -top-4 right-2 sm:-top-5 sm:right-6 glass-panel px-3.5 py-2.5 rounded-2xl border border-gray-700/80 shadow-2xl flex items-center gap-2.5 bg-[#0D1B2A]/90 backdrop-blur-md">
-              <div class="w-8 h-8 rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#2DD4BF] shrink-0">
-                <i class="fa-solid fa-bolt text-xs"></i>
+            <div class="hero-float absolute top-3 right-3 sm:right-4 glass-panel px-3.5 py-2 rounded-2xl border border-[#D4AF37]/35 shadow-2xl flex items-center gap-2.5 bg-[#0B1120]/95 backdrop-blur-md">
+              <div class="w-8 h-8 rounded-xl bg-[#0D9488]/25 border border-[#0D9488]/50 flex items-center justify-center text-[#D4AF37] shrink-0">
+                <i class="fa-solid fa-bus text-xs"></i>
               </div>
               <div>
-                <p class="text-[9px] uppercase tracking-wider text-[#94A3B8] font-semibold leading-none">Next Scan Slot</p>
-                <p class="text-[11px] font-bold text-white mt-0.5">Today @ 2:30 PM</p>
+                <p class="text-[9px] uppercase tracking-wider text-[#CBD5E1] font-semibold leading-none mb-0">Fleet Availability</p>
+                <p class="text-[11px] font-bold text-white mt-0.5 mb-0">12 to 45 Seaters Ready</p>
               </div>
             </div>
 
-            <!-- Floating Patient Rating Badge (Bottom Left) -->
-            <div class="absolute -bottom-4 left-2 sm:-bottom-5 sm:left-6 glass-panel px-4 py-3 rounded-2xl border border-gray-700/80 shadow-2xl flex items-center gap-3 bg-[#0D1B2A]/90 backdrop-blur-md">
-              <div class="w-9 h-9 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
+            <!-- Floating Customer Rating Badge (Bottom Left) -->
+            <div class="hero-float-delayed absolute bottom-3 left-3 sm:left-4 glass-panel px-4 py-2.5 rounded-2xl border border-white/20 shadow-2xl flex items-center gap-3 bg-[#0B1120]/95 backdrop-blur-md">
+              <div class="w-9 h-9 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/40 flex items-center justify-center text-[#D4AF37] shrink-0">
                 <i class="fa-solid fa-star text-sm"></i>
               </div>
               <div>
                 <div class="flex items-center gap-1">
                   <span class="text-xs font-bold text-white">4.9 / 5.0</span>
-                  <span class="text-[10px] text-amber-400">★★★★★</span>
+                  <span class="text-[10px] text-[#D4AF37]">★★★★★</span>
                 </div>
-                <p class="text-[10px] text-[#94A3B8] font-medium mt-0.5">2,400+ Verified Patient Reviews</p>
+                <p class="text-[10px] text-[#CBD5E1] font-medium mt-0.5 mb-0">2,400+ Safe Group Journeys</p>
               </div>
             </div>
 
@@ -276,294 +291,316 @@
       </div>
 
       <!-- Bottom Specialty Feature Bar (4-Pill Ribbon) -->
-      <div class="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 items-stretch border-t border-gray-800/80 pt-6">
+      <div class="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 items-stretch border-t border-white/10 pt-6">
 
-  <div class="glass-panel min-w-0 h-full p-3 sm:p-4 rounded-2xl border border-gray-800/80 bg-[#0D1B2A]/40 flex flex-col items-center justify-center text-center gap-2">
-    <i class="fa-solid fa-bullseye text-[#0D9488] text-lg sm:text-xl"></i>
-    <div class="flex flex-col items-center justify-center gap-1">
-      <h4 class="text-xs font-bold text-white">Fluoroscopy Guided</h4>
-      <p class="text-[10px] text-[#94A3B8]">High-definition imaging</p>
-    </div>
-  </div>
+        <div class="glass-panel min-w-0 h-full p-3 sm:p-4 rounded-2xl border border-white/10 bg-[#111B2E]/50 flex flex-col items-center justify-center text-center gap-2">
+          <i class="fa-solid fa-location-crosshairs text-[#D4AF37] text-lg sm:text-xl"></i>
+          <div class="flex flex-col items-center justify-center gap-1">
+            <h4 class="text-xs font-bold text-white">GPS Tracked Fleet</h4>
+            <p class="text-[10px] text-[#CBD5E1]">Live route &amp; safety monitoring</p>
+          </div>
+        </div>
 
-  <div class="glass-panel min-w-0 h-full p-3 sm:p-4 rounded-2xl border border-gray-800/80 bg-[#0D1B2A]/40 flex flex-col items-center justify-center text-center gap-2">
-    <i class="fa-solid fa-user-shield text-[#0284C7] text-lg sm:text-xl"></i>
-    <div class="flex flex-col items-center justify-center gap-1">
-      <h4 class="text-xs font-bold text-white">Outpatient Recovery</h4>
-      <p class="text-[10px] text-[#94A3B8]">Same-day discharge</p>
-    </div>
-  </div>
+        <div class="glass-panel min-w-0 h-full p-3 sm:p-4 rounded-2xl border border-white/10 bg-[#111B2E]/50 flex flex-col items-center justify-center text-center gap-2">
+          <i class="fa-solid fa-id-card-clip text-[#0D9488] text-lg sm:text-xl"></i>
+          <div class="flex flex-col items-center justify-center gap-1">
+            <h4 class="text-xs font-bold text-white">Verified Chauffeurs</h4>
+            <p class="text-[10px] text-[#CBD5E1]">Uniformed highway experts</p>
+          </div>
+        </div>
 
-  <div class="glass-panel min-w-0 h-full p-3 sm:p-4 rounded-2xl border border-gray-800/80 bg-[#0D1B2A]/40 flex flex-col items-center justify-center text-center gap-2">
-    <i class="fa-solid fa-laptop-medical text-[#14B8A6] text-lg sm:text-xl"></i>
-    <div class="flex flex-col items-center justify-center gap-1">
-      <h4 class="text-xs font-bold text-white">Multidisciplinary</h4>
-      <p class="text-[10px] text-[#94A3B8]">Anesthesiology specialists</p>
-    </div>
-  </div>
+        <div class="glass-panel min-w-0 h-full p-3 sm:p-4 rounded-2xl border border-white/10 bg-[#111B2E]/50 flex flex-col items-center justify-center text-center gap-2">
+          <i class="fa-solid fa-snowflake text-[#D4AF37] text-lg sm:text-xl"></i>
+          <div class="flex flex-col items-center justify-center gap-1">
+            <h4 class="text-xs font-bold text-white">Pushback AC Comfort</h4>
+            <p class="text-[10px] text-[#CBD5E1]">Spacious legroom &amp; luggage bays</p>
+          </div>
+        </div>
 
-  <div class="glass-panel min-w-0 h-full p-3 sm:p-4 rounded-2xl border border-gray-800/80 bg-[#0D1B2A]/40 flex flex-col items-center justify-center text-center gap-2">
-    <i class="fa-solid fa-file-invoice-dollar text-emerald-400 text-lg sm:text-xl"></i>
-    <div class="flex flex-col items-center justify-center gap-1">
-      <h4 class="text-xs font-bold text-white">Insurance Accepted</h4>
-      <p class="text-[10px] text-[#94A3B8]">Major providers covered</p>
-    </div>
-  </div>
+        <div class="glass-panel min-w-0 h-full p-3 sm:p-4 rounded-2xl border border-white/10 bg-[#111B2E]/50 flex flex-col items-center justify-center text-center gap-2">
+          <i class="fa-solid fa-file-invoice-dollar text-[#0D9488] text-lg sm:text-xl"></i>
+          <div class="flex flex-col items-center justify-center gap-1">
+            <h4 class="text-xs font-bold text-white">Transparent Pricing</h4>
+            <p class="text-[10px] text-[#CBD5E1]">Clear per-km &amp; package rates</p>
+          </div>
+        </div>
 
-</div>
+      </div>
 
     </div>
   </section>
 
-  <!-- 1. Clinical Offerings -> Interventional Procedures & Anesthesiology -->
-  <section class="py-24 bg-[#081018]">
+  <!-- 1. Featured Vehicle Fleet (6 Categories) -->
+  <section class="py-24 bg-[#0B1120]">
     <div class="container max-w-7xl mx-auto px-4">
       <div class="text-center space-y-3 mb-16" data-aos="fade-up">
-        <span class="text-xs uppercase tracking-widest text-[#0284C7] font-heading font-semibold">Clinical Services</span>
-        <h2 class="text-3xl md:text-4xl font-heading">Interventional Pain & Anesthesiology Care</h2>
-        <p class="text-[#94A3B8] max-w-xl mx-auto">Fluoroscopy-guided spinal injections, diagnostic nerve blocks, neuromodulation, and sub-specialty anesthesiology.</p>
+        <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-heading font-semibold">Featured Vehicle Fleet</span>
+        <h2 class="text-3xl md:text-4xl font-heading">Tourist Buses &amp; Tempo Travellers for Every Group</h2>
+        <p class="text-[#94A3B8] max-w-xl mx-auto">Choose from 12-seater tempo travellers to 45-seater luxury coaches, maintained for highway reliability and passenger comfort.</p>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Service Card 1 -->
+        <!-- Fleet Card 1 -->
         <div class="glass-panel rounded-2xl overflow-hidden glass-card-hover" data-aos="fade-up" data-aos-delay="100">
           <div class="h-48 relative overflow-hidden">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjgBqnV-l9qrKjtfqMNyf8YPmQbGGwrhrbh9Q9MBnwfm-oEeYrVHLL2yg&s=10" alt="Epidural Injections"
+            <img src="https://images.pexels.com/photos/28897042/pexels-photo-28897042/free-photo-of-scenic-road-trip-adventure-with-camper-van.jpeg?auto=compress&cs=tinysrgb&w=900" alt="12-Seater Tempo Traveller on scenic highway"
               class="w-full h-full object-cover">
           </div>
           <div class="p-6 space-y-3">
-            <h3 class="text-xl font-heading">Epidural Steroid Injections</h3>
-            <p class="text-sm text-[#CBD5E1]">Targeted fluoroscopy-guided cervical, thoracic, and lumbar epidural injections for herniated discs and sciatica.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold text-[#D4AF37] uppercase">12+1 Seater</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-[#0D9488]/20 text-[#2DD4BF]">AC Pushback</span>
+            </div>
+            <h3 class="text-xl font-heading">12-Seater Tempo Traveller</h3>
+            <p class="text-sm text-[#CBD5E1]">Ideal for family vacations, weekend hill-station getaways, and airport transfers with generous luggage space.</p>
           </div>
         </div>
 
-        <!-- Service Card 2 -->
+        <!-- Fleet Card 2 -->
         <div class="glass-panel rounded-2xl overflow-hidden glass-card-hover" data-aos="fade-up" data-aos-delay="200">
           <div class="h-48 relative overflow-hidden">
-            <img src="https://d2yjegym0lbr1w.cloudfront.net/thumbs/medialblock_1280.jpg?v=201808111" alt="Nerve Blocks & Ablation"
+            <img src="https://images.pexels.com/photos/29510192/pexels-photo-29510192/free-photo-of-travelers-seated-on-a-bus-interior-view.jpeg?auto=compress&cs=tinysrgb&w=900" alt="17-Seater Tempo Traveller exterior"
               class="w-full h-full object-cover">
           </div>
           <div class="p-6 space-y-3">
-            <h3 class="text-xl font-heading">Nerve Blocks & Ablation</h3>
-            <p class="text-sm text-[#CBD5E1]">Diagnostic medial branch blocks, stellate ganglion blocks, and radiofrequency ablation (RFA) for chronic nerve pain.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold text-[#D4AF37] uppercase">17+1 Seater</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-[#0D9488]/20 text-[#2DD4BF]">Executive AC</span>
+            </div>
+            <h3 class="text-xl font-heading">17-Seater Tempo Traveller</h3>
+            <p class="text-sm text-[#CBD5E1]">High-roof executive traveller with individual reading lights, USB charging ports, and smooth suspension.</p>
           </div>
         </div>
 
-        <!-- Service Card 3 -->
+        <!-- Fleet Card 3 -->
         <div class="glass-panel rounded-2xl overflow-hidden glass-card-hover" data-aos="fade-up" data-aos-delay="300">
           <div class="h-48 relative overflow-hidden">
-            <img src="https://www.ultrasound-guided-injections.co.uk/wp-content/uploads/2024/10/rank-math-social-image.jpg" alt="Spine & Joint Injections"
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=900&q=80" alt="20-Seater Mini Bus"
               class="w-full h-full object-cover">
           </div>
           <div class="p-6 space-y-3">
-            <h3 class="text-xl font-heading">Spine & Joint Interventions</h3>
-            <p class="text-sm text-[#CBD5E1]">Precision facet joint injections, sacroiliac (SI) joint blocks, and ultrasound-guided joint therapies.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold text-[#D4AF37] uppercase">20 Seater</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-[#0D9488]/20 text-[#2DD4BF]">AC / Non-AC</span>
+            </div>
+            <h3 class="text-xl font-heading">20-Seater Mini Bus</h3>
+            <p class="text-sm text-[#CBD5E1]">Nimble mid-size tourist mini bus perfect for corporate offsites, pilgrimage circuits, and city sightseeing.</p>
           </div>
         </div>
 
-        <!-- Service Card 4 -->
+        <!-- Fleet Card 4 -->
         <div class="glass-panel rounded-2xl overflow-hidden glass-card-hover" data-aos="fade-up" data-aos-delay="400">
           <div class="h-48 relative overflow-hidden">
-            <img src="https://floridasurgeryconsultants.com/wp-content/uploads/2018/02/Back-Pain-The-5-Benefits-of-Spinal-Cord-Stimulation.jpg" alt="Spinal Cord Stimulation"
+            <img src="images/fleet-27-bus.jpg" alt="27-Seater Tourist Bus on coastal highway"
               class="w-full h-full object-cover">
           </div>
           <div class="p-6 space-y-3">
-            <h3 class="text-xl font-heading">Spinal Cord Stimulation (SCS)</h3>
-            <p class="text-sm text-[#CBD5E1]">Advanced neuromodulation trials and permanent implant therapies for severe refractory neuropathic pain.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold text-[#D4AF37] uppercase">27 Seater</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-[#0D9488]/20 text-[#2DD4BF]">Panoramic AC</span>
+            </div>
+            <h3 class="text-xl font-heading">27-Seater Tourist Bus</h3>
+            <p class="text-sm text-[#CBD5E1]">Panoramic tinted glass, 2x2 reclining coach seating, PA audio system, and dedicated under-floor luggage hold.</p>
           </div>
         </div>
 
-        <!-- Service Card 5 -->
+        <!-- Fleet Card 5 -->
         <div class="glass-panel rounded-2xl overflow-hidden glass-card-hover" data-aos="fade-up" data-aos-delay="500">
           <div class="h-48 relative overflow-hidden">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwIY46Wt6IW-8IGmJoARQS1I-6pbygwaGfBUgHzfmTPUbVPMvSq39RUeK2&s=10" alt="Outpatient Anesthesiology"
+            <img src="https://images.pexels.com/photos/29586609/pexels-photo-29586609/free-photo-of-luxury-seabird-coach-bus-for-comfortable-travel.jpeg?auto=compress&cs=tinysrgb&w=900" alt="35-Seater Tourist Bus"
               class="w-full h-full object-cover">
           </div>
           <div class="p-6 space-y-3">
-            <h3 class="text-xl font-heading">Sub-Specialty Anesthesiology</h3>
-            <p class="text-sm text-[#CBD5E1]">Dedicated outpatient anesthesia care, conscious sedation, and perioperative monitoring for pain procedures.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold text-[#D4AF37] uppercase">35 Seater</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-[#0D9488]/20 text-[#2DD4BF]">Air Suspension</span>
+            </div>
+            <h3 class="text-xl font-heading">35-Seater Tourist Bus</h3>
+            <p class="text-sm text-[#CBD5E1]">Designed for college tours, wedding baraat guest shuttles, and multi-day interstate heritage tours.</p>
           </div>
         </div>
 
-        <!-- Service Card 6 -->
+        <!-- Fleet Card 6 -->
         <div class="glass-panel rounded-2xl overflow-hidden glass-card-hover" data-aos="fade-up" data-aos-delay="600">
           <div class="h-48 relative overflow-hidden">
-            <img src="https://texasspecialtyclinic.com/blogs/wp-content/uploads/2025/10/GettyImages-857090084-physical-therapy-600x350-min.jpg" alt="Chronic Pain Rehab"
+            <img src="images/fleet-45-coach.jpg" alt="45-Seater Luxury Coach parked at hotel"
               class="w-full h-full object-cover">
           </div>
           <div class="p-6 space-y-3">
-            <h3 class="text-xl font-heading">Chronic Pain Rehabilitation</h3>
-            <p class="text-sm text-[#CBD5E1]">Multidisciplinary physical therapy, non-opioid medication management, and functional recovery programs.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold text-[#D4AF37] uppercase">45 Seater</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-[#D4AF37]/20 text-[#D4AF37]">Luxury Coach</span>
+            </div>
+            <h3 class="text-xl font-heading">45-Seater Luxury Coach</h3>
+            <p class="text-sm text-[#CBD5E1]">Flagship Volvo-class highway coach with plush calf-support recliners, LED entertainment, and climate control.</p>
           </div>
         </div>
       </div>
+
+      <div class="text-center mt-12">
+        <a href="services.html" class="px-8 py-3 rounded-full bg-[#0D9488] text-white font-semibold text-sm hover:bg-[#0D9488]/90 transition-all text-decoration-none inline-flex items-center gap-2">
+          View All Fleet Specifications <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- 2. ApexPain Clinic Stats -->
-  <section class="py-16 bg-[#0D1B2A]/40 border-y border-gray-800">
+  <!-- 2. Why Choose Our Services (Stats Ribbon) -->
+  <section class="py-16 bg-[#111B2E]/50 border-y border-white/10">
     <div class="container max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
       <div data-aos="zoom-in" data-aos-delay="100">
-        <h3 class="text-4xl font-heading text-[#0D9488] font-medium">12K+</h3>
-        <p class="text-xs text-[#94A3B8] uppercase tracking-wider mt-1">Targeted Procedures</p>
+        <h3 class="text-4xl font-heading text-[#D4AF37] font-medium">15K+</h3>
+        <p class="text-xs text-[#CBD5E1] uppercase tracking-wider mt-1">Completed Group Trips</p>
       </div>
       <div data-aos="zoom-in" data-aos-delay="200">
-        <h3 class="text-4xl font-heading text-[#0D9488] font-medium">98%</h3>
-        <p class="text-xs text-[#94A3B8] uppercase tracking-wider mt-1">Pain Relief Satisfaction</p>
+        <h3 class="text-4xl font-heading text-[#D4AF37] font-medium">99%</h3>
+        <p class="text-xs text-[#CBD5E1] uppercase tracking-wider mt-1">On-Time Pickup Rate</p>
       </div>
       <div data-aos="zoom-in" data-aos-delay="300">
-        <h3 class="text-4xl font-heading text-[#0D9488] font-medium">15+</h3>
-        <p class="text-xs text-[#94A3B8] uppercase tracking-wider mt-1">Years Clinical Expertise</p>
+        <h3 class="text-4xl font-heading text-[#D4AF37] font-medium">45+</h3>
+        <p class="text-xs text-[#CBD5E1] uppercase tracking-wider mt-1">Modern Coaches &amp; Vans</p>
       </div>
       <div data-aos="zoom-in" data-aos-delay="400">
-        <h3 class="text-4xl font-heading text-[#0D9488] font-medium">100%</h3>
-        <p class="text-xs text-[#94A3B8] uppercase tracking-wider mt-1">Board-Certified Team</p>
+        <h3 class="text-4xl font-heading text-[#D4AF37] font-medium">24/7</h3>
+        <p class="text-xs text-[#CBD5E1] uppercase tracking-wider mt-1">Roadside &amp; Dispatch Support</p>
       </div>
     </div>
   </section>
 
-  <!-- 3. Patient Care Journey (8 Steps) -->
-  <section class="py-24 bg-[#081018] relative">
+  <!-- 3. Seamless Booking Process (8 Steps) -->
+  <section class="py-24 bg-[#0B1120] relative">
     <div class="container max-w-7xl mx-auto px-4">
       <div class="text-center space-y-3 mb-20" data-aos="fade-up">
-        <span class="text-xs uppercase tracking-widest text-[#0284C7] font-heading font-semibold">Patient Journey</span>
-        <h2 class="text-3xl md:text-4xl font-heading">Our Clinical Pathway to Pain Relief</h2>
-        <p class="text-[#94A3B8] max-w-xl mx-auto">A thorough diagnostic and interventional treatment model designed for lasting functional recovery.</p>
+        <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-heading font-semibold">Booking Process</span>
+        <h2 class="text-3xl md:text-4xl font-heading">How Your Group Journey Comes Together</h2>
+        <p class="text-[#94A3B8] max-w-xl mx-auto">From selecting the right seating capacity to safe return drop-off, every trip is managed with precision.</p>
       </div>
 
       <div class="relative">
-        <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-4 gap-6 relative z-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
           <!-- Step 1 -->
-          <div class="glass-panel p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0D9488]/10 group flex flex-col items-center text-center h-full z-10 border border-gray-800 hover:border-[#0D9488]/50 col-span-1 md:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="100">
-            <div class="absolute -inset-px bg-gradient-to-br from-[#0284C7]/20 to-[#0D9488]/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-            <div class="w-12 h-12 rounded-xl bg-[#0D9488]/10 border border-[#0D9488]/30 flex items-center justify-center text-[#0D9488] group-hover:bg-[#0D9488] group-hover:text-white transition-all duration-300 mb-6 shrink-0 shadow-lg shadow-[#0D9488]/5 mx-auto">
-              <i class="fa-solid fa-clipboard-user text-xl"></i>
+          <div class="glass-panel p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group flex flex-col items-center text-center h-full z-10 border border-white/10 hover:border-[#0D9488]/60" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-12 h-12 rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] group-hover:bg-[#0D9488] group-hover:text-white transition-all duration-300 mb-6 shrink-0 mx-auto">
+              <i class="fa-solid fa-users text-xl"></i>
             </div>
             <div class="space-y-2 flex-grow flex flex-col justify-between">
               <div>
-                <span class="text-xs font-semibold text-[#0D9488] uppercase tracking-wider block mb-1">Step 1</span>
-                <h3 class="text-lg font-bold font-heading text-white group-hover:text-[#0284C7] transition-colors duration-200 mb-2">Initial Intake</h3>
-                <p class="text-xs text-[#CBD5E1] group-hover:text-gray-300 transition-colors duration-200 leading-relaxed">
-                  Comprehensive pain evaluation, symptom history review, and baseline assessment.
+                <span class="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider block mb-1">Step 1</span>
+                <h3 class="text-lg font-bold font-heading text-white mb-2">Choose Seating</h3>
+                <p class="text-xs text-[#CBD5E1] leading-relaxed">
+                  Pick from 12, 17, 20, 27, 35, or 45-seater vehicles matched to your group size.
                 </p>
               </div>
             </div>
           </div>
 
           <!-- Step 2 -->
-          <div class="glass-panel p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0D9488]/10 group flex flex-col items-center text-center h-full z-10 border border-gray-800 hover:border-[#0D9488]/50 col-span-1 md:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="200">
-            <div class="absolute -inset-px bg-gradient-to-br from-[#0284C7]/20 to-[#0D9488]/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-            <div class="w-12 h-12 rounded-xl bg-[#0D9488]/10 border border-[#0D9488]/30 flex items-center justify-center text-[#0D9488] group-hover:bg-[#0D9488] group-hover:text-white transition-all duration-300 mb-6 shrink-0 shadow-lg shadow-[#0D9488]/5 mx-auto">
-              <i class="fa-solid fa-x-ray text-xl"></i>
+          <div class="glass-panel p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group flex flex-col items-center text-center h-full z-10 border border-white/10 hover:border-[#0D9488]/60" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-12 h-12 rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] group-hover:bg-[#0D9488] group-hover:text-white transition-all duration-300 mb-6 shrink-0 mx-auto">
+              <i class="fa-solid fa-map-pin text-xl"></i>
             </div>
             <div class="space-y-2 flex-grow flex flex-col justify-between">
               <div>
-                <span class="text-xs font-semibold text-[#0D9488] uppercase tracking-wider block mb-1">Step 2</span>
-                <h3 class="text-lg font-bold font-heading text-white group-hover:text-[#0284C7] transition-colors duration-200 mb-2">Diagnostic Imaging</h3>
-                <p class="text-xs text-[#CBD5E1] group-hover:text-gray-300 transition-colors duration-200 leading-relaxed">
-                  MRI, CT, and fluoroscopy imaging review to pinpoint exact anatomical nerve and disc targets.
+                <span class="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider block mb-1">Step 2</span>
+                <h3 class="text-lg font-bold font-heading text-white mb-2">Share Itinerary</h3>
+                <p class="text-xs text-[#CBD5E1] leading-relaxed">
+                  Enter pickup point, destination cities, travel dates, and return schedule.
                 </p>
               </div>
             </div>
           </div>
 
           <!-- Step 3 -->
-          <div class="glass-panel p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0D9488]/10 group flex flex-col items-center text-center h-full z-10 border border-gray-800 hover:border-[#0D9488]/50 col-span-1 md:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="300">
-            <div class="absolute -inset-px bg-gradient-to-br from-[#0284C7]/20 to-[#0D9488]/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-            <div class="w-12 h-12 rounded-xl bg-[#0D9488]/10 border border-[#0D9488]/30 flex items-center justify-center text-[#0D9488] group-hover:bg-[#0D9488] group-hover:text-white transition-all duration-300 mb-6 shrink-0 shadow-lg shadow-[#0D9488]/5 mx-auto">
-              <i class="fa-solid fa-user-nurse text-xl"></i>
+          <div class="glass-panel p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group flex flex-col items-center text-center h-full z-10 border border-white/10 hover:border-[#0D9488]/60" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-12 h-12 rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] group-hover:bg-[#0D9488] group-hover:text-white transition-all duration-300 mb-6 shrink-0 mx-auto">
+              <i class="fa-solid fa-file-invoice text-xl"></i>
             </div>
             <div class="space-y-2 flex-grow flex flex-col justify-between">
               <div>
-                <span class="text-xs font-semibold text-[#0D9488] uppercase tracking-wider block mb-1">Step 3</span>
-                <h3 class="text-lg font-bold font-heading text-white group-hover:text-[#0284C7] transition-colors duration-200 mb-2">Anesthesia Review</h3>
-                <p class="text-xs text-[#CBD5E1] group-hover:text-gray-300 transition-colors duration-200 leading-relaxed">
-                  Pre-anesthetic evaluation ensuring patient safety, cardiac clearance, and sedation parameters.
+                <span class="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider block mb-1">Step 3</span>
+                <h3 class="text-lg font-bold font-heading text-white mb-2">Transparent Quote</h3>
+                <p class="text-xs text-[#CBD5E1] leading-relaxed">
+                  Receive a clear breakdown of per-km charges, driver allowance, and tolls.
                 </p>
               </div>
             </div>
           </div>
 
           <!-- Step 4 -->
-          <div class="glass-panel p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0D9488]/10 group flex flex-col items-center text-center h-full z-10 border border-gray-800 hover:border-[#0D9488]/50 col-span-1 md:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="400">
-            <div class="absolute -inset-px bg-gradient-to-br from-[#0284C7]/20 to-[#0D9488]/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-            <div class="w-12 h-12 rounded-xl bg-[#0D9488]/10 border border-[#0D9488]/30 flex items-center justify-center text-[#0D9488] group-hover:bg-[#0D9488] group-hover:text-white transition-all duration-300 mb-6 shrink-0 shadow-lg shadow-[#0D9488]/5 mx-auto">
-              <i class="fa-solid fa-notes-medical text-xl"></i>
+          <div class="glass-panel p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group flex flex-col items-center text-center h-full z-10 border border-white/10 hover:border-[#0D9488]/60" data-aos="fade-up" data-aos-delay="400">
+            <div class="w-12 h-12 rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] group-hover:bg-[#0D9488] group-hover:text-white transition-all duration-300 mb-6 shrink-0 mx-auto">
+              <i class="fa-solid fa-calendar-check text-xl"></i>
             </div>
             <div class="space-y-2 flex-grow flex flex-col justify-between">
               <div>
-                <span class="text-xs font-semibold text-[#0D9488] uppercase tracking-wider block mb-1">Step 4</span>
-                <h3 class="text-lg font-bold font-heading text-white group-hover:text-[#0284C7] transition-colors duration-200 mb-2">Treatment Design</h3>
-                <p class="text-xs text-[#CBD5E1] group-hover:text-gray-300 transition-colors duration-200 leading-relaxed">
-                  Tailored intervention strategy combining spinal injections, nerve blocks, and physical therapy.
+                <span class="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider block mb-1">Step 4</span>
+                <h3 class="text-lg font-bold font-heading text-white mb-2">Confirm Booking</h3>
+                <p class="text-xs text-[#CBD5E1] leading-relaxed">
+                  Lock in your vehicle reservation and view your booking ID in the Customer Dashboard.
                 </p>
               </div>
             </div>
           </div>
 
           <!-- Step 5 -->
-          <div class="glass-panel p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0D9488]/10 group flex flex-col items-center text-center h-full z-10 border border-gray-800 hover:border-[#0D9488]/50 col-span-1 md:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="500">
-            <div class="absolute -inset-px bg-gradient-to-br from-[#0284C7]/20 to-[#0D9488]/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-            <div class="w-12 h-12 rounded-xl bg-[#0D9488]/10 border border-[#0D9488]/30 flex items-center justify-center text-[#0D9488] group-hover:bg-[#0D9488] group-hover:text-white transition-all duration-300 mb-6 shrink-0 shadow-lg shadow-[#0D9488]/5 mx-auto">
-              <i class="fa-solid fa-syringe text-xl"></i>
+          <div class="glass-panel p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group flex flex-col items-center text-center h-full z-10 border border-white/10 hover:border-[#0D9488]/60" data-aos="fade-up" data-aos-delay="500">
+            <div class="w-12 h-12 rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] group-hover:bg-[#0D9488] group-hover:text-white transition-all duration-300 mb-6 shrink-0 mx-auto">
+              <i class="fa-solid fa-user-tie text-xl"></i>
             </div>
             <div class="space-y-2 flex-grow flex flex-col justify-between">
               <div>
-                <span class="text-xs font-semibold text-[#0D9488] uppercase tracking-wider block mb-1">Step 5</span>
-                <h3 class="text-lg font-bold font-heading text-white group-hover:text-[#0284C7] transition-colors duration-200 mb-2">Guided Procedure</h3>
-                <p class="text-xs text-[#CBD5E1] group-hover:text-gray-300 transition-colors duration-200 leading-relaxed">
-                  Outpatient procedure performed under real-time fluoroscopy or for maximum accuracy.
+                <span class="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider block mb-1">Step 5</span>
+                <h3 class="text-lg font-bold font-heading text-white mb-2">Chauffeur Assigned</h3>
+                <p class="text-xs text-[#CBD5E1] leading-relaxed">
+                  Get vehicle registration and experienced highway driver contact details prior to departure.
                 </p>
               </div>
             </div>
           </div>
 
           <!-- Step 6 -->
-          <div class="glass-panel p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0D9488]/10 group flex flex-col items-center text-center h-full z-10 border border-gray-800 hover:border-[#0D9488]/50 col-span-1 md:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="600">
-            <div class="absolute -inset-px bg-gradient-to-br from-[#0284C7]/20 to-[#0D9488]/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-            <div class="w-12 h-12 rounded-xl bg-[#0D9488]/10 border border-[#0D9488]/30 flex items-center justify-center text-[#0D9488] group-hover:bg-[#0D9488] group-hover:text-white transition-all duration-300 mb-6 shrink-0 shadow-lg shadow-[#0D9488]/5 mx-auto">
-              <i class="fa-solid fa-heart-pulse text-xl"></i>
+          <div class="glass-panel p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group flex flex-col items-center text-center h-full z-10 border border-white/10 hover:border-[#0D9488]/60" data-aos="fade-up" data-aos-delay="600">
+            <div class="w-12 h-12 rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] group-hover:bg-[#0D9488] group-hover:text-white transition-all duration-300 mb-6 shrink-0 mx-auto">
+              <i class="fa-solid fa-suitcase-rolling text-xl"></i>
             </div>
             <div class="space-y-2 flex-grow flex flex-col justify-between">
               <div>
-                <span class="text-xs font-semibold text-[#0D9488] uppercase tracking-wider block mb-1">Step 6</span>
-                <h3 class="text-lg font-bold font-heading text-white group-hover:text-[#0284C7] transition-colors duration-200 mb-2"> Monitoring</h3>
-                <p class="text-xs text-[#CBD5E1] group-hover:text-gray-300 transition-colors duration-200 leading-relaxed">
-                  Post-procedure PACU observation by specialized nursing staff to ensure comfortable discharge.
+                <span class="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider block mb-1">Step 6</span>
+                <h3 class="text-lg font-bold font-heading text-white mb-2">Sanitized Pickup</h3>
+                <p class="text-xs text-[#CBD5E1] leading-relaxed">
+                  Clean, AC-tested coach arrives 15 minutes early with assisted luggage loading.
                 </p>
               </div>
             </div>
           </div>
 
           <!-- Step 7 -->
-          <div class="glass-panel p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0D9488]/10 group flex flex-col items-center text-center h-full z-10 border border-gray-800 hover:border-[#0D9488]/50 col-span-1 md:col-span-2 md:col-start-2 lg:col-span-1 lg:col-start-auto" data-aos="fade-up" data-aos-delay="700">
-            <div class="absolute -inset-px bg-gradient-to-br from-[#0284C7]/20 to-[#0D9488]/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-            <div class="w-12 h-12 rounded-xl bg-[#0D9488]/10 border border-[#0D9488]/30 flex items-center justify-center text-[#0D9488] group-hover:bg-[#0D9488] group-hover:text-white transition-all duration-300 mb-6 shrink-0 shadow-lg shadow-[#0D9488]/5 mx-auto">
-              <i class="fa-solid fa-person-walking text-xl"></i>
+          <div class="glass-panel p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group flex flex-col items-center text-center h-full z-10 border border-white/10 hover:border-[#0D9488]/60" data-aos="fade-up" data-aos-delay="700">
+            <div class="w-12 h-12 rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] group-hover:bg-[#0D9488] group-hover:text-white transition-all duration-300 mb-6 shrink-0 mx-auto">
+              <i class="fa-solid fa-road text-xl"></i>
             </div>
             <div class="space-y-2 flex-grow flex flex-col justify-between">
               <div>
-                <span class="text-xs font-semibold text-[#0D9488] uppercase tracking-wider block mb-1">Step 7</span>
-                <h3 class="text-lg font-bold font-heading text-white group-hover:text-[#0284C7] transition-colors duration-200 mb-2">Physical Therapy</h3>
-                <p class="text-xs text-[#CBD5E1] group-hover:text-gray-300 transition-colors duration-200 leading-relaxed">
-                  Targeted rehabilitation exercises to strengthen core and spinal alignment during maximum windows.
+                <span class="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider block mb-1">Step 7</span>
+                <h3 class="text-lg font-bold font-heading text-white mb-2">Comfortable Ride</h3>
+                <p class="text-xs text-[#CBD5E1] leading-relaxed">
+                  Relax in pushback seats with GPS tracking and 24/7 fleet control room support.
                 </p>
               </div>
             </div>
           </div>
 
           <!-- Step 8 -->
-          <div class="glass-panel p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#0D9488]/10 group flex flex-col items-center text-center h-full z-10 border border-gray-800 hover:border-[#0D9488]/50 col-span-1 md:col-span-2 md:col-start-4 lg:col-span-1 lg:col-start-auto" data-aos="fade-up" data-aos-delay="800">
-            <div class="absolute -inset-px bg-gradient-to-br from-[#0284C7]/20 to-[#0D9488]/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-            <div class="w-12 h-12 rounded-xl bg-[#0D9488]/10 border border-[#0D9488]/30 flex items-center justify-center text-[#0D9488] group-hover:bg-[#0D9488] group-hover:text-white transition-all duration-300 mb-6 shrink-0 shadow-lg shadow-[#0D9488]/5 mx-auto">
-              <i class="fa-solid fa-chart-line text-xl"></i>
+          <div class="glass-panel p-6 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group flex flex-col items-center text-center h-full z-10 border border-white/10 hover:border-[#0D9488]/60" data-aos="fade-up" data-aos-delay="800">
+            <div class="w-12 h-12 rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] group-hover:bg-[#0D9488] group-hover:text-white transition-all duration-300 mb-6 shrink-0 mx-auto">
+              <i class="fa-solid fa-receipt text-xl"></i>
             </div>
             <div class="space-y-2 flex-grow flex flex-col justify-between">
               <div>
-                <span class="text-xs font-semibold text-[#0D9488] uppercase tracking-wider block mb-1">Step 8</span>
-                <h3 class="text-lg font-bold font-heading text-white group-hover:text-[#0284C7] transition-colors duration-200 mb-2">Pain Tracking</h3>
-                <p class="text-xs text-[#CBD5E1] group-hover:text-gray-300 transition-colors duration-200 leading-relaxed">
-                  Ongoing digital pain rating VAS tracking and follow-up consultations in the ApexPain patient portal.
+                <span class="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider block mb-1">Step 8</span>
+                <h3 class="text-lg font-bold font-heading text-white mb-2">Digital Invoice</h3>
+                <p class="text-xs text-[#CBD5E1] leading-relaxed">
+                  Download trip summaries and billing statements anytime from your Customer Portal.
                 </p>
               </div>
             </div>
@@ -573,262 +610,257 @@
     </div>
   </section>
 
-  <!-- 4. Clinical Consultations & Specialty Programs -->
-  <section class="py-24 bg-[#081018]">
+  <!-- 4. Popular Travel Services (4 Cards) -->
+  <section class="py-24 bg-[#0B1120]">
     <div class="container max-w-7xl mx-auto px-4">
       <div class="text-center space-y-3 mb-16" data-aos="fade-up">
-        <span class="text-xs uppercase tracking-widest text-[#0284C7] font-heading font-semibold">Expert Care</span>
-        <h2 class="text-3xl md:text-4xl font-heading">Specialized Clinical Consultations</h2>
-        <p class="text-[#94A3B8] max-w-xl mx-auto">Consult with board-certified interventional pain physicians and anesthesiologists for individualized treatment plans.</p>
+        <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-heading font-semibold">Popular Travel Services</span>
+        <h2 class="text-3xl md:text-4xl font-heading">Tailored Group Transportation Solutions</h2>
+        <p class="text-[#94A3B8] max-w-xl mx-auto">Whether it is a family pilgrimage, corporate retreat, or multi-day wedding celebration, we keep your group moving together.</p>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
         <!-- Card 1 -->
         <div
-          class="glass-panel p-6 rounded-2xl space-y-4 hover:border-gray-700 transition-all flex flex-col justify-between"
+          class="glass-panel p-6 rounded-2xl space-y-4 hover:border-[#0D9488]/50 transition-all flex flex-col justify-between"
           data-aos="fade-up" data-aos-delay="100">
           <div class="space-y-4">
-            <div class="h-40 w-full rounded-xl overflow-hidden border border-gray-800">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQyoCrrUaB1PEYh__AT8SRyX9bNONt2FDZTKOqLC00IBC0B94gGz3yXe0&s=10" alt="Spine Consultation"
+            <div class="h-40 w-full rounded-xl overflow-hidden border border-white/10">
+              <img src="https://images.pexels.com/photos/29510192/pexels-photo-29510192/free-photo-of-travelers-seated-on-a-bus-interior-view.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Family group travelling inside comfortable bus"
                 class="w-full h-full object-cover">
             </div>
-            <h4 class="text-lg font-heading">Spine & Nerve Evaluation</h4>
-            <p class="text-sm text-[#94A3B8]">Comprehensive spine MRI review and diagnostic nerve testing for sciatica, radiculopathy, and disc disease.</p>
+            <h4 class="text-lg font-heading">Family Holidays &amp; Tours</h4>
+            <p class="text-sm text-[#CBD5E1]">Spacious tempo travellers and tourist buses for multi-generational family vacations and sightseeing circuits.</p>
           </div>
-          <a href="contact.html" class="text-xs text-[#0D9488] hover:underline flex items-center gap-1 mt-4">Book Consultation <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+          <a href="services.html" class="text-xs text-[#D4AF37] hover:underline flex items-center gap-1 mt-4 text-decoration-none">Explore Vehicles <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
         </div>
 
         <!-- Card 2 -->
         <div
-          class="glass-panel p-6 rounded-2xl space-y-4 hover:border-gray-700 transition-all flex flex-col justify-between"
+          class="glass-panel p-6 rounded-2xl space-y-4 hover:border-[#0D9488]/50 transition-all flex flex-col justify-between"
           data-aos="fade-up" data-aos-delay="200">
           <div class="space-y-4">
-            <div class="h-40 w-full rounded-xl overflow-hidden border border-gray-800">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYJsABkNq_o_YrAU-My6rHf5TkbGnKwoP9sV4MsqT5hhZ1wCzYMJpO0oY&s=10" alt="Anesthesia Clearance"
+            <div class="h-40 w-full rounded-xl overflow-hidden border border-white/10">
+              <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=700&q=80" alt="Corporate group coach"
                 class="w-full h-full object-cover">
             </div>
-            <h4 class="text-lg font-heading">Pre-Anesthesia Consult</h4>
-            <p class="text-sm text-[#94A3B8]">Safety evaluations and conscious sedation planning for surgical procedures and nerve ablations.</p>
+            <h4 class="text-lg font-heading">Corporate &amp; MICE Travel</h4>
+            <p class="text-sm text-[#CBD5E1]">Punctual executive coaches for team offsites, conferences, factory visits, and daily employee shuttles.</p>
           </div>
-          <a href="contact.html" class="text-xs text-[#0284C7] hover:underline flex items-center gap-1 mt-4">Book Consultation <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+          <a href="prescriptions.html" class="text-xs text-[#D4AF37] hover:underline flex items-center gap-1 mt-4 text-decoration-none">View Corporate Rates <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
         </div>
 
         <!-- Card 3 -->
         <div
-          class="glass-panel p-6 rounded-2xl space-y-4 hover:border-gray-700 transition-all flex flex-col justify-between"
+          class="glass-panel p-6 rounded-2xl space-y-4 hover:border-[#0D9488]/50 transition-all flex flex-col justify-between"
           data-aos="fade-up" data-aos-delay="300">
           <div class="space-y-4">
-            <div class="h-40 w-full rounded-xl overflow-hidden border border-gray-800">
-              <img src="https://images.squarespace-cdn.com/content/v1/663d0c9ab9220e585d90407b/6784ed2a-185b-471e-84f1-5c32c4b81ddc/Image_by_Anupam_Mahapatra_courtesy_of_Unsplash.jpg" alt="Chronic Pain Program"
+            <div class="h-40 w-full rounded-xl overflow-hidden border border-white/10">
+              <img src="images/fleet-45-coach.jpg" alt="Wedding guest luxury coach"
                 class="w-full h-full object-cover">
             </div>
-            <h4 class="text-lg font-heading">Chronic Pain Programs</h4>
-            <p class="text-sm text-[#94A3B8]">Multidisciplinary plans targeting fibromyalgia, complex regional pain syndrome (CRPS), and joint arthritis.</p>
+            <h4 class="text-lg font-heading">Wedding Guest Shuttles</h4>
+            <p class="text-sm text-[#CBD5E1]">Coordinated luxury coach fleets for hotel-to-venue guest transfers, baraat processions, and airport pickups.</p>
           </div>
-          <a href="services.html#programs-section" class="text-xs text-[#0284C7] hover:underline flex items-center gap-1 mt-4">Learn More <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+          <a href="contact.html" class="text-xs text-[#D4AF37] hover:underline flex items-center gap-1 mt-4 text-decoration-none">Request Wedding Fleet <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
         </div>
 
         <!-- Card 4 -->
         <div
-          class="glass-panel p-6 rounded-2xl space-y-4 hover:border-gray-700 transition-all flex flex-col justify-between"
+          class="glass-panel p-6 rounded-2xl space-y-4 hover:border-[#0D9488]/50 transition-all flex flex-col justify-between"
           data-aos="fade-up" data-aos-delay="400">
           <div class="space-y-4">
-            <div class="h-40 w-full rounded-xl overflow-hidden border border-gray-800">
-              <img src="https://farrbcn.com/wp-content/uploads/2025/09/IMG_9314-1024x987.jpeg" alt="Neuromodulation Consult"
+            <div class="h-40 w-full rounded-xl overflow-hidden border border-white/10">
+              <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=700&q=80" alt="Outstation highway road trip"
                 class="w-full h-full object-cover">
             </div>
-            <h4 class="text-lg font-heading">Neuromodulation Trials</h4>
-            <p class="text-sm text-[#94A3B8]">Evaluation and trial programming for spinal cord stimulators (SCS) and intrathecal drug delivery.</p>
+            <h4 class="text-lg font-heading">Custom Outstation Packages</h4>
+            <p class="text-sm text-[#CBD5E1]">Multi-day hill station, wildlife, and heritage itineraries with flexible local and highway packages.</p>
           </div>
-          <a href="services.html#injections-section" class="text-xs text-[#0D9488] hover:underline flex items-center gap-1 mt-4">Learn More <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+          <a href="prescriptions.html" class="text-xs text-[#D4AF37] hover:underline flex items-center gap-1 mt-4 text-decoration-none">See Rate Cards <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 5. Clinical Outcomes & Case Studies -->
-  <section class="py-24 bg-[#0D1B2A]/40 border-y border-gray-800">
+  <!-- 5. Travel Destinations & Transparent Pricing Highlights -->
+  <section class="py-24 bg-[#111B2E]/40 border-y border-white/10">
     <div class="container max-w-7xl mx-auto px-4">
       <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
         <div>
-          <span class="text-xs uppercase tracking-widest text-[#0284C7] font-heading font-semibold">Clinical Success</span>
-          <h2 class="text-3xl md:text-4xl font-heading mt-2">Patient Recovery Outcomes</h2>
+          <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-heading font-semibold">Destinations &amp; Rates</span>
+          <h2 class="text-3xl md:text-4xl font-heading mt-2">Popular Routes &amp; Transparent Pricing</h2>
         </div>
-        <a href="services.html#articles-section"
-          class="px-6 py-2 rounded-full border border-gray-800 hover:border-gray-600 transition-colors text-sm text-decoration-none">
-          Read Articles
+        <a href="prescriptions.html"
+          class="px-6 py-2 rounded-full border border-[#D4AF37]/60 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0B1120] transition-colors text-sm text-decoration-none font-medium">
+          View Full Rate Card
         </a>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8">
-        <!-- Event Card 1 -->
+        <!-- Route Card 1 -->
         <div class="glass-panel rounded-2xl overflow-hidden grid xl:grid-cols-12 glass-card-hover" data-aos="fade-up">
-          <div class="xl:col-span-5 h-[280px] md:h-[350px] lg:h-[400px] xl:h-auto relative">
-            <img src="https://media.post.rvohealth.io/wp-content/uploads/2021/09/Lumbar-Epidural-Steroid-Injection-732x549-thumbnail.jpg" alt="Lumbar Epidural Case Study"
+          <div class="xl:col-span-5 h-[280px] md:h-[320px] xl:h-auto relative">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Scenic mountain valley road trip"
               class="w-full h-full object-cover">
           </div>
           <div class="xl:col-span-7 p-6 flex flex-col justify-between space-y-4">
             <div>
-              <span class="text-xs text-[#0D9488] font-medium uppercase tracking-wider">Spine Intervention Case</span>
-              <h3 class="text-xl font-heading mt-1">Lumbar Radiculopathy</h3>
-              <p class="text-xs text-[#94A3B8] mt-1"><i class="fa-regular fa-calendar mr-2"></i>August 2026</p>
-              <p class="text-sm text-[#CBD5E1] mt-2">Targeted fluoroscopy-guided L5-S1 transforaminal epidural injection achieved an 85% pain reduction in 48 hours for a severe sciatica patient.</p>
+              <span class="text-xs text-[#D4AF37] font-medium uppercase tracking-wider">Hill Station Circuit</span>
+              <h3 class="text-xl font-heading mt-1">Mountain &amp; Valley Retreats</h3>
+              <p class="text-xs text-[#CBD5E1] mt-1"><i class="fa-solid fa-van-shuttle mr-2 text-[#0D9488]"></i>Recommended: 12 / 17-Seater Tempo Traveller</p>
+              <p class="text-sm text-[#E2E8F0] mt-2">High-torque hill-ready tempo travellers with experienced mountain drivers, clear per-km outstation billing, and zero hidden surcharges.</p>
             </div>
-            <a href="services.html#articles-section" class="text-sm text-[#0284C7] hover:underline flex items-center gap-1 text-decoration-none">Read Full Case <i class="fa-solid fa-chevron-right text-xs"></i></a>
+            <a href="prescriptions.html" class="text-sm text-[#D4AF37] hover:underline flex items-center gap-1 text-decoration-none">Check Sample Per-Km Rates <i class="fa-solid fa-chevron-right text-xs"></i></a>
           </div>
         </div>
 
-        <!-- Event Card 2 -->
+        <!-- Route Card 2 -->
         <div class="glass-panel rounded-2xl overflow-hidden grid xl:grid-cols-12 glass-card-hover" data-aos="fade-up"
           data-aos-delay="200">
-          <div class="xl:col-span-5 h-[280px] md:h-[350px] lg:h-[400px] xl:h-auto relative">
-            <img src="https://static.wixstatic.com/media/fbd72c_4dcf330fc0414dd9811c800eb0f2822a~mv2.jpg/v1/fill/w_1500,h_1000,al_c,q_85/Foto1.jpg" alt="Radiofrequency Ablation Study"
+          <div class="xl:col-span-5 h-[280px] md:h-[320px] xl:h-auto relative">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="Scenic heritage highway journey"
               class="w-full h-full object-cover">
           </div>
           <div class="xl:col-span-7 p-6 flex flex-col justify-between space-y-4">
             <div>
-              <span class="text-xs text-[#0284C7] font-medium uppercase tracking-wider">Nerve Ablation Case</span>
-              <h3 class="text-xl font-heading mt-1">Cervical Facet RF Ablation</h3>
-              <p class="text-xs text-[#94A3B8] mt-1"><i class="fa-regular fa-calendar mr-2"></i>September 2026</p>
-              <p class="text-sm text-[#CBD5E1] mt-2">Radiofrequency ablation of cervical medial branches restored full neck mobility and eliminated chronic headaches in post-whiplash recovery.</p>
+              <span class="text-xs text-[#D4AF37] font-medium uppercase tracking-wider">Grand Group Circuit</span>
+              <h3 class="text-xl font-heading mt-1">Interstate Heritage &amp; Coastal Tours</h3>
+              <p class="text-xs text-[#CBD5E1] mt-1"><i class="fa-solid fa-bus mr-2 text-[#0D9488]"></i>Recommended: 27 / 35 / 45-Seater Coach</p>
+              <p class="text-sm text-[#E2E8F0] mt-2">All-India tourist permit coaches equipped with air suspension, deep luggage compartments, and transparent multi-day package pricing.</p>
             </div>
-            <a href="services.html#articles-section" class="text-sm text-[#0D9488] hover:underline flex items-center gap-1 text-decoration-none">Read Full Case
-              <i class="fa-solid fa-chevron-right text-xs"></i></a>
+            <a href="prescriptions.html" class="text-sm text-[#D4AF37] hover:underline flex items-center gap-1 text-decoration-none">Compare Coach Packages <i class="fa-solid fa-chevron-right text-xs"></i></a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. Patient Testimonials -->
-  <section class="py-24 bg-[#081018]">
+  <!-- 6. Customer Testimonials -->
+  <section class="py-24 bg-[#0B1120]">
     <div class="container max-w-3xl mx-auto px-4 text-center">
-      <span class="text-xs uppercase tracking-widest text-[#0284C7] font-heading font-semibold mb-3 block">Patient Testimonials</span>
+      <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-heading font-semibold mb-3 block">Customer Testimonials</span>
 
       <!-- Bootstrap Carousel Glass Box -->
       <div id="testimonialCarousel" class="carousel slide glass-panel p-8 md:p-12 rounded-3xl" data-bs-ride="carousel"
         data-aos="zoom-in">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <!-- Rating -->
-            <div class="flex items-center justify-center gap-1 text-amber-400 mb-4 text-sm">
+            <div class="flex items-center justify-center gap-1 text-[#D4AF37] mb-4 text-sm">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
-              <span class="text-xs text-amber-400 font-semibold ml-1">5.0 Rating</span>
+              <span class="text-xs text-[#D4AF37] font-semibold ml-1">5.0 Rating</span>
             </div>
-            <p class="text-lg md:text-xl text-[#CBD5E1] font-light italic px-6 md:px-16">
-              "After living with chronic lumbar disc pain for over three years, Dr. Vance's targeted epidural steroid injection gave me back my ability to walk pain-free. The entire clinical team was reassuring and professional."
+            <p class="text-lg md:text-xl text-[#E2E8F0] font-light italic px-6 md:px-16">
+              "We booked a 17-seater Tempo Traveller for our 6-day family hill trip. The vehicle was spotless, the AC worked effortlessly, and our captain knew every mountain route safely."
             </p>
             <div class="mt-6 flex flex-col items-center">
               <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-[#0D9488] shadow-lg mb-2">
-                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150" alt="David Miller" class="w-full h-full object-cover">
+                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Rajesh Nair" class="w-full h-full object-cover">
               </div>
-              <h5 class="text-[#F8FAFC] font-heading font-medium text-base mb-0">David Miller</h5>
-              <p class="text-xs text-[#94A3B8] mt-0.5">Lumbar Epidural Patient • Denver, CO</p>
+              <h5 class="text-white font-heading font-medium text-base mb-0">Rajesh Nair</h5>
+              <p class="text-xs text-[#94A3B8] mt-0.5">17-Seater Family Tour • 14 Passengers</p>
             </div>
           </div>
 
           <div class="carousel-item">
-            <!-- Rating -->
-            <div class="flex items-center justify-center gap-1 text-amber-400 mb-4 text-sm">
+            <div class="flex items-center justify-center gap-1 text-[#D4AF37] mb-4 text-sm">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
-              <span class="text-xs text-amber-400 font-semibold ml-1">5.0 Rating</span>
+              <span class="text-xs text-[#D4AF37] font-semibold ml-1">5.0 Rating</span>
             </div>
-            <p class="text-lg md:text-xl text-[#CBD5E1] font-light italic px-6 md:px-16">
-              "The stellate ganglion nerve block procedure performed by Dr. Rostova eliminated my neuropathic arm pain completely. The outpatient anesthesiology sedation was smooth and stress-free."
+            <p class="text-lg md:text-xl text-[#E2E8F0] font-light italic px-6 md:px-16">
+              "Horizon Coach handled all three 35-seater tourist buses for our sister's wedding. Every airport pickup and venue shuttle ran right on schedule with zero stress."
             </p>
             <div class="mt-6 flex flex-col items-center">
-              <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-[#0284C7] shadow-lg mb-2">
-                <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Sarah Jenkins" class="w-full h-full object-cover">
+              <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-[#D4AF37] shadow-lg mb-2">
+                <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Ananya Sharma" class="w-full h-full object-cover">
               </div>
-              <h5 class="text-[#F8FAFC] font-heading font-medium text-base mb-0">Sarah Jenkins</h5>
-              <p class="text-xs text-[#94A3B8] mt-0.5">Neuropathic Pain Patient • ApexPain</p>
+              <h5 class="text-white font-heading font-medium text-base mb-0">Ananya Sharma</h5>
+              <p class="text-xs text-[#94A3B8] mt-0.5">Wedding Guest Fleet • 100+ Guests</p>
             </div>
           </div>
 
           <div class="carousel-item">
-            <!-- Rating -->
-            <div class="flex items-center justify-center gap-1 text-amber-400 mb-4 text-sm">
+            <div class="flex items-center justify-center gap-1 text-[#D4AF37] mb-4 text-sm">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
-              <span class="text-xs text-amber-400 font-semibold ml-1">5.0 Rating</span>
+              <span class="text-xs text-[#D4AF37] font-semibold ml-1">5.0 Rating</span>
             </div>
-            <p class="text-lg md:text-xl text-[#CBD5E1] font-light italic px-6 md:px-16">
-              "My radiofrequency ablation procedure gave me 12+ months of pain relief. I went from being unable to work to playing golf every weekend. ApexPain changed my life!"
+            <p class="text-lg md:text-xl text-[#E2E8F0] font-light italic px-6 md:px-16">
+              "Our annual corporate offsite for 42 employees in the 45-seater luxury coach was effortless. Transparent billing, plush recliners, and smooth highway driving."
             </p>
             <div class="mt-6 flex flex-col items-center">
-              <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-[#14B8A6] shadow-lg mb-2">
-                <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Marcus Henderson" class="w-full h-full object-cover">
+              <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-[#0D9488] shadow-lg mb-2">
+                <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Vikram Mehta" class="w-full h-full object-cover">
               </div>
-              <h5 class="text-[#F8FAFC] font-heading font-medium text-base mb-0">Marcus Henderson</h5>
-              <p class="text-xs text-[#94A3B8] mt-0.5">Spine RFA Patient • Boulder, CO</p>
+              <h5 class="text-white font-heading font-medium text-base mb-0">Vikram Mehta</h5>
+              <p class="text-xs text-[#94A3B8] mt-0.5">Corporate Offsite • 45-Seater Coach</p>
             </div>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-          <i class="fa-solid fa-chevron-left text-xl text-gray-500 hover:text-white"></i>
+          <i class="fa-solid fa-chevron-left text-xl text-gray-400 hover:text-white"></i>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-          <i class="fa-solid fa-chevron-right text-xl text-gray-500 hover:text-white"></i>
+          <i class="fa-solid fa-chevron-right text-xl text-gray-400 hover:text-white"></i>
         </button>
       </div>
     </div>
   </section>
 
-  <!-- 7. Clinical Accreditation Marquee -->
-  <section class="py-12 bg-[#0D1B2A]/20 border-y border-gray-800 overflow-hidden">
+  <!-- 7. Safety & Service Standards Marquee -->
+  <section class="py-12 bg-[#111B2E]/30 border-y border-white/10 overflow-hidden">
     <div class="w-full flex items-center relative">
       <div class="animate-marquee gap-16 items-center flex flex-nowrap whitespace-nowrap">
-        <!-- Logo items -->
-        <span class="text-lg tracking-widest text-[#94A3B8] uppercase font-heading flex items-center gap-2 whitespace-nowrap shrink-0"><i
-            class="fa-solid fa-certificate"></i> AAAHC ACCREDITED CLINIC</span>
-        <span class="text-lg tracking-widest text-[#94A3B8] uppercase font-heading flex items-center gap-2 whitespace-nowrap shrink-0"><i
-            class="fa-solid fa-user-doctor"></i> AMERICAN BOARD OF ANESTHESIOLOGY</span>
-        <span class="text-lg tracking-widest text-[#94A3B8] uppercase font-heading flex items-center gap-2 whitespace-nowrap shrink-0"><i
-            class="fa-solid fa-shield-halved"></i> ASRA PAIN MEDICINE AFFILIATE</span>
-        <span class="text-lg tracking-widest text-[#94A3B8] uppercase font-heading flex items-center gap-2 whitespace-nowrap shrink-0"><i
-            class="fa-solid fa-[#0D9488] fa-hospital"></i> FLUOROSCOPY SURGICAL SUITE</span>
+        <span class="text-lg tracking-widest text-[#CBD5E1] uppercase font-heading flex items-center gap-2 whitespace-nowrap shrink-0"><i
+            class="fa-solid fa-shield-halved text-[#D4AF37]"></i> ALL-INDIA TOURIST PERMITS</span>
+        <span class="text-lg tracking-widest text-[#CBD5E1] uppercase font-heading flex items-center gap-2 whitespace-nowrap shrink-0"><i
+            class="fa-solid fa-satellite-dish text-[#0D9488]"></i> LIVE GPS FLEET TRACKING</span>
+        <span class="text-lg tracking-widest text-[#CBD5E1] uppercase font-heading flex items-center gap-2 whitespace-nowrap shrink-0"><i
+            class="fa-solid fa-spray-can-sparkles text-[#D4AF37]"></i> SANITIZED CABIN INTERIORS</span>
+        <span class="text-lg tracking-widest text-[#CBD5E1] uppercase font-heading flex items-center gap-2 whitespace-nowrap shrink-0"><i
+            class="fa-solid fa-headset text-[#0D9488]"></i> 24/7 HIGHWAY ASSISTANCE</span>
 
         <!-- Duplicated for seamless loop -->
-        <span class="text-lg tracking-widest text-[#94A3B8] uppercase font-heading flex items-center gap-2 whitespace-nowrap shrink-0"><i
-            class="fa-solid fa-certificate"></i> AAAHC ACCREDITED CLINIC</span>
-        <span class="text-lg tracking-widest text-[#94A3B8] uppercase font-heading flex items-center gap-2 whitespace-nowrap shrink-0"><i
-            class="fa-solid fa-user-doctor"></i> AMERICAN BOARD OF ANESTHESIOLOGY</span>
-        <span class="text-lg tracking-widest text-[#94A3B8] uppercase font-heading flex items-center gap-2 whitespace-nowrap shrink-0"><i
-            class="fa-solid fa-shield-halved"></i> ASRA PAIN MEDICINE AFFILIATE</span>
-        <span class="text-lg tracking-widest text-[#94A3B8] uppercase font-heading flex items-center gap-2 whitespace-nowrap shrink-0"><i
-            class="fa-solid fa-hospital"></i> FLUOROSCOPY SURGICAL SUITE</span>
+        <span class="text-lg tracking-widest text-[#CBD5E1] uppercase font-heading flex items-center gap-2 whitespace-nowrap shrink-0"><i
+            class="fa-solid fa-shield-halved text-[#D4AF37]"></i> ALL-INDIA TOURIST PERMITS</span>
+        <span class="text-lg tracking-widest text-[#CBD5E1] uppercase font-heading flex items-center gap-2 whitespace-nowrap shrink-0"><i
+            class="fa-solid fa-satellite-dish text-[#0D9488]"></i> LIVE GPS FLEET TRACKING</span>
+        <span class="text-lg tracking-widest text-[#CBD5E1] uppercase font-heading flex items-center gap-2 whitespace-nowrap shrink-0"><i
+            class="fa-solid fa-spray-can-sparkles text-[#D4AF37]"></i> SANITIZED CABIN INTERIORS</span>
+        <span class="text-lg tracking-widest text-[#CBD5E1] uppercase font-heading flex items-center gap-2 whitespace-nowrap shrink-0"><i
+            class="fa-solid fa-headset text-[#0D9488]"></i> 24/7 HIGHWAY ASSISTANCE</span>
       </div>
     </div>
   </section>
 
-  <!-- 8. Patient Consultation CTA -->
-  <section class="py-24 bg-[#081018]">
+  <!-- 8. Final Booking CTA -->
+  <section class="py-24 bg-[#0B1120]">
     <div class="container max-w-4xl mx-auto px-4">
       <div class="glass-panel p-8 md:p-12 rounded-3xl text-center space-y-6 relative overflow-hidden"
         data-aos="fade-up">
         <div class="bg-gradient-orb orb-primary -top-20 -left-20"></div>
-        <span class="text-xs uppercase tracking-widest text-[#0284C7] font-heading font-semibold">Take the First Step</span>
-        <h2 class="text-3xl font-heading">Schedule Your Pain Relief Consultation</h2>
-        <p class="text-[#94A3B8] max-w-md mx-auto text-sm">Speak with our pain management specialists today to evaluate your condition and discover image-guided treatment options.</p>
+        <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-heading font-semibold">Plan Your Group Trip</span>
+        <h2 class="text-3xl font-heading">Ready to Reserve Your Tourist Bus or Traveller?</h2>
+        <p class="text-[#CBD5E1] max-w-md mx-auto text-sm">Enter your email or phone to receive an instant custom rental quote and vehicle availability sheet.</p>
 
         <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto relative z-10"
-          onsubmit="event.preventDefault(); alert('Thank you! Our clinical intake coordinator will contact you within 24 hours.');">
-          <input type="email" placeholder="Enter your email" required
-            class="flex-1 px-5 py-3 rounded-full bg-[#081018]/80 border border-gray-800 text-white placeholder-gray-500 focus:outline-none focus:border-[#0284C7] transition-all">
+          onsubmit="event.preventDefault(); alert('Thank you! Our Horizon Coach trip coordinator will send your custom quote shortly.');">
+          <input type="email" placeholder="Enter your email address" required
+            class="flex-1 px-5 py-3 rounded-full bg-[#0B1120]/90 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-[#0D9488] transition-all">
           <button type="submit"
             class="px-8 py-3 rounded-full bg-[#0D9488] text-white hover:bg-[#0D9488]/90 transition-all font-medium whitespace-nowrap">
-            Request Consult
+            Get Quote
           </button>
         </form>
       </div>
@@ -843,12 +875,12 @@
     <div class="container max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-8 mb-12 relative z-10">
       <!-- Brand column -->
       <div class="md:col-span-4 space-y-4">
-        <a class="brand-logo flex items-center gap-2" href="index.html">
-          <i class="fa-solid fa-heart-pulse text-[#2DD4BF] text-xl"></i>
-          <span>APEX<span class="text-[#0D9488]">PAIN</span></span>
+        <a class="brand-logo flex items-center gap-2 text-decoration-none" href="index.html">
+          <i class="fa-solid fa-bus-simple text-[#D4AF37] text-xl"></i>
+          <span>HORIZON<span class="text-[#0D9488]">COACH</span></span>
         </a>
-        <p class="text-xs leading-relaxed text-[#94A3B8] max-w-sm">
-          ApexPain is a premier pain management and anesthesiology clinic providing image-guided interventions, nerve block therapies, and personalized pain recovery programs.
+        <p class="text-xs leading-relaxed text-[#CBD5E1] max-w-sm">
+          Horizon Coach is a premier Tourist Bus &amp; Traveller Rental service offering 12 to 45-seater AC coaches, tempo travellers, and chauffeur-driven group travel.
         </p>
         <!-- Social Icons -->
         <div class="flex gap-3 pt-2">
@@ -867,55 +899,55 @@
         </div>
       </div>
 
-      <!-- Quick links (Single Word Labels) -->
+      <!-- Fleet Categories -->
       <div class="md:col-span-2 space-y-3">
-        <h5 class="text-white text-xs font-semibold uppercase tracking-wider">Services</h5>
+        <h5 class="text-white text-xs font-semibold uppercase tracking-wider">Fleet</h5>
         <ul class="space-y-2 text-xs p-0 list-none">
-          <li><a href="services.html#injections-section" class="hover:text-white transition-colors text-decoration-none">Injections</a></li>
-          <li><a href="services.html#programs-section" class="hover:text-white transition-colors text-decoration-none">Programs</a></li>
-          <li><a href="services.html#articles-section" class="hover:text-white transition-colors text-decoration-none">Articles</a></li>
-          <li><a href="contact.html" class="hover:text-white transition-colors text-decoration-none">Consultation</a></li>
+          <li><a href="services.html" class="hover:text-white transition-colors text-decoration-none">Tempo Travellers</a></li>
+          <li><a href="services.html" class="hover:text-white transition-colors text-decoration-none">20-Seater Mini Bus</a></li>
+          <li><a href="services.html" class="hover:text-white transition-colors text-decoration-none">27 &amp; 35-Seater Bus</a></li>
+          <li><a href="services.html" class="hover:text-white transition-colors text-decoration-none">45-Seater Coach</a></li>
         </ul>
       </div>
 
       <div class="md:col-span-2 space-y-3">
-        <h5 class="text-white text-xs font-semibold uppercase tracking-wider">Navigation</h5>
+        <h5 class="text-white text-xs font-semibold uppercase tracking-wider">Quick Links</h5>
         <ul class="space-y-2 text-xs p-0 list-none">
           <li><a href="index.html" class="hover:text-white transition-colors text-decoration-none">Home</a></li>
-          <li><a href="home-2.html" class="hover:text-white transition-colors text-decoration-none">Home 2</a></li>
+          <li><a href="prescriptions.html" class="hover:text-white transition-colors text-decoration-none">Rates</a></li>
           <li><a href="about.html" class="hover:text-white transition-colors text-decoration-none">About</a></li>
-          <li><a href="doctors.html" class="hover:text-white transition-colors text-decoration-none">Doctors</a></li>
+          <li><a href="contact.html" class="hover:text-white transition-colors text-decoration-none">Contact</a></li>
           <li><a href="dashboard.html" class="hover:text-white transition-colors text-decoration-none">Dashboard</a></li>
         </ul>
       </div>
 
       <!-- Info column -->
       <div class="md:col-span-4 space-y-3">
-        <h5 class="text-white text-xs font-semibold uppercase tracking-wider">Clinic Location</h5>
-        <ul class="space-y-3 text-xs text-[#94A3B8] p-0 list-none">
+        <h5 class="text-white text-xs font-semibold uppercase tracking-wider">Booking &amp; Fleet Depot</h5>
+        <ul class="space-y-3 text-xs text-[#CBD5E1] p-0 list-none">
           <li class="flex items-start gap-3">
-            <div class="w-7 h-7 rounded-lg bg-[#0D9488]/10 border border-[#0D9488]/20 flex items-center justify-center text-[#0D9488] shrink-0 mt-0.5">
+            <div class="w-7 h-7 rounded-lg bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] shrink-0 mt-0.5">
               <i class="fa-solid fa-location-dot text-xs text-center"></i>
             </div>
-            <span class="leading-relaxed text-[#CBD5E1]">
-              ApexPain Medical Center<br>
-              1400 Glenarm Place, Suite 400, Denver, CO 80202
+            <span class="leading-relaxed text-[#E2E8F0]">
+              Horizon Coach Travel Hub<br>
+              420 Transport Terminal Road, Suite 12
             </span>
           </li>
           <li class="flex items-center gap-3">
-            <div class="w-7 h-7 rounded-lg bg-[#0284C7]/10 border border-[#0284C7]/20 flex items-center justify-center text-[#0284C7] shrink-0">
+            <div class="w-7 h-7 rounded-lg bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] shrink-0">
               <i class="fa-solid fa-phone text-xs text-center"></i>
             </div>
-            <a href="tel:3035550140" class="text-[#CBD5E1] hover:text-white transition-colors text-decoration-none">
-              (303) 555-0140
+            <a href="tel:+18005550199" class="text-[#E2E8F0] hover:text-white transition-colors text-decoration-none">
+              +1 (800) 555-0199
             </a>
           </li>
           <li class="flex items-center gap-3">
-            <div class="w-7 h-7 rounded-lg bg-[#14B8A6]/10 border border-[#14B8A6]/20 flex items-center justify-center text-[#14B8A6] shrink-0">
+            <div class="w-7 h-7 rounded-lg bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] shrink-0">
               <i class="fa-solid fa-envelope text-xs text-center"></i>
             </div>
-            <a href="mailto:care@apexpain.com" class="text-[#CBD5E1] hover:text-white transition-colors text-decoration-none">
-              care@apexpain.com
+            <a href="mailto:bookings@horizoncoach.com" class="text-[#E2E8F0] hover:text-white transition-colors text-decoration-none">
+              bookings@horizoncoach.com
             </a>
           </li>
         </ul>
@@ -923,12 +955,12 @@
     </div>
 
     <!-- Bottom border & copyright -->
-    <div class="container max-w-7xl mx-auto px-4 pt-8 border-t border-gray-900 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-10">
-      <p class="text-[#64748B]">&copy; 2026 ApexPain Management & Anesthesiology Center. All Rights Reserved.</p>
-      <div class="flex gap-6 text-[#64748B]">
-        <a href="#" class="hover:text-white transition-colors text-decoration-none">Privacy</a>
-        <a href="#" class="hover:text-white transition-colors text-decoration-none">Terms</a>
-        <a href="#" class="hover:text-white transition-colors text-decoration-none">HIPAA</a>
+    <div class="container max-w-7xl mx-auto px-4 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-10">
+      <p class="text-[#94A3B8]">&copy; 2026 Horizon Coach – Tourist Bus &amp; Traveller Rental. All Rights Reserved.</p>
+      <div class="flex gap-6 text-[#94A3B8]">
+        <a href="about.html" class="hover:text-white transition-colors text-decoration-none">Safety Policy</a>
+        <a href="prescriptions.html" class="hover:text-white transition-colors text-decoration-none">Rental Terms</a>
+        <a href="contact.html" class="hover:text-white transition-colors text-decoration-none">Support</a>
       </div>
     </div>
   </footer>
