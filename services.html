@@ -91,16 +91,35 @@
 
     .faq-btn {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between !important;
       align-items: center;
       width: 100%;
       padding: 1rem 1.25rem;
       background: transparent;
       border: none;
       color: #F8FAFC;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
+      font-weight: 600;
       cursor: pointer;
       gap: 1rem;
+      text-align: left;
+    }
+
+    [data-theme="light"] .faq-btn {
+      color: #0F172A !important;
+    }
+
+    .faq-item .collapse.show {
+      visibility: visible !important;
+      display: block !important;
+    }
+
+    .faq-item .collapsing {
+      visibility: visible !important;
+    }
+
+    [data-theme="light"] .faq-answer {
+      color: #334155 !important;
     }
 
     .faq-btn:hover {
@@ -119,24 +138,24 @@
         <span>HORIZON<span class="text-[#0D9488]">COACH</span></span>
       </a>
 
-      <div class="hidden lg:flex items-center gap-7">
+      <div class="hidden xl:flex items-center gap-7">
         <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none"
           href="index.html">Home</a>
         <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none"
           href="home-2.html">Home 2</a>
+        <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none"
+          href="about.html">About</a>
         <a class="text-[#D4AF37] font-bold active-nav-link hover:text-[#D4AF37] transition-colors text-decoration-none"
           href="services.html" aria-current="page">Fleet</a>
         <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none"
           href="prescriptions.html">Rates</a>
-        <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none"
-          href="about.html">About</a>
         <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none"
           href="contact.html">Contact</a>
         <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none"
           href="dashboard.html">Dashboard</a>
       </div>
 
-      <div class="hidden lg:flex items-center gap-3">
+      <div class="hidden xl:flex items-center gap-3">
         <button id="theme-toggle" class="header-theme-switch" title="Toggle Theme">
           <span class="track-icons flex justify-between items-center text-xs select-none w-full">
             <i class="fa-regular fa-moon text-sky-400 text-xs opacity-75"></i>
@@ -157,7 +176,7 @@
         </a>
       </div>
 
-      <button class="lg:hidden text-white text-xl" id="mobile-menu-btn" aria-expanded="false">
+      <button class="xl:hidden text-white text-xl" id="mobile-menu-btn" aria-expanded="false">
         <i class="fa-solid fa-bars"></i>
       </button>
     </div>
@@ -165,12 +184,12 @@
 
   <!-- Mobile Dropdown Navigation -->
   <div id="mobile-menu"
-    class="hidden fixed top-[70px] left-0 w-full glass-panel py-6 px-5 z-40 lg:hidden flex flex-col gap-3">
+    class="hidden fixed top-[70px] left-0 w-full glass-panel py-6 px-5 z-40 xl:hidden flex flex-col gap-3">
     <a class="text-base text-[#E2E8F0] text-decoration-none" href="index.html">Home</a>
     <a class="text-base text-[#E2E8F0] text-decoration-none" href="home-2.html">Home 2</a>
+    <a class="text-base text-[#E2E8F0] text-decoration-none" href="about.html">About</a>
     <a class="text-base text-[#D4AF37] font-bold active-nav-link text-decoration-none" href="services.html">Fleet</a>
     <a class="text-base text-[#E2E8F0] text-decoration-none" href="prescriptions.html">Rates</a>
-    <a class="text-base text-[#E2E8F0] text-decoration-none" href="about.html">About</a>
     <a class="text-base text-[#E2E8F0] text-decoration-none" href="contact.html">Contact</a>
     <a class="text-base text-[#E2E8F0] text-decoration-none" href="dashboard.html">Dashboard</a>
     <div class="h-[1px] bg-white/10 my-2"></div>
@@ -229,7 +248,7 @@
 
         <!-- 1. 12-Seater Tempo Traveller -->
         <div class="glass-panel rounded-2xl overflow-hidden glass-card-hover flex flex-col justify-between fleet-card"
-          data-category="traveller" data-aos="fade-up" data-aos-delay="100">
+          data-category="traveller">
           <div>
             <div class="h-52 relative overflow-hidden">
               <img
@@ -239,26 +258,32 @@
                 class="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#0B1120]/90 text-[#D4AF37] text-xs font-semibold border border-[#D4AF37]/30">12+1
                 Seater</span>
             </div>
-            <div class="p-6 space-y-4">
-              <div class="flex items-start justify-between gap-2">
-                <h3 class="text-xl font-heading text-white">12-Seater Tempo Traveller</h3>
+            <div class="p-6 space-y-4 text-start">
+              <div class="flex items-center justify-between gap-2 w-full"
+                style="justify-content: space-between !important;">
+                <h3 class="text-lg font-heading text-white mb-0">12-Seater Tempo Traveller</h3>
                 <span class="text-xs px-2.5 py-1 rounded-full bg-[#0D9488]/25 text-[#2DD4BF] shrink-0">AC /
                   Non-AC</span>
               </div>
-              <div class="grid grid-cols-2 gap-2 text-xs text-[#CBD5E1]">
-                <div class="flex items-center gap-2"><i class="fa-solid fa-chair text-[#D4AF37]"></i> 12 Pushback Seats
+              <div class="grid grid-cols-2 gap-x-2 gap-y-2.5 text-xs text-[#CBD5E1] min-h-[3.25rem]">
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-chair text-[#D4AF37]"></i> 12 Pushback Seats
                 </div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-suitcase text-[#0D9488]"></i> 10–12 Suitcases
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-suitcase text-[#0D9488]"></i> 10–12 Suitcases
                 </div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-snowflake text-[#D4AF37]"></i> Dual-Zone AC
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-snowflake text-[#D4AF37]"></i> Dual-Zone AC
                 </div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-bolt text-[#0D9488]"></i> USB Charging</div>
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-bolt text-[#0D9488]"></i> USB Charging</div>
               </div>
-              <p class="text-xs text-[#94A3B8]">
+              <p class="text-xs text-[#94A3B8] min-h-[2.5rem] mb-0">
                 <strong class="text-white">Best For:</strong> Family holidays, weekend hill-station drives, and airport
                 group pickups.
               </p>
-              <div class="pt-2 border-t border-white/10 flex items-center justify-between">
+              <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2 w-full"
+                style="justify-content: space-between !important;">
                 <div>
                   <span class="text-[10px] uppercase tracking-wider text-[#94A3B8] block">Sample Starting Rate</span>
                   <span class="text-base font-bold text-[#D4AF37]">Sample: $1.10 / km</span>
@@ -270,46 +295,51 @@
           <div class="px-6 pb-6 flex gap-3">
             <button type="button"
               onclick="openVehicleModal('12-Seater Tempo Traveller', '12+1 Pushback Reclining', 'AC &amp; Non-AC Options', '10–12 Large Suitcases + Roof Carrier', 'Family Trips, Hill Stations, Airport Transfers', 'Individual AC vents, USB charging, Icebox, First-aid kit, GPS tracking')"
-              class="flex-1 py-2.5 rounded-xl border border-white/20 text-xs font-semibold text-white hover:bg-white/10 transition-all">View
+              class="flex-1 py-2.5 rounded-xl border border-white/20 text-xs font-semibold text-white hover:bg-[#0D9488]/15 hover:border-[#0D9488] hover:text-[#0D9488] hover:-translate-y-0.5 transition-all">View
               Details</button>
             <a href="contact.html"
-              class="flex-1 py-2.5 rounded-xl bg-[#0D9488] text-white text-xs font-semibold text-center hover:bg-[#0D9488]/90 transition-all text-decoration-none">Book
+              class="flex-1 py-2.5 rounded-xl bg-[#0D9488] text-white text-xs font-semibold text-center hover:bg-[#0F766E] hover:shadow-lg hover:shadow-[#0D9488]/30 hover:-translate-y-0.5 transition-all text-decoration-none">Book
               Now</a>
           </div>
         </div>
 
         <!-- 2. 17-Seater Tempo Traveller -->
         <div class="glass-panel rounded-2xl overflow-hidden glass-card-hover flex flex-col justify-between fleet-card"
-          data-category="traveller" data-aos="fade-up" data-aos-delay="200">
+          data-category="traveller">
           <div>
             <div class="h-52 relative overflow-hidden">
-              <img src="https://images.pexels.com/photos/29510192/pexels-photo-29510192/free-photo-of-travelers-seated-on-a-bus-interior-view.jpeg?auto=compress&cs=tinysrgb&w=900"
-                alt="17-Seater Tempo Traveller" class="w-full h-full object-cover">
+              <img src="images/image.png" alt="17-Seater Tempo Traveller" class="w-full h-full object-cover">
               <span
                 class="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#0B1120]/90 text-[#D4AF37] text-xs font-semibold border border-[#D4AF37]/30">17+1
                 Seater</span>
             </div>
-            <div class="p-6 space-y-4">
-              <div class="flex items-start justify-between gap-2">
-                <h3 class="text-xl font-heading text-white">17-Seater Tempo Traveller</h3>
+            <div class="p-6 space-y-4 text-start">
+              <div class="flex items-center justify-between gap-2 w-full"
+                style="justify-content: space-between !important;">
+                <h3 class="text-lg font-heading text-white mb-0">17-Seater Tempo Traveller</h3>
                 <span class="text-xs px-2.5 py-1 rounded-full bg-[#0D9488]/25 text-[#2DD4BF] shrink-0">AC
                   Available</span>
               </div>
-              <div class="grid grid-cols-2 gap-2 text-xs text-[#CBD5E1]">
-                <div class="flex items-center gap-2"><i class="fa-solid fa-chair text-[#D4AF37]"></i> 17 High-Back Seats
+              <div class="grid grid-cols-2 gap-x-2 gap-y-2.5 text-xs text-[#CBD5E1] min-h-[3.25rem]">
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-chair text-[#D4AF37]"></i> 17 High-Back Seats
                 </div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-suitcase text-[#0D9488]"></i> 15–17 Suitcases
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-suitcase text-[#0D9488]"></i> 15–17 Suitcases
                 </div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-music text-[#D4AF37]"></i> LED TV &amp; Audio
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-music text-[#D4AF37]"></i> LED TV &amp; Audio
                 </div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-wifi text-[#0D9488]"></i> Reading Lights
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-wifi text-[#0D9488]"></i> Reading Lights
                 </div>
               </div>
-              <p class="text-xs text-[#94A3B8]">
+              <p class="text-xs text-[#94A3B8] min-h-[2.5rem] mb-0">
                 <strong class="text-white">Best For:</strong> Extended family reunions, corporate team outings, and
                 pilgrimage tours.
               </p>
-              <div class="pt-2 border-t border-white/10 flex items-center justify-between">
+              <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2 w-full"
+                style="justify-content: space-between !important;">
                 <div>
                   <span class="text-[10px] uppercase tracking-wider text-[#94A3B8] block">Sample Starting Rate</span>
                   <span class="text-base font-bold text-[#D4AF37]">Sample: $1.35 / km</span>
@@ -321,46 +351,52 @@
           <div class="px-6 pb-6 flex gap-3">
             <button type="button"
               onclick="openVehicleModal('17-Seater Tempo Traveller', '17+1 High-Roof Executive', 'Full Cabin AC', '15–17 Suitcases + Rear Boot &amp; Carrier', 'Extended Family Tours, Pilgrimages, Corporate Outings', '24-inch LED Screen, Bluetooth Audio, Ample Headroom, GPS Tracked')"
-              class="flex-1 py-2.5 rounded-xl border border-white/20 text-xs font-semibold text-white hover:bg-white/10 transition-all">View
+              class="flex-1 py-2.5 rounded-xl border border-white/20 text-xs font-semibold text-white hover:bg-[#0D9488]/15 hover:border-[#0D9488] hover:text-[#0D9488] hover:-translate-y-0.5 transition-all">View
               Details</button>
             <a href="contact.html"
-              class="flex-1 py-2.5 rounded-xl bg-[#0D9488] text-white text-xs font-semibold text-center hover:bg-[#0D9488]/90 transition-all text-decoration-none">Book
+              class="flex-1 py-2.5 rounded-xl bg-[#0D9488] text-white text-xs font-semibold text-center hover:bg-[#0F766E] hover:shadow-lg hover:shadow-[#0D9488]/30 hover:-translate-y-0.5 transition-all text-decoration-none">Book
               Now</a>
           </div>
         </div>
 
         <!-- 3. 20-Seater Mini Bus -->
         <div class="glass-panel rounded-2xl overflow-hidden glass-card-hover flex flex-col justify-between fleet-card"
-          data-category="minibus" data-aos="fade-up" data-aos-delay="300">
+          data-category="minibus">
           <div>
             <div class="h-52 relative overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=900&q=80"
-                alt="20-Seater Mini Bus" class="w-full h-full object-cover">
+              <img src="images/image copy 6.png" alt="20-Seater Mini Bus on mountain highway"
+                class="w-full h-full object-cover">
               <span
                 class="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#0B1120]/90 text-[#D4AF37] text-xs font-semibold border border-[#D4AF37]/30">20
                 Seater</span>
             </div>
-            <div class="p-6 space-y-4">
-              <div class="flex items-start justify-between gap-2">
-                <h3 class="text-xl font-heading text-white">20-Seater Mini Bus</h3>
+            <div class="p-6 space-y-4 text-start">
+              <div class="flex items-center justify-between gap-2 w-full"
+                style="justify-content: space-between !important;">
+                <h3 class="text-lg font-heading text-white mb-0">20-Seater Mini Bus</h3>
                 <span class="text-xs px-2.5 py-1 rounded-full bg-[#0D9488]/25 text-[#2DD4BF] shrink-0">AC /
                   Non-AC</span>
               </div>
-              <div class="grid grid-cols-2 gap-2 text-xs text-[#CBD5E1]">
-                <div class="flex items-center gap-2"><i class="fa-solid fa-chair text-[#D4AF37]"></i> 2x1 Coach Seating
+              <div class="grid grid-cols-2 gap-x-2 gap-y-2.5 text-xs text-[#CBD5E1] min-h-[3.25rem]">
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-chair text-[#D4AF37]"></i> 2x1 Coach Seating
                 </div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-suitcase text-[#0D9488]"></i> 20+ Luggage
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-suitcase text-[#0D9488]"></i> 20+ Luggage
                   Bags</div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-microphone text-[#D4AF37]"></i> Tour Guide
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-microphone text-[#D4AF37]"></i> Tour Guide
                   Mic</div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-shield text-[#0D9488]"></i> ABS &amp; Speed
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-shield text-[#0D9488]"></i> ABS &amp; Speed
                   Lock</div>
               </div>
-              <p class="text-xs text-[#94A3B8]">
+              <p class="text-xs text-[#94A3B8] min-h-[2.5rem] mb-0">
                 <strong class="text-white">Best For:</strong> City sightseeing tours, corporate offsites, and mid-size
                 wedding guest groups.
               </p>
-              <div class="pt-2 border-t border-white/10 flex items-center justify-between">
+              <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2 w-full"
+                style="justify-content: space-between !important;">
                 <div>
                   <span class="text-[10px] uppercase tracking-wider text-[#94A3B8] block">Sample Starting Rate</span>
                   <span class="text-base font-bold text-[#D4AF37]">Sample: $1.55 / km</span>
@@ -372,17 +408,17 @@
           <div class="px-6 pb-6 flex gap-3">
             <button type="button"
               onclick="openVehicleModal('20-Seater Mini Bus', '20 Passenger (2x1 Wide Aisle)', 'AC &amp; Non-AC Available', '20+ Suitcases in Rear &amp; Side Bays', 'City Tours, Corporate Shuttles, Wedding Transfers', 'PA Microphone, Panoramic Windows, Pneumatic Door, First-Aid Kit')"
-              class="flex-1 py-2.5 rounded-xl border border-white/20 text-xs font-semibold text-white hover:bg-white/10 transition-all">View
+              class="flex-1 py-2.5 rounded-xl border border-white/20 text-xs font-semibold text-white hover:bg-[#0D9488]/15 hover:border-[#0D9488] hover:text-[#0D9488] hover:-translate-y-0.5 transition-all">View
               Details</button>
             <a href="contact.html"
-              class="flex-1 py-2.5 rounded-xl bg-[#0D9488] text-white text-xs font-semibold text-center hover:bg-[#0D9488]/90 transition-all text-decoration-none">Book
+              class="flex-1 py-2.5 rounded-xl bg-[#0D9488] text-white text-xs font-semibold text-center hover:bg-[#0F766E] hover:shadow-lg hover:shadow-[#0D9488]/30 hover:-translate-y-0.5 transition-all text-decoration-none">Book
               Now</a>
           </div>
         </div>
 
         <!-- 4. 27-Seater Tourist Bus -->
         <div class="glass-panel rounded-2xl overflow-hidden glass-card-hover flex flex-col justify-between fleet-card"
-          data-category="touristbus" data-aos="fade-up" data-aos-delay="100">
+          data-category="touristbus">
           <div>
             <div class="h-52 relative overflow-hidden">
               <img src="images/fleet-27-bus.jpg" alt="27-Seater Tourist Bus" class="w-full h-full object-cover">
@@ -390,27 +426,33 @@
                 class="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#0B1120]/90 text-[#D4AF37] text-xs font-semibold border border-[#D4AF37]/30">27
                 Seater</span>
             </div>
-            <div class="p-6 space-y-4">
-              <div class="flex items-start justify-between gap-2">
-                <h3 class="text-xl font-heading text-white">27-Seater Tourist Bus</h3>
+            <div class="p-6 space-y-4 text-start">
+              <div class="flex items-center justify-between gap-2 w-full"
+                style="justify-content: space-between !important;">
+                <h3 class="text-lg font-heading text-white mb-0">27-Seater Tourist Bus</h3>
                 <span class="text-xs px-2.5 py-1 rounded-full bg-[#0D9488]/25 text-[#2DD4BF] shrink-0">AC
                   Pushback</span>
               </div>
-              <div class="grid grid-cols-2 gap-2 text-xs text-[#CBD5E1]">
-                <div class="flex items-center gap-2"><i class="fa-solid fa-chair text-[#D4AF37]"></i> 2x2 Reclining
+              <div class="grid grid-cols-2 gap-x-2 gap-y-2.5 text-xs text-[#CBD5E1] min-h-[3.25rem]">
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-chair text-[#D4AF37]"></i> 2x2 Reclining
                   Seats</div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-suitcase text-[#0D9488]"></i> Under-Floor
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-suitcase text-[#0D9488]"></i> Under-Floor
                   Boot</div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-tv text-[#D4AF37]"></i> Dual LED Screens
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-tv text-[#D4AF37]"></i> Dual LED Screens
                 </div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-wind text-[#0D9488]"></i> Overhead AC Ducts
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-wind text-[#0D9488]"></i> Overhead AC Ducts
                 </div>
               </div>
-              <p class="text-xs text-[#94A3B8]">
+              <p class="text-xs text-[#94A3B8] min-h-[2.5rem] mb-0">
                 <strong class="text-white">Best For:</strong> Multi-day group tours, school/college excursions, and
                 corporate conferences.
               </p>
-              <div class="pt-2 border-t border-white/10 flex items-center justify-between">
+              <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2 w-full"
+                style="justify-content: space-between !important;">
                 <div>
                   <span class="text-[10px] uppercase tracking-wider text-[#94A3B8] block">Sample Starting Rate</span>
                   <span class="text-base font-bold text-[#D4AF37]">Sample: $1.85 / km</span>
@@ -422,47 +464,51 @@
           <div class="px-6 pb-6 flex gap-3">
             <button type="button"
               onclick="openVehicleModal('27-Seater Tourist Bus', '27 Passenger (2x2 Coach)', 'Climate-Controlled AC', '27+ Suitcases in Under-Floor Compartment', 'Outstation Tours, College Trips, Group Retreats', 'Tinted Panoramic Glass, Reclining Armrests, PA System, GPS')"
-              class="flex-1 py-2.5 rounded-xl border border-white/20 text-xs font-semibold text-white hover:bg-white/10 transition-all">View
+              class="flex-1 py-2.5 rounded-xl border border-white/20 text-xs font-semibold text-white hover:bg-[#0D9488]/15 hover:border-[#0D9488] hover:text-[#0D9488] hover:-translate-y-0.5 transition-all">View
               Details</button>
             <a href="contact.html"
-              class="flex-1 py-2.5 rounded-xl bg-[#0D9488] text-white text-xs font-semibold text-center hover:bg-[#0D9488]/90 transition-all text-decoration-none">Book
+              class="flex-1 py-2.5 rounded-xl bg-[#0D9488] text-white text-xs font-semibold text-center hover:bg-[#0F766E] hover:shadow-lg hover:shadow-[#0D9488]/30 hover:-translate-y-0.5 transition-all text-decoration-none">Book
               Now</a>
           </div>
         </div>
 
         <!-- 5. 35-Seater Tourist Bus -->
         <div class="glass-panel rounded-2xl overflow-hidden glass-card-hover flex flex-col justify-between fleet-card"
-          data-category="touristbus" data-aos="fade-up" data-aos-delay="200">
+          data-category="touristbus">
           <div>
             <div class="h-52 relative overflow-hidden">
-              <img
-                src="https://images.pexels.com/photos/29586609/pexels-photo-29586609/free-photo-of-luxury-seabird-coach-bus-for-comfortable-travel.jpeg?auto=compress&cs=tinysrgb&w=900"
-                alt="35-Seater Tourist Bus" class="w-full h-full object-cover">
+              <img src="images/image copy 7.png" alt="35-Seater Tourist Bus" class="w-full h-full object-cover">
               <span
                 class="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#0B1120]/90 text-[#D4AF37] text-xs font-semibold border border-[#D4AF37]/30">35
                 Seater</span>
             </div>
-            <div class="p-6 space-y-4">
-              <div class="flex items-start justify-between gap-2">
-                <h3 class="text-xl font-heading text-white">35-Seater Tourist Bus</h3>
+            <div class="p-6 space-y-4 text-start">
+              <div class="flex items-center justify-between gap-2 w-full"
+                style="justify-content: space-between !important;">
+                <h3 class="text-lg font-heading text-white mb-0">35-Seater Tourist Bus</h3>
                 <span class="text-xs px-2.5 py-1 rounded-full bg-[#0D9488]/25 text-[#2DD4BF] shrink-0">Air
                   Suspension</span>
               </div>
-              <div class="grid grid-cols-2 gap-2 text-xs text-[#CBD5E1]">
-                <div class="flex items-center gap-2"><i class="fa-solid fa-chair text-[#D4AF37]"></i> 35 Plush Recliners
+              <div class="grid grid-cols-2 gap-x-2 gap-y-2.5 text-xs text-[#CBD5E1] min-h-[3.25rem]">
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-chair text-[#D4AF37]"></i> 35 Plush Recliners
                 </div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-suitcase text-[#0D9488]"></i> 35+ Large Bags
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-suitcase text-[#0D9488]"></i> 35+ Large Bags
                 </div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-snowflake text-[#D4AF37]"></i> Heavy-Duty AC
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-snowflake text-[#D4AF37]"></i> Heavy-Duty AC
                 </div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-road text-[#0D9488]"></i> Highway Stabilizer
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-road text-[#0D9488]"></i> Highway Stabilizer
                 </div>
               </div>
-              <p class="text-xs text-[#94A3B8]">
+              <p class="text-xs text-[#94A3B8] min-h-[2.5rem] mb-0">
                 <strong class="text-white">Best For:</strong> Wedding guest transport, large cultural tours, and
                 interstate group expeditions.
               </p>
-              <div class="pt-2 border-t border-white/10 flex items-center justify-between">
+              <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2 w-full"
+                style="justify-content: space-between !important;">
                 <div>
                   <span class="text-[10px] uppercase tracking-wider text-[#94A3B8] block">Sample Starting Rate</span>
                   <span class="text-base font-bold text-[#D4AF37]">Sample: $2.20 / km</span>
@@ -474,17 +520,17 @@
           <div class="px-6 pb-6 flex gap-3">
             <button type="button"
               onclick="openVehicleModal('35-Seater Tourist Bus', '35 Passenger (2x2 Luxury)', 'Full Cabin AC &amp; Non-AC Option', '35+ Suitcases + Overhead Racks', 'Wedding Guests, Interstate Tours, Event Shuttles', 'Air Suspension, Emergency Exit, Fire Extinguisher, USB Ports')"
-              class="flex-1 py-2.5 rounded-xl border border-white/20 text-xs font-semibold text-white hover:bg-white/10 transition-all">View
+              class="flex-1 py-2.5 rounded-xl border border-white/20 text-xs font-semibold text-white hover:bg-[#0D9488]/15 hover:border-[#0D9488] hover:text-[#0D9488] hover:-translate-y-0.5 transition-all">View
               Details</button>
             <a href="contact.html"
-              class="flex-1 py-2.5 rounded-xl bg-[#0D9488] text-white text-xs font-semibold text-center hover:bg-[#0D9488]/90 transition-all text-decoration-none">Book
+              class="flex-1 py-2.5 rounded-xl bg-[#0D9488] text-white text-xs font-semibold text-center hover:bg-[#0F766E] hover:shadow-lg hover:shadow-[#0D9488]/30 hover:-translate-y-0.5 transition-all text-decoration-none">Book
               Now</a>
           </div>
         </div>
 
         <!-- 6. 45-Seater Luxury Coach -->
         <div class="glass-panel rounded-2xl overflow-hidden glass-card-hover flex flex-col justify-between fleet-card"
-          data-category="luxury" data-aos="fade-up" data-aos-delay="300">
+          data-category="luxury">
           <div>
             <div class="h-52 relative overflow-hidden">
               <img src="images/fleet-45-coach.jpg" alt="45-Seater Luxury Coach" class="w-full h-full object-cover">
@@ -492,26 +538,32 @@
                 class="absolute top-3 right-3 px-3 py-1 rounded-full bg-[#D4AF37] text-[#0B1120] text-xs font-bold">45
                 Seater Flagship</span>
             </div>
-            <div class="p-6 space-y-4">
-              <div class="flex items-start justify-between gap-2">
-                <h3 class="text-xl font-heading text-white">45-Seater Luxury Coach</h3>
+            <div class="p-6 space-y-4 text-start">
+              <div class="flex items-center justify-between gap-2 w-full"
+                style="justify-content: space-between !important;">
+                <h3 class="text-lg font-heading text-white mb-0">45-Seater Luxury Coach</h3>
                 <span class="text-xs px-2.5 py-1 rounded-full bg-[#D4AF37]/20 text-[#D4AF37] shrink-0">Premium AC</span>
               </div>
-              <div class="grid grid-cols-2 gap-2 text-xs text-[#CBD5E1]">
-                <div class="flex items-center gap-2"><i class="fa-solid fa-chair text-[#D4AF37]"></i> Calf-Rest
+              <div class="grid grid-cols-2 gap-x-2 gap-y-2.5 text-xs text-[#CBD5E1] min-h-[3.25rem]">
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-chair text-[#D4AF37]"></i> Calf-Rest
                   Recliners</div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-suitcase text-[#0D9488]"></i> Mega Luggage
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-suitcase text-[#0D9488]"></i> Mega Luggage
                   Bay</div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-wifi text-[#D4AF37]"></i> Onboard Wi-Fi Ready
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-wifi text-[#D4AF37]"></i> Onboard Wi-Fi Ready
                 </div>
-                <div class="flex items-center gap-2"><i class="fa-solid fa-volume-high text-[#0D9488]"></i> Surround
+                <div class="flex items-center gap-2" style="justify-content: flex-start !important;"><i
+                    class="fa-solid fa-volume-high text-[#0D9488]"></i> Surround
                   Audio</div>
               </div>
-              <p class="text-xs text-[#94A3B8]">
+              <p class="text-xs text-[#94A3B8] min-h-[2.5rem] mb-0">
                 <strong class="text-white">Best For:</strong> Grand wedding convoys, corporate conventions, and
                 long-haul luxury group charters.
               </p>
-              <div class="pt-2 border-t border-white/10 flex items-center justify-between">
+              <div class="pt-3 border-t border-white/10 flex items-center justify-between gap-2 w-full"
+                style="justify-content: space-between !important;">
                 <div>
                   <span class="text-[10px] uppercase tracking-wider text-[#94A3B8] block">Sample Starting Rate</span>
                   <span class="text-base font-bold text-[#D4AF37]">Contact for Quote</span>
@@ -523,10 +575,10 @@
           <div class="px-6 pb-6 flex gap-3">
             <button type="button"
               onclick="openVehicleModal('45-Seater Luxury Coach', '45 Passenger Flagship Volvo-Class', 'Multi-Zone Climate Control AC', '50+ Suitcases in Pass-Through Bay', 'Grand Weddings, Corporate Summits, Long-Haul Charters', 'Calf-Support Seats, Individual Reading Lamps, Refrigerator, GPS')"
-              class="flex-1 py-2.5 rounded-xl border border-white/20 text-xs font-semibold text-white hover:bg-white/10 transition-all">View
+              class="flex-1 py-2.5 rounded-xl border border-white/20 text-xs font-semibold text-white hover:bg-[#0D9488]/15 hover:border-[#0D9488] hover:text-[#0D9488] hover:-translate-y-0.5 transition-all">View
               Details</button>
             <a href="contact.html"
-              class="flex-1 py-2.5 rounded-xl bg-[#0D9488] text-white text-xs font-semibold text-center hover:bg-[#0D9488]/90 transition-all text-decoration-none">Book
+              class="flex-1 py-2.5 rounded-xl bg-[#0D9488] text-white text-xs font-semibold text-center hover:bg-[#0F766E] hover:shadow-lg hover:shadow-[#0D9488]/30 hover:-translate-y-0.5 transition-all text-decoration-none">Book
               Now</a>
           </div>
         </div>
@@ -539,13 +591,16 @@
   <section class="py-16 bg-[#111B2E]/50 border-t border-white/10">
     <div class="container max-w-7xl mx-auto px-4 space-y-8">
       <div class="text-center max-w-2xl mx-auto space-y-2" data-aos="fade-up">
-        <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-heading font-semibold">Side-by-Side Specs</span>
+        <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-heading font-semibold">Side-by-Side
+          Specs</span>
         <h2 class="text-3xl font-heading">Compare Fleet Capacity &amp; Amenities</h2>
-        <p class="text-xs sm:text-sm text-[#CBD5E1]">Quickly match passenger count, luggage capacity, and climate control options across our 6 vehicle tiers.</p>
+        <p class="text-xs sm:text-sm text-[#CBD5E1]">Quickly match passenger count, luggage capacity, and climate
+          control options across our 6 vehicle tiers.</p>
       </div>
 
       <div class="glass-panel rounded-2xl overflow-x-auto p-4 sm:p-6" data-aos="fade-up">
-        <table class="table table-dark table-hover align-middle mb-0 text-xs sm:text-sm" style="background: transparent;">
+        <table class="table table-dark table-hover align-middle mb-0 text-xs sm:text-sm"
+          style="background: transparent;">
           <thead>
             <tr class="text-[#D4AF37] border-b border-white/15">
               <th>Vehicle Model</th>
@@ -608,42 +663,56 @@
   <section class="py-16 bg-[#0B1120] border-t border-white/10">
     <div class="container max-w-7xl mx-auto px-4">
       <div class="text-center max-w-2xl mx-auto space-y-2 mb-12" data-aos="fade-up">
-        <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-heading font-semibold">Safety &amp; Comfort</span>
+        <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-heading font-semibold">Safety &amp;
+          Comfort</span>
         <h2 class="text-3xl font-heading">Standard Across Every Horizon Coach</h2>
-        <p class="text-xs sm:text-sm text-[#CBD5E1]">Every bus and tempo traveller is inspected before dispatch for clean interiors and highway reliability.</p>
+        <p class="text-xs sm:text-sm text-[#CBD5E1]">Every bus and tempo traveller is inspected before dispatch for
+          clean interiors and highway reliability.</p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between h-full space-y-3" data-aos="fade-up" data-aos-delay="100">
-          <div class="w-11 h-11 rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37]">
+        <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between h-full space-y-3 text-center"
+          data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="w-11 h-11 mx-auto rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37]">
             <i class="fa-solid fa-wrench text-lg"></i>
           </div>
           <h4 class="text-base font-heading">40-Point Pre-Trip Check</h4>
-          <p class="text-xs text-[#CBD5E1] mb-0">Brakes, tires, suspension, and AC cooling verified prior to every pickup.</p>
+          <p class="text-xs text-[#CBD5E1] mb-0">Brakes, tires, suspension, and AC cooling verified prior to every
+            pickup.</p>
         </div>
 
-        <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between h-full space-y-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="w-11 h-11 rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37]">
+        <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between h-full space-y-3 text-center"
+          data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="w-11 h-11 mx-auto rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37]">
             <i class="fa-solid fa-satellite-dish text-lg"></i>
           </div>
           <h4 class="text-base font-heading">Live GPS Telemetry</h4>
-          <p class="text-xs text-[#CBD5E1] mb-0">24/7 route monitoring and emergency control-room assistance on highways.</p>
+          <p class="text-xs text-[#CBD5E1] mb-0">24/7 route monitoring and emergency control-room assistance on
+            highways.</p>
         </div>
 
-        <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between h-full space-y-3" data-aos="fade-up" data-aos-delay="300">
-          <div class="w-11 h-11 rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37]">
+        <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between h-full space-y-3 text-center"
+          data-aos="fade-up" data-aos-delay="300">
+          <div
+            class="w-11 h-11 mx-auto rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37]">
             <i class="fa-solid fa-spray-can-sparkles text-lg"></i>
           </div>
           <h4 class="text-base font-heading">Sanitized Cabins</h4>
-          <p class="text-xs text-[#CBD5E1] mb-0">Fresh upholstery, clean curtains, first-aid kit, and fire extinguisher onboard.</p>
+          <p class="text-xs text-[#CBD5E1] mb-0">Fresh upholstery, clean curtains, first-aid kit, and fire extinguisher
+            onboard.</p>
         </div>
 
-        <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between h-full space-y-3" data-aos="fade-up" data-aos-delay="400">
-          <div class="w-11 h-11 rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37]">
+        <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between h-full space-y-3 text-center"
+          data-aos="fade-up" data-aos-delay="400">
+          <div
+            class="w-11 h-11 mx-auto rounded-xl bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37]">
             <i class="fa-solid fa-user-tie text-lg"></i>
           </div>
           <h4 class="text-base font-heading">Uniformed Captains</h4>
-          <p class="text-xs text-[#CBD5E1] mb-0">Verified, courteous drivers experienced across hill passes and expressways.</p>
+          <p class="text-xs text-[#CBD5E1] mb-0">Verified, courteous drivers experienced across hill passes and
+            expressways.</p>
         </div>
       </div>
     </div>
@@ -653,16 +722,20 @@
   <section class="py-16 bg-[#111B2E]/50 border-t border-white/10">
     <div class="container max-w-4xl mx-auto px-4">
       <div class="glass-panel p-8 sm:p-10 rounded-3xl text-center space-y-4" data-aos="zoom-in">
-        <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-heading font-semibold">Need Multiple Vehicles?</span>
+        <span class="text-xs uppercase tracking-widest text-[#D4AF37] font-heading font-semibold">Need Multiple
+          Vehicles?</span>
         <h2 class="text-2xl sm:text-3xl font-heading">Book a Custom Wedding or Corporate Fleet</h2>
         <p class="text-xs sm:text-sm text-[#CBD5E1] max-w-xl mx-auto">
-          Planning a multi-bus wedding convoy or corporate conference? Get a dedicated fleet coordinator and custom group pricing.
+          Planning a multi-bus wedding convoy or corporate conference? Get a dedicated fleet coordinator and custom
+          group pricing.
         </p>
-        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
-          <a href="contact.html" class="px-7 py-3 rounded-full bg-[#0D9488] text-white text-xs sm:text-sm font-semibold hover:bg-[#0F766E] transition-all text-decoration-none">
-            Get Your Custom Travel Quote
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-2 max-w-lg mx-auto">
+          <a href="contact.html"
+            class="w-full sm:w-[230px] h-12 px-5 inline-flex items-center justify-center rounded-full bg-[#0D9488] text-white text-xs sm:text-sm font-semibold hover:bg-[#0F766E] transition-all text-decoration-none whitespace-nowrap">
+            Get Custom Travel Quote
           </a>
-          <a href="prescriptions.html" class="px-7 py-3 rounded-full border border-[#D4AF37]/80 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0B1120] text-xs sm:text-sm font-semibold transition-all text-decoration-none">
+          <a href="prescriptions.html"
+            class="w-full sm:w-[230px] h-12 px-5 inline-flex items-center justify-center rounded-full border border-[#D4AF37]/80 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0B1120] text-xs sm:text-sm font-semibold transition-all text-decoration-none whitespace-nowrap">
             View Sample Rates
           </a>
         </div>
@@ -686,9 +759,9 @@
         <div class="faq-item glass-panel">
           <button class="faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
             <span class="font-semibold text-left">Are all vehicles chauffeur-driven and GPS tracked?</span>
-            <i class="fa-solid fa-chevron-down text-[#D4AF37] text-xs"></i>
+            <i class="fa-solid fa-chevron-down text-[#D4AF37] text-xs shrink-0"></i>
           </button>
-          <div id="faq1" class="collapse show px-5 pb-4 text-xs sm:text-sm text-[#CBD5E1]">
+          <div id="faq1" class="collapse show faq-answer px-5 pb-4 text-xs sm:text-sm text-[#E2E8F0] text-left">
             Yes. Every Horizon Coach tempo traveller, mini bus, and luxury coach is operated by a verified, uniformed
             highway chauffeur and monitored 24/7 via live GPS.
           </div>
@@ -697,9 +770,9 @@
         <div class="faq-item glass-panel">
           <button class="faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
             <span class="font-semibold text-left">Can we choose between AC and Non-AC tourist buses?</span>
-            <i class="fa-solid fa-chevron-down text-[#D4AF37] text-xs"></i>
+            <i class="fa-solid fa-chevron-down text-[#D4AF37] text-xs shrink-0"></i>
           </button>
-          <div id="faq2" class="collapse px-5 pb-4 text-xs sm:text-sm text-[#CBD5E1]">
+          <div id="faq2" class="collapse faq-answer px-5 pb-4 text-xs sm:text-sm text-[#E2E8F0] text-left">
             Yes. Our 12-seater, 20-seater, 27-seater, and 35-seater models are available in both AC and Non-AC
             configurations depending on your route and budget.
           </div>
@@ -708,9 +781,9 @@
         <div class="faq-item glass-panel">
           <button class="faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
             <span class="font-semibold text-left">How much luggage can each vehicle accommodate?</span>
-            <i class="fa-solid fa-chevron-down text-[#D4AF37] text-xs"></i>
+            <i class="fa-solid fa-chevron-down text-[#D4AF37] text-xs shrink-0"></i>
           </button>
-          <div id="faq3" class="collapse px-5 pb-4 text-xs sm:text-sm text-[#CBD5E1]">
+          <div id="faq3" class="collapse faq-answer px-5 pb-4 text-xs sm:text-sm text-[#E2E8F0] text-left">
             Tempo Travellers include rear boot space plus an optional weatherproof roof carrier, while 27 to 45-seater
             coaches feature dedicated under-floor luggage bays for 1–2 large bags per passenger.
           </div>
@@ -747,7 +820,11 @@
 
   <!-- Premium Footer -->
   <footer class="premium-footer pt-16 pb-12 text-sm text-[#94A3B8]">
+    <div class="bg-gradient-orb orb-primary opacity-[0.04] -bottom-16 -left-16 w-80 h-80"></div>
+    <div class="bg-gradient-orb orb-secondary opacity-[0.04] -top-16 -right-16 w-80 h-80"></div>
+
     <div class="container max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-8 mb-12 relative z-10">
+      <!-- Brand column -->
       <div class="md:col-span-4 space-y-4">
         <a class="brand-logo flex items-center gap-2 text-decoration-none" href="index.html">
           <i class="fa-solid fa-bus-simple text-[#D4AF37] text-xl"></i>
@@ -757,38 +834,108 @@
           Horizon Coach is a premier Tourist Bus &amp; Traveller Rental service offering 12 to 45-seater AC coaches,
           tempo travellers, and chauffeur-driven group travel.
         </p>
+        <!-- Social Icons -->
+        <div class="flex gap-3 pt-2">
+          <a href="#" class="social-icon-btn instagram" title="Instagram">
+            <i class="fa-brands fa-instagram text-center"></i>
+          </a>
+          <a href="#" class="social-icon-btn youtube" title="YouTube">
+            <i class="fa-brands fa-youtube text-center"></i>
+          </a>
+          <a href="#" class="social-icon-btn facebook" title="Facebook">
+            <i class="fa-brands fa-facebook-f text-center"></i>
+          </a>
+          <a href="#" class="social-icon-btn linkedin" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in text-center"></i>
+          </a>
+        </div>
       </div>
+
+      <!-- Fleet Categories -->
       <div class="md:col-span-2 space-y-3">
         <h5 class="text-white text-xs font-semibold uppercase tracking-wider">Fleet</h5>
         <ul class="space-y-2 text-xs p-0 list-none">
-          <li><a href="services.html" class="hover:text-white text-decoration-none">Tempo Travellers</a></li>
-          <li><a href="services.html" class="hover:text-white text-decoration-none">20-Seater Mini Bus</a></li>
-          <li><a href="services.html" class="hover:text-white text-decoration-none">27 &amp; 35-Seater Bus</a></li>
-          <li><a href="services.html" class="hover:text-white text-decoration-none">45-Seater Coach</a></li>
+          <li><a href="services.html"
+              class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">Tempo Travellers</a>
+          </li>
+          <li><a href="services.html"
+              class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">20-Seater Mini Bus</a>
+          </li>
+          <li><a href="services.html"
+              class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">27 &amp; 35-Seater
+              Bus</a></li>
+          <li><a href="services.html"
+              class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">45-Seater Coach</a>
+          </li>
         </ul>
       </div>
+
       <div class="md:col-span-2 space-y-3">
         <h5 class="text-white text-xs font-semibold uppercase tracking-wider">Quick Links</h5>
         <ul class="space-y-2 text-xs p-0 list-none">
-          <li><a href="index.html" class="hover:text-white text-decoration-none">Home</a></li>
-          <li><a href="prescriptions.html" class="hover:text-white text-decoration-none">Rates</a></li>
-          <li><a href="about.html" class="hover:text-white text-decoration-none">About</a></li>
-          <li><a href="contact.html" class="hover:text-white text-decoration-none">Contact</a></li>
-          <li><a href="dashboard.html" class="hover:text-white text-decoration-none">Dashboard</a></li>
+          <li><a href="index.html"
+              class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">Home</a></li>
+          <li><a href="home-2.html"
+              class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">Home 2</a></li>
+          <li><a href="services.html"
+              class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">Fleet</a></li>
+          <li><a href="prescriptions.html"
+              class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">Rates</a></li>
+          <li><a href="about.html"
+              class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">About</a></li>
+          <li><a href="contact.html"
+              class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">Contact</a></li>
+          <li><a href="dashboard.html"
+              class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">Dashboard</a></li>
         </ul>
       </div>
+
+      <!-- Info column -->
       <div class="md:col-span-4 space-y-3">
-        <h5 class="text-white text-xs font-semibold uppercase tracking-wider">Contact Information</h5>
-        <ul class="space-y-2 text-xs text-[#CBD5E1] p-0 list-none">
-          <li><i class="fa-solid fa-phone text-[#D4AF37] mr-2"></i> +1 (800) 555-0199</li>
-          <li><i class="fa-solid fa-envelope text-[#D4AF37] mr-2"></i> bookings@horizoncoach.com</li>
-          <li><i class="fa-solid fa-location-dot text-[#D4AF37] mr-2"></i> 420 Transport Terminal Road, Suite 12</li>
+        <h5 class="text-white text-xs font-semibold uppercase tracking-wider">Booking &amp; Fleet Depot</h5>
+        <ul class="space-y-3 text-xs text-[#CBD5E1] p-0 list-none">
+          <li class="flex items-start gap-3">
+            <div
+              class="w-7 h-7 rounded-lg bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] shrink-0 mt-0.5">
+              <i class="fa-solid fa-location-dot text-xs text-center"></i>
+            </div>
+            <span class="leading-relaxed text-[#E2E8F0]">
+              Horizon Coach Travel Hub<br>
+              420 Transport Terminal Road, Suite 12
+            </span>
+          </li>
+          <li class="flex items-center gap-3">
+            <div
+              class="w-7 h-7 rounded-lg bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] shrink-0">
+              <i class="fa-solid fa-phone text-xs text-center"></i>
+            </div>
+            <a href="tel:+18005550199" class="text-[#E2E8F0] hover:text-white transition-colors text-decoration-none">
+              +1 (800) 555-0199
+            </a>
+          </li>
+          <li class="flex items-center gap-3">
+            <div
+              class="w-7 h-7 rounded-lg bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] shrink-0">
+              <i class="fa-solid fa-envelope text-xs text-center"></i>
+            </div>
+            <a href="mailto:bookings@horizoncoach.com"
+              class="text-[#E2E8F0] hover:text-white transition-colors text-decoration-none">
+              bookings@horizoncoach.com
+            </a>
+          </li>
         </ul>
       </div>
     </div>
+
+    <!-- Bottom border & copyright -->
     <div
-      class="container max-w-7xl mx-auto px-4 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
+      class="container max-w-7xl mx-auto px-4 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-10">
       <p class="text-[#94A3B8]">&copy; 2026 Horizon Coach – Tourist Bus &amp; Traveller Rental. All Rights Reserved.</p>
+      <div class="flex gap-6 text-[#94A3B8]">
+        <a href="about.html" class="hover:text-white transition-colors text-decoration-none">Safety Policy</a>
+        <a href="prescriptions.html" class="hover:text-white transition-colors text-decoration-none">Rental Terms</a>
+        <a href="contact.html" class="hover:text-white transition-colors text-decoration-none">Support</a>
+      </div>
     </div>
   </footer>
 

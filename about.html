@@ -46,16 +46,16 @@
         <i class="fa-solid fa-bus-simple text-[#D4AF37] text-xl"></i>
         <span>HORIZON<span class="text-[#0D9488]">COACH</span></span>
       </a>
-      <div class="hidden lg:flex items-center gap-7">
+      <div class="hidden xl:flex items-center gap-7">
         <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none" href="index.html">Home</a>
         <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none" href="home-2.html">Home 2</a>
+        <a class="text-[#D4AF37] font-bold active-nav-link hover:text-[#D4AF37] transition-colors text-decoration-none" href="about.html" aria-current="page">About</a>
         <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none" href="services.html">Fleet</a>
         <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none" href="prescriptions.html">Rates</a>
-        <a class="text-[#D4AF37] font-bold active-nav-link hover:text-[#D4AF37] transition-colors text-decoration-none" href="about.html" aria-current="page">About</a>
         <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none" href="contact.html">Contact</a>
         <a class="text-[#E2E8F0] hover:text-[#D4AF37] transition-colors font-medium text-decoration-none" href="dashboard.html">Dashboard</a>
       </div>
-      <div class="hidden lg:flex items-center gap-3">
+      <div class="hidden xl:flex items-center gap-3">
         <button id="theme-toggle" class="header-theme-switch" title="Toggle Theme">
           <span class="track-icons flex justify-between items-center text-xs select-none w-full">
             <i class="fa-regular fa-moon text-sky-400 text-xs opacity-75"></i>
@@ -68,17 +68,17 @@
         </button>
         <a href="register.html" class="h-[38px] px-5 inline-flex items-center justify-center rounded-full border border-[#0D9488] bg-[#0D9488] text-white hover:bg-[#0D9488]/90 transition-all duration-300 font-medium text-sm text-decoration-none">Book Vehicle</a>
       </div>
-      <button class="lg:hidden text-white text-xl" id="mobile-menu-btn" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <button class="xl:hidden text-white text-xl" id="mobile-menu-btn" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
     </div>
   </nav>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden fixed top-[70px] left-0 w-full glass-panel py-6 px-5 z-40 lg:hidden flex flex-col gap-3">
+  <div id="mobile-menu" class="hidden fixed top-[70px] left-0 w-full glass-panel py-6 px-5 z-40 xl:hidden flex flex-col gap-3">
     <a class="text-base text-[#E2E8F0] text-decoration-none" href="index.html">Home</a>
     <a class="text-base text-[#E2E8F0] text-decoration-none" href="home-2.html">Home 2</a>
-    <a class="text-base text-[#E2E8F0] text-decoration-none" href="services.html">Fleet</a>
-    <a class="text-base text-[#E2E8F0] text-decoration-none" href="prescriptions.html">Rates</a>
-    <a class="text-base text-[#D4AF37] font-bold active-nav-link text-decoration-none" href="about.html">About</a>
+        <a class="text-base text-[#D4AF37] font-bold active-nav-link text-decoration-none" href="about.html">About</a>
+        <a class="text-base text-[#E2E8F0] text-decoration-none" href="services.html">Fleet</a>
+        <a class="text-base text-[#E2E8F0] text-decoration-none" href="prescriptions.html">Rates</a>
     <a class="text-base text-[#E2E8F0] text-decoration-none" href="contact.html">Contact</a>
     <a class="text-base text-[#E2E8F0] text-decoration-none" href="dashboard.html">Dashboard</a>
   </div>
@@ -92,9 +92,9 @@
         <p class="text-[#CBD5E1] leading-relaxed text-sm sm:text-base">
           For over 12 years, Horizon Coach has specialized in Tourist Bus &amp; Tempo Traveller rentals for families, corporate teams, schools, and wedding celebrations. Our mission is simple: keep every group travelling together in clean, well-maintained, chauffeur-driven vehicles.
         </p>
-        <div class="flex flex-wrap gap-4 pt-2">
-          <a href="services.html" class="px-6 py-3 rounded-full bg-[#0D9488] text-white text-sm font-semibold text-decoration-none">Explore Fleet</a>
-          <a href="doctors.html" class="px-6 py-3 rounded-full border border-[#D4AF37] text-[#D4AF37] text-sm font-semibold text-decoration-none">Meet Our Chauffeurs</a>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 max-w-md mx-auto lg:mx-0">
+          <a href="services.html" class="w-full sm:w-[210px] h-12 px-5 inline-flex items-center justify-center rounded-full bg-[#0D9488] text-white text-sm font-semibold text-decoration-none whitespace-nowrap">Explore Fleet</a>
+          <a href="doctors.html" class="w-full sm:w-[210px] h-12 px-5 inline-flex items-center justify-center rounded-full border border-[#D4AF37] text-[#D4AF37] text-sm font-semibold text-decoration-none whitespace-nowrap">Meet Our Chauffeurs</a>
         </div>
       </div>
       <div class="rounded-3xl overflow-hidden border border-white/15 shadow-2xl h-[340px]" data-aos="fade-left">
@@ -107,22 +107,22 @@
   <section class="py-20 bg-[#0B1120]">
     <div class="container max-w-7xl mx-auto px-4">
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="glass-panel p-7 rounded-2xl space-y-3" data-aos="fade-up" data-aos-delay="100">
-          <div class="w-12 h-12 rounded-xl bg-[#0D9488]/20 flex items-center justify-center text-[#D4AF37] text-xl">
+        <div class="glass-panel p-7 rounded-2xl space-y-3 text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-12 h-12 mx-auto rounded-xl bg-[#0D9488]/20 flex items-center justify-center text-[#D4AF37] text-xl">
             <i class="fa-solid fa-shield-halved"></i>
           </div>
           <h3 class="text-xl font-heading">Safety First Inspections</h3>
           <p class="text-xs sm:text-sm text-[#CBD5E1]">Every coach undergoes a 40-point mechanical, brake, tire, and AC check before departure, backed by live GPS telemetry.</p>
         </div>
-        <div class="glass-panel p-7 rounded-2xl space-y-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="w-12 h-12 rounded-xl bg-[#0D9488]/20 flex items-center justify-center text-[#D4AF37] text-xl">
+        <div class="glass-panel p-7 rounded-2xl space-y-3 text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-12 h-12 mx-auto rounded-xl bg-[#0D9488]/20 flex items-center justify-center text-[#D4AF37] text-xl">
             <i class="fa-solid fa-user-tie"></i>
           </div>
           <h3 class="text-xl font-heading">Experienced Highway Captains</h3>
           <p class="text-xs sm:text-sm text-[#CBD5E1]">Our uniformed drivers hold commercial heavy-vehicle endorsements with deep familiarity across mountain passes and highways.</p>
         </div>
-        <div class="glass-panel p-7 rounded-2xl space-y-3" data-aos="fade-up" data-aos-delay="300">
-          <div class="w-12 h-12 rounded-xl bg-[#0D9488]/20 flex items-center justify-center text-[#D4AF37] text-xl">
+        <div class="glass-panel p-7 rounded-2xl space-y-3 text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-12 h-12 mx-auto rounded-xl bg-[#0D9488]/20 flex items-center justify-center text-[#D4AF37] text-xl">
             <i class="fa-solid fa-handshake"></i>
           </div>
           <h3 class="text-xl font-heading">Honest, Clear Billing</h3>
@@ -168,7 +168,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
         <div class="glass-panel p-6 rounded-2xl text-center flex flex-col justify-between h-full space-y-4" data-aos="fade-up" data-aos-delay="100">
           <div class="space-y-3">
-            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Capt. Rajesh Verma" class="w-24 h-24 rounded-full mx-auto object-cover border-2 border-[#D4AF37]">
+            <img src="images/image copy 5.png" alt="Capt. Rajesh Verma" class="w-24 h-24 rounded-full mx-auto object-cover border-2 border-[#D4AF37]">
             <h3 class="text-lg font-heading mb-0">Capt. Rajesh Verma</h3>
             <p class="text-xs text-[#D4AF37] font-semibold mb-0">Senior Coach Captain • 14 Years Exp.</p>
             <p class="text-xs text-[#CBD5E1] mb-0">Specializes in 35 &amp; 45-seater luxury coaches and multi-state heritage circuits.</p>
@@ -221,14 +221,101 @@
   </section>
 
   <!-- Footer -->
-  <footer class="premium-footer pt-14 pb-10 text-sm text-[#94A3B8]">
-    <div class="container max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-      <p class="text-[#94A3B8] mb-0">&copy; 2026 Horizon Coach – Tourist Bus &amp; Traveller Rental. All Rights Reserved.</p>
-      <div class="flex gap-5 text-xs">
-        <a href="index.html" class="hover:text-white text-decoration-none">Home</a>
-        <a href="services.html" class="hover:text-white text-decoration-none">Fleet</a>
-        <a href="prescriptions.html" class="hover:text-white text-decoration-none">Rates</a>
-        <a href="contact.html" class="hover:text-white text-decoration-none">Contact</a>
+  <footer class="premium-footer pt-16 pb-12 text-sm text-[#94A3B8]">
+    <div class="bg-gradient-orb orb-primary opacity-[0.04] -bottom-16 -left-16 w-80 h-80"></div>
+    <div class="bg-gradient-orb orb-secondary opacity-[0.04] -top-16 -right-16 w-80 h-80"></div>
+
+    <div class="container max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-8 mb-12 relative z-10">
+      <!-- Brand column -->
+      <div class="md:col-span-4 space-y-4">
+        <a class="brand-logo flex items-center gap-2 text-decoration-none" href="index.html">
+          <i class="fa-solid fa-bus-simple text-[#D4AF37] text-xl"></i>
+          <span>HORIZON<span class="text-[#0D9488]">COACH</span></span>
+        </a>
+        <p class="text-xs leading-relaxed text-[#CBD5E1] max-w-sm">
+          Horizon Coach is a premier Tourist Bus &amp; Traveller Rental service offering 12 to 45-seater AC coaches, tempo travellers, and chauffeur-driven group travel.
+        </p>
+        <!-- Social Icons -->
+        <div class="flex gap-3 pt-2">
+          <a href="#" class="social-icon-btn instagram" title="Instagram">
+            <i class="fa-brands fa-instagram text-center"></i>
+          </a>
+          <a href="#" class="social-icon-btn youtube" title="YouTube">
+            <i class="fa-brands fa-youtube text-center"></i>
+          </a>
+          <a href="#" class="social-icon-btn facebook" title="Facebook">
+            <i class="fa-brands fa-facebook-f text-center"></i>
+          </a>
+          <a href="#" class="social-icon-btn linkedin" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in text-center"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Fleet Categories -->
+      <div class="md:col-span-2 space-y-3">
+        <h5 class="text-white text-xs font-semibold uppercase tracking-wider">Fleet</h5>
+        <ul class="space-y-2 text-xs p-0 list-none">
+          <li><a href="services.html" class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">Tempo Travellers</a></li>
+          <li><a href="services.html" class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">20-Seater Mini Bus</a></li>
+          <li><a href="services.html" class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">27 &amp; 35-Seater Bus</a></li>
+          <li><a href="services.html" class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">45-Seater Coach</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2 space-y-3">
+        <h5 class="text-white text-xs font-semibold uppercase tracking-wider">Quick Links</h5>
+        <ul class="space-y-2 text-xs p-0 list-none">
+          <li><a href="index.html" class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">Home</a></li>
+          <li><a href="home-2.html" class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">Home 2</a></li>
+          <li><a href="services.html" class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">Fleet</a></li>
+          <li><a href="prescriptions.html" class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">Rates</a></li>
+          <li><a href="about.html" class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">About</a></li>
+          <li><a href="contact.html" class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">Contact</a></li>
+          <li><a href="dashboard.html" class="text-[#CBD5E1] hover:text-[#D4AF37] transition-colors text-decoration-none">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <!-- Info column -->
+      <div class="md:col-span-4 space-y-3">
+        <h5 class="text-white text-xs font-semibold uppercase tracking-wider">Booking &amp; Fleet Depot</h5>
+        <ul class="space-y-3 text-xs text-[#CBD5E1] p-0 list-none">
+          <li class="flex items-start gap-3">
+            <div class="w-7 h-7 rounded-lg bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] shrink-0 mt-0.5">
+              <i class="fa-solid fa-location-dot text-xs text-center"></i>
+            </div>
+            <span class="leading-relaxed text-[#E2E8F0]">
+              Horizon Coach Travel Hub<br>
+              420 Transport Terminal Road, Suite 12
+            </span>
+          </li>
+          <li class="flex items-center gap-3">
+            <div class="w-7 h-7 rounded-lg bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] shrink-0">
+              <i class="fa-solid fa-phone text-xs text-center"></i>
+            </div>
+            <a href="tel:+18005550199" class="text-[#E2E8F0] hover:text-white transition-colors text-decoration-none">
+              +1 (800) 555-0199
+            </a>
+          </li>
+          <li class="flex items-center gap-3">
+            <div class="w-7 h-7 rounded-lg bg-[#0D9488]/20 border border-[#0D9488]/40 flex items-center justify-center text-[#D4AF37] shrink-0">
+              <i class="fa-solid fa-envelope text-xs text-center"></i>
+            </div>
+            <a href="mailto:bookings@horizoncoach.com" class="text-[#E2E8F0] hover:text-white transition-colors text-decoration-none">
+              bookings@horizoncoach.com
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom border & copyright -->
+    <div class="container max-w-7xl mx-auto px-4 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 relative z-10">
+      <p class="text-[#94A3B8]">&copy; 2026 Horizon Coach – Tourist Bus &amp; Traveller Rental. All Rights Reserved.</p>
+      <div class="flex gap-6 text-[#94A3B8]">
+        <a href="about.html" class="hover:text-white transition-colors text-decoration-none">Safety Policy</a>
+        <a href="prescriptions.html" class="hover:text-white transition-colors text-decoration-none">Rental Terms</a>
+        <a href="contact.html" class="hover:text-white transition-colors text-decoration-none">Support</a>
       </div>
     </div>
   </footer>

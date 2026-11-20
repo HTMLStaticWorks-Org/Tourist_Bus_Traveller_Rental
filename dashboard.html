@@ -45,11 +45,11 @@
   </style>
 </head>
 
-<body class="bg-[#0B1120] text-white h-screen overflow-hidden flex flex-col lg:flex-row">
+<body class="bg-[#0B1120] text-white h-screen overflow-hidden flex flex-col xl:flex-row">
 
   <!-- Sidebar Navigation (Desktop) -->
   <aside
-    class="hidden lg:flex flex-col w-64 glass-panel border-r border-white/10 p-6 justify-between shrink-0 sticky top-0 h-screen overflow-y-auto">
+    class="hidden xl:flex flex-col w-64 glass-panel border-r border-white/10 p-6 justify-between shrink-0 sticky top-0 h-screen overflow-y-auto">
     <div class="space-y-6 flex flex-col flex-1">
       <div class="flex justify-between items-center">
         <a class="brand-logo flex items-center gap-2 text-lg text-decoration-none" href="index.html">
@@ -119,25 +119,28 @@
   <div class="flex-1 flex flex-col h-full max-h-full overflow-hidden">
     <!-- Top Header Bar -->
     <header
-      class="w-full glass-panel border-b border-white/10 px-4 md:px-6 py-4 flex justify-between items-center bg-[#0B1120]/70 backdrop-blur-md sticky top-0 z-30">
-      <div class="flex items-center gap-3">
-        <button class="lg:hidden text-white text-xl" type="button" data-bs-toggle="offcanvas"
+      class="w-full glass-panel border-b border-white/10 px-3 sm:px-4 md:px-6 py-3 sm:py-4 flex items-center gap-2 bg-[#0B1120]/70 backdrop-blur-md sticky top-0 z-30" style="justify-content: space-between !important;">
+      <div class="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1" style="justify-content: flex-start !important;">
+        <button class="xl:hidden text-white text-xl shrink-0" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#mobileSidebar" aria-label="Open Dashboard Menu">
           <i class="fa-solid fa-bars"></i>
         </button>
-        <div>
-          <h1 class="text-base sm:text-lg font-heading font-bold text-white mb-0">Customer Travel Portal</h1>
-          <p class="text-[11px] text-[#CBD5E1] mb-0">Sample Demo Data • Manage Bookings, Trips &amp; Invoices</p>
+        <div class="min-w-0" style="text-align: left !important;">
+          <h1 class="text-sm sm:text-lg font-heading font-bold text-white mb-0 truncate" style="text-align: left !important;">Customer Travel Portal</h1>
+          <p class="hidden sm:block text-[11px] text-[#CBD5E1] mb-0 truncate" style="text-align: left !important;">Sample Demo Data • Manage Bookings, Trips &amp; Invoices</p>
         </div>
       </div>
 
-      <div class="flex items-center gap-2 sm:gap-3">
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
         <button id="theme-toggle" class="header-theme-switch" title="Toggle Theme">
           <span class="track-icons flex justify-between items-center text-xs select-none w-full">
             <i class="fa-regular fa-moon text-sky-400 text-xs opacity-75"></i>
             <i class="fa-regular fa-sun text-amber-400 text-xs opacity-75"></i>
           </span>
           <span id="header-theme-thumb"><i id="theme-icon" class="fa-regular fa-sun text-white"></i></span>
+        </button>
+        <button id="rtl-toggle" class="w-[38px] h-[38px] flex items-center justify-center rounded-full border border-white/20 hover:bg-white/10 text-gray-300 hover:text-white transition-colors bg-transparent shrink-0" title="Toggle Layout Direction">
+          <i id="rtl-icon" class="fa-solid fa-right-left text-sm"></i>
         </button>
       </div>
     </header>
@@ -525,7 +528,7 @@
           <div class="glass-panel p-5 rounded-2xl border border-white/10 space-y-3" data-wall="traveller"
             data-grade="ac">
             <img
-              src="https://images.pexels.com/photos/29510192/pexels-photo-29510192/free-photo-of-travelers-seated-on-a-bus-interior-view.jpeg?auto=compress&cs=tinysrgb&w=900"
+              src="images/image.png"
               alt="17-Seater Tempo Traveller" class="w-full h-40 object-cover rounded-xl">
             <h4 class="text-base font-heading font-bold text-white mb-0">17-Seater Tempo Traveller</h4>
             <p class="text-xs text-[#CBD5E1]">AC Pushback • 15–17 Bags • Family &amp; Hill Tours</p>

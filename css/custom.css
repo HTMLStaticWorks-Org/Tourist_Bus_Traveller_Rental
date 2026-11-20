@@ -122,6 +122,35 @@ nav a {
   font-weight: 600 !important;
 }
 
+/* Global Interactive Button Hover Across All Pages */
+button:not(.carousel-control-prev):not(.carousel-control-next):not(.btn-close):not(.faq-btn):not(.password-toggle-btn):not(#mobile-menu-btn),
+.btn,
+a.rounded-full,
+a.rounded-xl {
+  transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.22s ease, background-color 0.22s ease, border-color 0.22s ease, color 0.22s ease !important;
+}
+
+button:not(.carousel-control-prev):not(.carousel-control-next):not(.btn-close):not(.faq-btn):not(.password-toggle-btn):not(#mobile-menu-btn):not(.header-theme-switch):hover,
+.btn:hover,
+a.rounded-full:hover,
+a.rounded-xl:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px -6px rgba(13, 148, 136, 0.42);
+}
+
+button.bg-\[\#0D9488\]:hover,
+a.bg-\[\#0D9488\]:hover {
+  background-color: #0F766E !important;
+  color: #FFFFFF !important;
+}
+
+a.border-\[\#D4AF37\]\/80:hover,
+a.border-\[\#D4AF37\]:hover {
+  background-color: #D4AF37 !important;
+  color: #0B1120 !important;
+  box-shadow: 0 8px 22px -6px rgba(212, 175, 55, 0.45);
+}
+
 .card-title,
 .nav-link,
 .badge-label {
@@ -269,7 +298,8 @@ h2 {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #0D9488, #0284C7);
+  background: linear-gradient(135deg, #0D9488, #0F766E);
+  border: 1px solid rgba(212, 175, 55, 0.45);
   color: #FFFFFF !important;
   border: 1px solid rgba(255, 255, 255, 0.25);
   display: flex;
@@ -2313,7 +2343,7 @@ footer .social-icon-btn:hover i,
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08) !important;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1279px) {
   #mobile-menu:not(.hidden) {
     display: flex !important;
   }
@@ -4133,13 +4163,21 @@ button.active-services-btn {
   background: linear-gradient(135deg, #0F766E, #0369A1) !important;
 }
 
-[dir="rtl"] #header-theme-thumb {
-  left: auto !important;
-  right: 3px !important;
+[dir="rtl"] .header-theme-switch {
+  direction: ltr !important;
 }
 
-[dir="rtl"][data-theme="light"] #header-theme-thumb {
-  transform: translateX(-24px) !important;
+[dir="rtl"] #header-theme-thumb {
+  left: 3px !important;
+  right: auto !important;
+}
+
+[dir="rtl"][data-theme="dark"] .header-theme-switch #header-theme-thumb {
+  transform: translateX(26px) !important;
+}
+
+[dir="rtl"][data-theme="light"] .header-theme-switch #header-theme-thumb {
+  transform: translateX(0) !important;
 }
 
 /* Global Light Mode Overrides for Tailwind & Bootstrap Color Classes */
@@ -4302,7 +4340,8 @@ button.active-services-btn {
   color: #0F172A !important;
 }
 
-[data-theme="light"] .home1-hero-wrapper h1 span.bg-clip-text {
+[data-theme="light"] .home1-hero-wrapper h1 span.bg-clip-text,
+[data-theme="light"] h1 span.bg-clip-text {
   background-image: linear-gradient(90deg, #9A7209, #0F766E) !important;
 }
 
@@ -4424,9 +4463,67 @@ button.active-services-btn {
   text-align: left !important;
 }
 
+/* RTL Footer Alignment */
+[dir="rtl"] footer.premium-footer,
+[dir="rtl"] footer.premium-footer h5,
+[dir="rtl"] footer.premium-footer p,
+[dir="rtl"] footer.premium-footer li,
+[dir="rtl"] footer.premium-footer span {
+  text-align: right !important;
+}
+
+[dir="rtl"] footer.premium-footer .brand-logo,
+[dir="rtl"] footer.premium-footer ul li.flex,
+[dir="rtl"] footer.premium-footer .flex.gap-3 {
+  justify-content: flex-start !important;
+  text-align: right !important;
+}
+
+[dir="rtl"] footer.premium-footer .border-t {
+  justify-content: space-between !important;
+}
+
+[dir="rtl"] footer.premium-footer a[href^="tel:"] {
+  direction: ltr;
+  unicode-bidi: embed;
+  display: inline-block;
+}
+
 [dir="rtl"] .home2-hero-wrapper .text-left,
 [dir="rtl"] .home1-hero-wrapper .text-left {
   text-align: right !important;
+}
+
+/* Preserve centered headings, eyebrows, and text inside .text-center in RTL mode across all pages */
+[dir="rtl"] .text-center,
+[dir="rtl"] .text-center h1,
+[dir="rtl"] .text-center h2,
+[dir="rtl"] .text-center h3,
+[dir="rtl"] .text-center h4,
+[dir="rtl"] .text-center h5,
+[dir="rtl"] .text-center h6,
+[dir="rtl"] .text-center p,
+[dir="rtl"] .text-center span,
+[dir="rtl"] .text-center a,
+[dir="rtl"] .text-center button {
+  text-align: center !important;
+}
+
+/* Center submit & social buttons and flip password eye icon in Login/Signup RTL mode */
+[dir="rtl"] .auth-card button[type="submit"],
+[dir="rtl"] .auth-card .social-login-btn {
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+[dir="rtl"] .auth-card .password-toggle-btn {
+  right: auto !important;
+  left: 1rem !important;
+}
+
+[dir="rtl"] .auth-card #password-input {
+  padding-right: 1rem !important;
+  padding-left: 2.75rem !important;
 }
 
 /* Strict 368px Viewport Right-Side Overflow Guard */

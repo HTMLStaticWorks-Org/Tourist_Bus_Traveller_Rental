@@ -116,22 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       backToTopBtn?.classList.remove('show');
     }
-
-    if (backToTopBtn && backToTopBtn.classList.contains('show')) {
-      const scrollHeight = document.documentElement.scrollHeight;
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const clientHeight = document.documentElement.clientHeight;
-      const distanceFromBottom = scrollHeight - scrollTop - clientHeight;
-      const footer = document.querySelector('footer');
-      const footerHeight = footer ? footer.offsetHeight : 0;
-
-      if (distanceFromBottom < footerHeight) {
-        const offset = footerHeight - distanceFromBottom + 24;
-        backToTopBtn.style.bottom = `${offset}px`;
-      } else {
-        backToTopBtn.style.bottom = '24px';
-      }
-    }
   });
 
   // Back to top scroll handler
@@ -260,21 +244,24 @@ document.addEventListener('DOMContentLoaded', () => {
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         filterButtons.forEach(b => {
-          b.classList.remove('bg-[#0D9488]', 'text-white', 'border-[#0D9488]');
-          b.classList.add('bg-white/5', 'text-[#E2E8F0]', 'border-white/15');
+          b.classList.remove('active', 'bg-[#0D9488]', 'text-white', 'border-[#0D9488]');
         });
-        btn.classList.remove('bg-white/5', 'text-[#E2E8F0]', 'border-white/15');
-        btn.classList.add('bg-[#0D9488]', 'text-white', 'border-[#0D9488]');
+        btn.classList.add('active', 'bg-[#0D9488]', 'text-white', 'border-[#0D9488]');
 
         const category = btn.getAttribute('data-filter');
         fleetCards.forEach(card => {
           const cardCat = card.getAttribute('data-category');
           if (category === 'all' || cardCat === category) {
             card.classList.remove('hidden');
+            card.classList.add('aos-animate');
           } else {
             card.classList.add('hidden');
           }
         });
+
+        if (typeof AOS !== 'undefined' && typeof AOS.refresh === 'function') {
+          AOS.refresh();
+        }
       });
     });
   }
